@@ -1,4 +1,6 @@
 
+ShareSDK is the most comprehensive social SDK in the world , which share easily with 40+ platforms , from around the world.This wiki mainly tells how to easily and fastly integrate ShareSDK.
+
 # ShareSDK文件包含：
 
  *  1、libraries（ShareSDK类库），其中包含：
