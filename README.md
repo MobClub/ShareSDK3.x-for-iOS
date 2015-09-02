@@ -8,6 +8,7 @@
      3. ShareSDK.bundle：ShareSDK资源文件。（必要）
      4. ShareSDK.framework：核心静态库。（必要）
      5. ShareSDKConnector.framework：用于ShareSDK框架与外部框架连接的代理框架插件。使用第三方SDK时必要。
+     
      6. ShareSDKExtension.framework：对ShareSDK功能的扩展框架插件。目前主要提供第三方平台登录、一键分享、截屏分享、摇一摇分享等相关功能。需要使用以上功能时必要。
      7. ShareSDKUI.bundle：分享菜单栏和分享编辑页面资源包。（如果自定义这些UI可直接移除）
      8. ShareSDKUI.framework：分享菜单栏和分享编辑页面。（如果自定义这些UI可直接移除）
