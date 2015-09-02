@@ -1,4 +1,5 @@
 # ShareSDK
+<<<<<<< HEAD
 ShareSDK  for  iOS 3.x
 
 ShareSDK文件包含：
@@ -17,3 +18,5 @@ ShareSDK文件包含：
 
 2、Demo（包含Objective-C、swift版示例Demo）。
 3、doc（包含Objective-C、swift版集成文档和新功能介绍）
+=======
+ShareSDK 3.x for iOS
