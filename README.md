@@ -1,2 +1,2 @@
 # ShareSDK
-ShareSDK  for  iOS 3.x
+ShareSDK 3.x for iOS 
