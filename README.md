@@ -1,6 +1,4 @@
 
-ShareSDK is the most comprehensive social SDK in the world , which share easily with 40+ platforms , from around the world.This wiki mainly tells how to easily and fastly integrate ShareSDK.
-
 # ShareSDK文件包含：
 
 **1、libraries（ShareSDK类库），其中包含：**
@@ -14,7 +12,7 @@ ShareSDK is the most comprehensive social SDK in the world , which share easily 
      7. ShareSDKUI.bundle：分享菜单栏和分享编辑页面资源包。（如果自定义这些UI可直接移除）
      8. ShareSDKUI.framework：分享菜单栏和分享编辑页面。（如果自定义这些UI可直接移除）
 
-**  2、Demo（包含Objective-C、swift版示例Demo）**
+**2、Demo（包含Objective-C、swift版示例Demo）**
  
-**  3、doc（包含Objective-C、swift版集成文档和新功能介绍）**
+**3、doc（包含Objective-C、swift版集成文档和新功能介绍）**
 
