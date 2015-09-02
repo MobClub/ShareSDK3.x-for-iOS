@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CustomAuthView/CustomAuthView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CustomAPICall/CustomAPICall.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:IntegrationDemo/IntegrationDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SharingDemo/SharingDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ThirdPartyLogin/ThirdPartyLogin.xcodeproj">
+   </FileRef>
+</Workspace>
