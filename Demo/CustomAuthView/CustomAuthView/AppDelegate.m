@@ -22,7 +22,9 @@
      *  如果您使用的时服务端托管平台信息时，第二、四项参数可以传入nil，第三项参数则根据服务端托管平台来决定要连接的社交SDK。
      */
     [ShareSDK registerApp:@"iosv1101"
-          activePlatforms:@[@(SSDKPlatformTypeSinaWeibo)]
+          activePlatforms:@[@(SSDKPlatformTypeSinaWeibo),
+                            @(SSDKPlatformTypeInstagram),
+                            @(SSDKPlatformTypePocket)]
                  onImport:nil
           onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
               
@@ -35,10 +37,19 @@
                                               redirectUri:@"http://www.sharesdk.cn"
                                                  authType:SSDKAuthTypeBoth];
                       break;
+                  case SSDKPlatformTypeInstagram:
+                      [appInfo SSDKSetupInstagramByClientID:@"ff68e3216b4f4f989121aa1c2962d058"
+                                               clientSecret:@"1b2e82f110264869b3505c3fe34e31a1"
+                                                redirectUri:@"http://sharesdk.cn"];
+                      break;
+                  case SSDKPlatformTypePocket:
+                      [appInfo SSDKSetupPocketByConsumerKey:@"11496-de7c8c5eb25b2c9fcdc2b627"
+                                                redirectUri:@"pocketapp1234"
+                                                   authType:SSDKAuthTypeBoth];
+                      break;
                   default:
                       break;
               }
-              
           }];
     
     return YES;

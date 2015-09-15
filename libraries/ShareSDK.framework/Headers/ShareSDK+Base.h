@@ -47,6 +47,14 @@
 + (SSDKUser *)currentUser:(SSDKPlatformType)platformType;
 
 /**
+ *  设置当前授权用户
+ *
+ *  @param user         用户信息
+ *  @param platformType 平台类型
+ */
++ (void)setCurrentUser:(SSDKUser *)user forPlatformType:(SSDKPlatformType)platformType;
+
+/**
  *  分享平台授权
  *
  *  @param platformType         平台类型

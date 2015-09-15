@@ -63,6 +63,27 @@
 + (void)setCancelButtonImage:(UIImage *)image;
 
 /**
+ *  设置取消按钮的左边距
+ *
+ *  @param margin 边距
+ */
++ (void)setCancelButtonLeftMargin:(CGFloat)margin;
+
+/**
+ *  设置导航栏右边按钮
+ *
+ *  @param label 右边按钮
+ */
++ (void)setRightButton:(UIButton *)button;
+
+/**
+ *  设置导航栏右边按钮的右边距
+ *
+ *  @param margin 边距
+ */
++ (void)setRightButtonRightMargin:(CGFloat)margin;
+
+/**
  *  设置状态栏样式
  *
  *  @param style 样式

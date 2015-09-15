@@ -230,11 +230,10 @@
  *  设置豆瓣分享参数
  *
  *  @param text  文本
- *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，仅在type为Image时有效。
+ *  @param image 分享图片，当type为Image时，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。当type为WebPage时，只能为网络图片，可以传入NSString（图片路径）、NSURL（图片路径）。
  *  @param title 网页标题，仅在type为WebPage时有效。
  *  @param url   网页链接，仅在type为WebPage时有效。
  *  @param urlDesc 网页描述，仅在type为WebPage时有效。
- *  @param urlImage 网页图片，只能为网络图片，仅在type为WebPage时有效。
  *  @param type  分享类型，仅支持Text、Image、WebPage类型
  */
 - (void)SSDKSetupDouBanParamsByText:(NSString *)text
@@ -242,7 +241,6 @@
                               title:(NSString *)title
                                 url:(NSURL *)url
                             urlDesc:(NSString *)urlDesc
-                           urlImage:(NSURL *)urlImage
                                type:(SSDKContentType)type;
 
 /**
@@ -288,11 +286,10 @@
  *  设置GooglePlus分享参数
  *
  *  @param text       文本
- *  @param image      分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，仅在type为Image时有效。
+ *  @param image      分享图片，当type为Image时，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。当type为WebPage时，只能为网络图片，可以传入NSString（图片路径）、NSURL（图片路径）
  *  @param url        分享链接，仅在type为WebPage时有效
  *  @param title      链接标题，仅在type为WebPage并且设置deepLinkId时生效。
  *  @param urlDesc    链接描述，仅在type为WebPage并且设置deepLinkId时生效。
- *  @param urlImage   链接缩略图，仅在type为WebPage并且设置deepLinkId时生效。
  *  @param deepLinkId DeepLink标识， 仅在type为WebPage时有效
  *  @param type  分享类型，仅支持Text、Image、WebPage类型
  */
@@ -301,9 +298,52 @@
                                     url:(NSURL *)url
                                   title:(NSString *)title
                                 urlDesc:(NSString *)urlDesc
-                               urlImage:(NSURL *)urlImage
                              deepLinkId:(NSString *)deepLinkId
                                    type:(SSDKContentType)type;
 
+/**
+ *  设置Instagram分享参数
+ *
+ *  @param image     分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，仅在type为Image时有效。
+ *  @param point     分享菜单的显示位置，仅用于iPad版
+ */
+- (void)SSDKSetupInstagramByImage:(id)image
+                 menuDisplayPoint:(CGPoint)point;
+
+/**
+ *  设置LinkedIn分享参数
+ *
+ *  @param text       分享文本
+ *  @param image      分享图片，只能够是网络图片，传入类型可以为NSString（图片路径）， NSURL（图片路径）。
+ *  @param url        分享链接
+ *  @param title      标题
+ *  @param urlDesc    链接的相关描述
+ *  @param visibility 可见性，可以传入anyone或者connections-only，默认为anyone
+ *  @param type       分享类型,仅支持Text和WebPage
+ */
+- (void)SSDKSetupLinkedInParamsByText:(NSString *)text
+                                image:(id)image
+                                  url:(NSURL *)url
+                                title:(NSString *)title
+                              urlDesc:(NSString *)urlDesc
+                           visibility:(NSString *)visibility
+                                 type:(SSDKContentType)type;
+
+/**
+ *  设置Tumblr分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，只能够是网络图片，传入类型可以为NSString（图片路径）， NSURL（图片路径）。
+ *  @param url   分享链接
+ *  @param title 标题
+ *  @param blogName 博客名称，如果为nil，则默认分享到默认博客中。
+ *  @param type  分享类型，仅支持Text和Image
+ */
+- (void)SSDKSetupTumblrParamsByText:(NSString *)text
+                              image:(id)image
+                                url:(NSURL *)url
+                              title:(NSString *)title
+                           blogName:(NSString *)blogName
+                               type:(SSDKContentType)type;
 
 @end

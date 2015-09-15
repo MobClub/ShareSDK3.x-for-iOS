@@ -40,6 +40,7 @@
 
 //GooglePlus SDK头文件
 #import <GooglePlus/GooglePlus.h>
+//GooglePlus SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 //以下是GooglePlus SDK的依赖库
 //1、CoreMotion.framework
 //2、CoreLocation.framework
@@ -73,7 +74,10 @@
                             @(SSDKPlatformTypeRenren),
                             @(SSDKPlatformTypeKaixin),
                             @(SSDKPlatformTypeGooglePlus),
-                            @(SSDKPlatformTypePocket)
+                            @(SSDKPlatformTypePocket),
+                            @(SSDKPlatformTypeInstagram),
+                            @(SSDKPlatformTypeLinkedIn),
+                            @(SSDKPlatformTypeTumblr)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
@@ -86,7 +90,8 @@
                              [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
                              break;
                          case SSDKPlatformTypeSinaWeibo:
-                             [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                             //截止发布ShareSDK新版，新浪微博最新的SDK在iOS9真机下初始化很多时候都会直接崩溃。因而注释掉这行，即不使用新浪微博SDK。
+                             //[ShareSDKConnector connectWeibo:[WeiboSDK class]];
                              break;
                         case SSDKPlatformTypeRenren:
                              [ShareSDKConnector connectRenren:[RennClient class]];
@@ -163,6 +168,21 @@
                       [appInfo SSDKSetupPocketByConsumerKey:@"11496-de7c8c5eb25b2c9fcdc2b627"
                                                 redirectUri:@"pocketapp1234"
                                                    authType:SSDKAuthTypeBoth];
+                      break;
+                  case SSDKPlatformTypeInstagram:
+                      [appInfo SSDKSetupInstagramByClientID:@"ff68e3216b4f4f989121aa1c2962d058"
+                                               clientSecret:@"1b2e82f110264869b3505c3fe34e31a1"
+                                                redirectUri:@"http://sharesdk.cn"];
+                      break;
+                  case SSDKPlatformTypeLinkedIn:
+                      [appInfo SSDKSetupLinkedInByApiKey:@"ejo5ibkye3vo"
+                                               secretKey:@"cC7B2jpxITqPLZ5M"
+                                             redirectUrl:@"http://sharesdk.cn"];
+                      break;
+                  case SSDKPlatformTypeTumblr:
+                      [appInfo SSDKSetupTumblrByConsumerKey:@"2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM"
+                                             consumerSecret:@"3Rt0sPFj7u2g39mEVB3IBpOzKnM3JnTtxX2bao2JKk4VV1gtNo"
+                                                callbackUrl:@"http://sharesdk.cn"];
                       break;
                   default:
                       break;

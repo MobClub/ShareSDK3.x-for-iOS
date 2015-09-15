@@ -42,7 +42,9 @@
           onAuthorize:^(SSDKAuthorizeStateChangedHandler authorizeStateChangedHandler) {
               
               //当尚未授权或者授权过期时会回调此方法
-              [ShareSDK authorize:SSDKPlatformTypeSinaWeibo settings:nil onStateChanged:authorizeStateChangedHandler];
+              [ShareSDK authorize:SSDKPlatformTypeSinaWeibo
+                         settings:nil
+                   onStateChanged:authorizeStateChangedHandler];
               
           }
        onStateChanged:^(SSDKResponseState state, id data, NSError *error) {

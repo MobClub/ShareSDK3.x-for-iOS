@@ -37,6 +37,7 @@
 		DE11F3361B7F23CB00C33072 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F3351B7F23CB00C33072 /* AssetsLibrary.framework */; };
 		DE11F3381B7F23D800C33072 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F3371B7F23D800C33072 /* AddressBook.framework */; };
 		DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F33F1B7F26EC00C33072 /* ImageIO.framework */; };
+		DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */; };
 		DE771F251B7F150600E2728B /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE771F1F1B7F150600E2728B /* GoogleOpenSource.framework */; };
 		DE771F261B7F150600E2728B /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE771F201B7F150600E2728B /* GooglePlus.bundle */; };
 		DE771F271B7F150600E2728B /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE771F211B7F150600E2728B /* GooglePlus.framework */; };
@@ -103,6 +104,7 @@
 		DE11F33F1B7F26EC00C33072 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DE28450F1B58E7C400856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DE2845101B58E7C400856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DE771F1F1B7F150600E2728B /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		DE771F201B7F150600E2728B /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		DE771F211B7F150600E2728B /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */,
 				DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */,
 				DE11F3381B7F23D800C33072 /* AddressBook.framework in Frameworks */,
 				DE11F3361B7F23CB00C33072 /* AssetsLibrary.framework in Frameworks */,
@@ -182,15 +185,8 @@
 		D08BDA0E1B412A8400C73757 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DE11F33F1B7F26EC00C33072 /* ImageIO.framework */,
-				DE11F33D1B7F249600C33072 /* CoreFoundation.framework */,
-				DE11F33B1B7F23FF00C33072 /* CoreGraphics.framework */,
-				DE11F3391B7F23F100C33072 /* CoreImage.framework */,
-				DE11F3371B7F23D800C33072 /* AddressBook.framework */,
-				DE11F3351B7F23CB00C33072 /* AssetsLibrary.framework */,
-				DE11F3331B7F23AA00C33072 /* MediaPlayer.framework */,
-				DE11F3311B7F239800C33072 /* CoreLocation.framework */,
-				DE11F32F1B7F238700C33072 /* CoreMotion.framework */,
+				D08BDA0F1B412A8400C73757 /* Info.plist */,
+				DE5C7CB11BA56BEF00B7409B /* System lib */,
 				DE0F12E61B84594C00B6E543 /* Icon-72.png */,
 				DE0F12E71B84594C00B6E543 /* Icon-72@2x.png */,
 				DE0F12E81B84594C00B6E543 /* Icon.png */,
@@ -202,11 +198,6 @@
 				DE7943471B58B99F00D266E8 /* Default-568h@2x.png */,
 				DE7943481B58B99F00D266E8 /* Default.png */,
 				DE7943491B58B99F00D266E8 /* Default@2x.png */,
-				D07CF92C1B43C674003CAD7A /* JavaScriptCore.framework */,
-				D08BDA611B412B6500C73757 /* libz.dylib */,
-				D08BDA5F1B412B5E00C73757 /* libstdc++.dylib */,
-				D08BDA5D1B412B5800C73757 /* libicucore.dylib */,
-				D08BDA0F1B412A8400C73757 /* Info.plist */,
 				D08BDA101B412A8400C73757 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -275,6 +266,27 @@
 				D08BDA4C1B412B4600C73757 /* WXApiObject.h */,
 			);
 			path = WeChatSDK;
+			sourceTree = "<group>";
+		};
+		DE5C7CB11BA56BEF00B7409B /* System lib */ = {
+			isa = PBXGroup;
+			children = (
+				D07CF92C1B43C674003CAD7A /* JavaScriptCore.framework */,
+				D08BDA611B412B6500C73757 /* libz.dylib */,
+				D08BDA5F1B412B5E00C73757 /* libstdc++.dylib */,
+				D08BDA5D1B412B5800C73757 /* libicucore.dylib */,
+				DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */,
+				DE11F33F1B7F26EC00C33072 /* ImageIO.framework */,
+				DE11F33D1B7F249600C33072 /* CoreFoundation.framework */,
+				DE11F33B1B7F23FF00C33072 /* CoreGraphics.framework */,
+				DE11F3391B7F23F100C33072 /* CoreImage.framework */,
+				DE11F3371B7F23D800C33072 /* AddressBook.framework */,
+				DE11F3351B7F23CB00C33072 /* AssetsLibrary.framework */,
+				DE11F3331B7F23AA00C33072 /* MediaPlayer.framework */,
+				DE11F3311B7F239800C33072 /* CoreLocation.framework */,
+				DE11F32F1B7F238700C33072 /* CoreMotion.framework */,
+			);
+			name = "System lib";
 			sourceTree = "<group>";
 		};
 		DE771F1E1B7F150600E2728B /* GooglePlusSDK */ = {
@@ -428,9 +440,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -447,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -472,9 +486,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -485,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,6 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../libraries/extends/QQSDK",
@@ -507,7 +524,7 @@
 					"$(SRCROOT)/../../libraries/extends/RenRenSDK",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,6 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../libraries/extends/QQSDK",
@@ -534,7 +552,7 @@
 					"$(SRCROOT)/../../libraries/extends/RenRenSDK",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

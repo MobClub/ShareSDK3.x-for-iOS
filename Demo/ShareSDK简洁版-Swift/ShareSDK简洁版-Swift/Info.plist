@@ -2,12 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>sinaweibohd</string>
+		<string>sinaweibo</string>
+		<string>mqqwpa</string>
+		<string>instagram</string>
+		<string>fbauth2</string>
+		<string>renren</string>
+		<string>renrenios</string>
+		<string>renrenapi</string>
+		<string>rm226427com.mob.demoShareSDK</string>
+		<string>mqq</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqqopensdkapiV3</string>
+		<string>wtloginmqq2</string>
+		<string>mqqapi</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>sinaweibohdsso</string>
+		<string>sinaweibosso</string>
+		<string>wechat</string>
+		<string>weixin</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>lisk.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>com.mob.demoShareSDK</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -25,11 +52,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>pocketapp1234</string>
+				<string>tb2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM</string>
 				<string>QQ05FB8B52</string>
 				<string>wx4868b35061f87885</string>
 				<string>tencent100371282</string>
 				<string>fb107704292745179</string>
 				<string>wb568898243</string>
+				<string>rm226427com.mob.demoShareSDKSwift</string>
+				<string>com.mob.demoShareSDK</string>
 			</array>
 		</dict>
 	</array>

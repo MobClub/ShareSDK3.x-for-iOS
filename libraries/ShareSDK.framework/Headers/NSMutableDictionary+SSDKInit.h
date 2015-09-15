@@ -141,5 +141,38 @@
                           redirectUri:(NSString *)redirectUri
                              authType:(NSString *)authType;
 
+/**
+ *  设置Instagram应用信息
+ *
+ *  @param clientId     应用标识
+ *  @param clientSecret 应用密钥
+ *  @param redirectUri  回调地址
+ */
+- (void)SSDKSetupInstagramByClientID:(NSString *)clientId
+                        clientSecret:(NSString *)clientSecret
+                         redirectUri:(NSString *)redirectUri;
+
+/**
+ *  设置LinkedIn应用信息
+ *
+ *  @param apiKey      应用标识
+ *  @param secretKey   应用密钥
+ *  @param redirectUrl 回调地址
+ */
+- (void)SSDKSetupLinkedInByApiKey:(NSString *)apiKey
+                        secretKey:(NSString *)secretKey
+                      redirectUrl:(NSString *)redirectUrl;
+
+/**
+ *  设置Tumblr应用信息
+ *
+ *  @param consumerKey    应用标识
+ *  @param consumerSecret 应用密钥
+ *  @param callbackUrl    回调地址
+ */
+- (void)SSDKSetupTumblrByConsumerKey:(NSString *)consumerKey
+                      consumerSecret:(NSString *)consumerSecret
+                         callbackUrl:(NSString *)callbackUrl;
+
 
 @end

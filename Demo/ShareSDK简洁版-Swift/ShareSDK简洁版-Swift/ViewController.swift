@@ -33,11 +33,11 @@ class ViewController: UIViewController {
             switch state{
                 
                 case SSDKResponseState.Success:
-                                                println("分享成功")
+                                                print("分享成功")
                                                 let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
                                                 alert.show()
-                case SSDKResponseState.Fail:    println("分享失败,错误描述:\(error)")
-                case SSDKResponseState.Cancel:  println("分享取消")
+                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.Cancel:  print("分享取消")
             
             default:
                 break
@@ -62,9 +62,9 @@ class ViewController: UIViewController {
             
             switch state{
             
-                case SSDKResponseState.Success: println("分享成功")
-                case SSDKResponseState.Fail:    println("分享失败,错误描述:\(error)")
-                case SSDKResponseState.Cancel:  println("分享取消")
+                case SSDKResponseState.Success: print("分享成功")
+                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.Cancel:  print("分享取消")
             
             default:
                 break
@@ -90,9 +90,9 @@ class ViewController: UIViewController {
             
             switch state{
                 
-                case SSDKResponseState.Success: println("分享成功")
-                case SSDKResponseState.Fail:    println("分享失败,错误描述:\(error)")
-                case SSDKResponseState.Cancel:  println("分享取消")
+                case SSDKResponseState.Success: print("分享成功")
+                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.Cancel:  print("分享取消")
                 
             default:
                 break
@@ -109,9 +109,9 @@ class ViewController: UIViewController {
             
             switch state{
                 
-            case SSDKResponseState.Success: println("授权成功,用户信息为\(user)\n ----- 授权凭证为\(user.credential)")
-            case SSDKResponseState.Fail:    println("授权失败,错误描述:\(error)")
-            case SSDKResponseState.Cancel:  println("操作取消")
+            case SSDKResponseState.Success: print("授权成功,用户信息为\(user)\n ----- 授权凭证为\(user.credential)")
+            case SSDKResponseState.Fail:    print("授权失败,错误描述:\(error)")
+            case SSDKResponseState.Cancel:  print("操作取消")
                 
             default:
                 break
@@ -119,7 +119,5 @@ class ViewController: UIViewController {
         })
     }
 }
-
-
 
 

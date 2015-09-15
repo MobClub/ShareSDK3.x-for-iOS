@@ -535,6 +535,7 @@
 //        //删除和添加平台示例
 //        [sheet.directSharePlatforms removeObject:@(SSDKPlatformTypeWechat)];
 //        [sheet.directSharePlatforms addObject:@(SSDKPlatformTypeSinaWeibo)];
+    
 }
 
 #pragma mark 内容编辑界面
@@ -696,9 +697,7 @@
              [theController.tableView reloadData];
              
          }];
-
     }
-    
 }
 
 #pragma mark 屏幕截图分享
@@ -806,7 +805,10 @@
         __weak ViewController *theController = self;
         
         //开启摇一摇分享功能
-        [SSEShareHelper beginShakeShare:nil onEndSake:nil onWillShareHandler:^(SSEShareHandler shareHandler) {
+        [SSEShareHelper beginShakeShare:nil
+                              onEndSake:nil
+                     onWillShareHandler:^(SSEShareHandler shareHandler)
+        {
             
             NSLog(@"======开始分享");
             //构造分享参数
@@ -832,9 +834,6 @@
                 }
 
             }
-            
-            
-            
         }
                          onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
             
