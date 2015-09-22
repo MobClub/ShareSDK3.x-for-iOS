@@ -139,9 +139,21 @@ typedef NS_ENUM(NSUInteger, SSDKPlatformType){
      */
     SSDKPlatformTypePocket              = 26,
     /**
+     *  有道云笔记
+     */
+    SSDKPlatformTypeYouDaoNote          = 27,
+    /**
+     *  Flickr
+     */
+    SSDKPlatformTypeFlickr              = 34,
+    /**
      *  微信收藏
      */
     SSDKPlatformSubTypeWechatFav        = 37,
+    /**
+     *  WhatsApp
+     */
+    SSDKPlatformTypeWhatsApp            = 43,
     /**
      *  微信平台,
      */

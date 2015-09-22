@@ -346,4 +346,64 @@
                            blogName:(NSString *)blogName
                                type:(SSDKContentType)type;
 
+/**
+ *  设置Flickr分享参数
+ *
+ *  @param text        图片描述
+ *  @param image       分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param title       图片标题
+ *  @param tags        图片标签列表
+ *  @param isPublic    指定是否公开图片，NO 私有 YES 公开。
+ *  @param isFriend    指定好友是否可以查看图片，NO 不允许，YES 允许
+ *  @param isFamily    指定家人是否可以查看图片，NO 不允许，YES 允许
+ *  @param safetyLevel 安全级别。1 安全 2 辅导级 3 限制级。
+ *  @param contentType 1 照片、2 屏幕截图、3 其他。
+ *  @param hidden      1 照片、2 屏幕截图、3 其他。
+ */
+- (void)SSDKSetupFlickrParamsByText:(NSString *)text
+                              image:(id)image
+                              title:(NSString *)title
+                               tags:(NSArray *)tags
+                           isPublic:(BOOL)isPublic
+                           isFriend:(BOOL)isFriend
+                           isFamily:(BOOL)isFamily
+                        safetyLevel:(NSInteger)safetyLevel
+                        contentType:(NSInteger)contentType
+                             hidden:(NSInteger)hidden;
+
+/**
+ *  设置WhatsApp分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param audio 分享音频, 可以为NSData、NSString、NSURL（文件路径）、SSDKData、注：只允许指定本地资源
+ *  @param video 分享视频, 可以为NSData、NSString、NSURL（文件路径）、SSDKData、注：只允许指定本地资源
+ *  @param point 分享菜单的显示位置，仅用于iPad版
+ *  @param type  分享类型，仅支持Text、Image、Audio、Video
+ */
+- (void)SSDKSetupWhatsAppParamsByText:(NSString *)text
+                                image:(id)image
+                                audio:(id)audio
+                                video:(id)video
+                     menuDisplayPoint:(CGPoint)point
+                                 type:(SSDKContentType)type;
+
+/**
+ *  设置有道云笔记分享参数
+ *
+ *  @param text   分享文本
+ *  @param images 分享图片列表,传入参数可以为单张图片信息，也可以为一个NSArray，数组元素可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，
+ *                  如: @"http://mob.com/Assets/images/logo.png?v=20150320" 或 @[@"http://mob.com/Assets/images/logo.png?v=20150320"]
+ *  @param title  标题
+ *  @param source 来源
+ *  @param author 作者
+ *  @param notebook 笔记本
+ */
+- (void)SSDKSetupYouDaoNoteParamsByText:(NSString *)text
+                                 images:(id)images
+                                  title:(NSString *)title
+                                 source:(NSString *)source
+                                 author:(NSString *)author
+                               notebook:(NSString *)notebook;
+
 @end

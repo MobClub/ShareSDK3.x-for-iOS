@@ -174,5 +174,25 @@
                       consumerSecret:(NSString *)consumerSecret
                          callbackUrl:(NSString *)callbackUrl;
 
+/**
+ *  设置Flickr应用信息
+ *
+ *  @param apiKey    应用标识
+ *  @param apiSecret 应用密钥
+ */
+- (void)SSDKSetupFlickrByApiKey:(NSString *)apiKey
+                      apiSecret:(NSString *)apiSecret;
+
+/**
+ *  设置有道云笔记应用信息
+ *
+ *  @param consumerKey    应用标识
+ *  @param consumerSecret 应用密钥
+ *  @param redirectUri    回调地址
+ */
+- (void)SSDKSetupYouDaoNoteByConsumerKey:(NSString *)consumerKey
+                          consumerSecret:(NSString *)consumerSecret
+                             redirectUri:(NSString *)redirectUri;
+
 
 @end

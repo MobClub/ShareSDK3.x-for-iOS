@@ -77,7 +77,10 @@
                             @(SSDKPlatformTypePocket),
                             @(SSDKPlatformTypeInstagram),
                             @(SSDKPlatformTypeLinkedIn),
-                            @(SSDKPlatformTypeTumblr)
+                            @(SSDKPlatformTypeTumblr),
+                            @(SSDKPlatformTypeFlickr),
+                            @(SSDKPlatformTypeWhatsApp),
+                            @(SSDKPlatformTypeYouDaoNote)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
@@ -90,8 +93,7 @@
                              [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
                              break;
                          case SSDKPlatformTypeSinaWeibo:
-                             //截止发布ShareSDK新版，新浪微博最新的SDK在iOS9真机下初始化很多时候都会直接崩溃。因而注释掉这行，即不使用新浪微博SDK。
-                             //[ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                             [ShareSDKConnector connectWeibo:[WeiboSDK class]];
                              break;
                         case SSDKPlatformTypeRenren:
                              [ShareSDKConnector connectRenren:[RennClient class]];
@@ -183,6 +185,15 @@
                       [appInfo SSDKSetupTumblrByConsumerKey:@"2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM"
                                              consumerSecret:@"3Rt0sPFj7u2g39mEVB3IBpOzKnM3JnTtxX2bao2JKk4VV1gtNo"
                                                 callbackUrl:@"http://sharesdk.cn"];
+                      break;
+                  case SSDKPlatformTypeFlickr:
+                      [appInfo SSDKSetupFlickrByApiKey:@"33d833ee6b6fca49943363282dd313dd"
+                                             apiSecret:@"3a2c5b42a8fbb8bb"];
+                      break;
+                  case SSDKPlatformTypeYouDaoNote:
+                      [appInfo SSDKSetupYouDaoNoteByConsumerKey:@"dcde25dca105bcc36884ed4534dab940"
+                                                 consumerSecret:@"d98217b4020e7f1874263795f44838fe"
+                                                    redirectUri:@"http://www.sharesdk.cn/"];
                       break;
                   default:
                       break;

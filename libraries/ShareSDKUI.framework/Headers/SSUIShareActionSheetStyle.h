@@ -62,5 +62,9 @@
  */
 + (void)setSupportedInterfaceOrientation:(UIInterfaceOrientationMask)toInterfaceOrientation;
 
+/**
+ *  设置分享菜单栏状态栏风格
+ */
++ (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
 
 @end

@@ -100,4 +100,9 @@
  */
 + (void)setSupportedInterfaceOrientation:(UIInterfaceOrientationMask)toInterfaceOrientation;
 
+/**
+ *  设置分享编辑页面状态栏风格
+ */
++ (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
+
 @end

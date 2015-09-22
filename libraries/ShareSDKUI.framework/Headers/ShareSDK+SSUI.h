@@ -64,4 +64,5 @@ typedef void (^SSUIShareStateChangedHandler) (SSDKResponseState state,
  */
 + (void)setSupportedInterfaceOrientation:(UIInterfaceOrientationMask)toInterfaceOrientation;
 
+
 @end

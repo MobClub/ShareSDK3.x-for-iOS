@@ -21,23 +21,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         *  如果您使用的时服务端托管平台信息时，第二、四项参数可以传入nil，第三项参数则根据服务端托管平台来决定要连接的社交SDK。
         */
         ShareSDK.registerApp("iosv1101",
-            activePlatforms : [SSDKPlatformType.TypeSinaWeibo.rawValue,
-                               SSDKPlatformType.TypeTencentWeibo.rawValue,
-                               SSDKPlatformType.TypeDouBan.rawValue,
-                               SSDKPlatformType.TypeCopy.rawValue,
-                               SSDKPlatformType.TypeFacebook.rawValue,
-                               SSDKPlatformType.TypeTwitter.rawValue,
-                               SSDKPlatformType.TypeMail.rawValue,
-                               SSDKPlatformType.TypeSMS.rawValue,
-                               SSDKPlatformType.TypeWechat.rawValue,
-                               SSDKPlatformType.TypeQQ.rawValue,
-                               SSDKPlatformType.TypeRenren.rawValue,
-                               SSDKPlatformType.TypeKaixin.rawValue,
-                               SSDKPlatformType.TypeGooglePlus.rawValue,
-                               SSDKPlatformType.TypePocket.rawValue,
-                               SSDKPlatformType.TypeInstagram.rawValue,
-                               SSDKPlatformType.TypeTumblr.rawValue,
-                               SSDKPlatformType.TypeLinkedIn.rawValue],
+            activePlatforms :
+            [
+                SSDKPlatformType.TypeSinaWeibo.rawValue,
+                SSDKPlatformType.TypeTencentWeibo.rawValue,
+                SSDKPlatformType.TypeDouBan.rawValue,
+                SSDKPlatformType.TypeCopy.rawValue,
+                SSDKPlatformType.TypeFacebook.rawValue,
+                SSDKPlatformType.TypeTwitter.rawValue,
+                SSDKPlatformType.TypeMail.rawValue,
+                SSDKPlatformType.TypeSMS.rawValue,
+                SSDKPlatformType.TypeWechat.rawValue,
+                SSDKPlatformType.TypeQQ.rawValue,
+                SSDKPlatformType.TypeRenren.rawValue,
+                SSDKPlatformType.TypeKaixin.rawValue,
+                SSDKPlatformType.TypeGooglePlus.rawValue,
+                SSDKPlatformType.TypePocket.rawValue,
+                SSDKPlatformType.TypeInstagram.rawValue,
+                SSDKPlatformType.TypeTumblr.rawValue,
+                SSDKPlatformType.TypeLinkedIn.rawValue,
+                SSDKPlatformType.TypeWhatsApp.rawValue,
+                SSDKPlatformType.TypeYouDaoNote.rawValue,
+                SSDKPlatformType.TypeFlickr.rawValue
+            ],
             // onImport 里的代码,需要连接社交平台SDK时触发
             onImport: {(platform : SSDKPlatformType) -> Void in
                 switch platform
@@ -66,7 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                 redirectUri : "http://www.sharesdk.cn",
                                                    authType : SSDKAuthTypeBoth)
                   
-                    
                     case SSDKPlatformType.TypeWechat:
                         //设置微信应用信息
                          appInfo.SSDKSetupWeChatByAppId("wx4868b35061f87885", appSecret: "64020361b8ec4c99936c0e3999a9f249")
@@ -132,6 +137,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     case SSDKPlatformType.TypeTumblr:
                         //设置Tumblr应用信息
                         appInfo.SSDKSetupTumblrByConsumerKey("2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM", consumerSecret: "3Rt0sPFj7u2g39mEVB3IBpOzKnM3JnTtxX2bao2JKk4VV1gtNo", callbackUrl: "http://sharesdk.cn")
+                    
+                    case SSDKPlatformType.TypeFlickr:
+                        //设置Flickr应用信息
+                        appInfo.SSDKSetupFlickrByApiKey("33d833ee6b6fca49943363282dd313dd", apiSecret: "3a2c5b42a8fbb8bb")
+                    
+                    case SSDKPlatformType.TypeYouDaoNote:
+                        //设置YouDaoNote应用信息
+                        appInfo.SSDKSetupYouDaoNoteByConsumerKey("dcde25dca105bcc36884ed4534dab940", consumerSecret: "d98217b4020e7f1874263795f44838fe", redirectUri: "http://www.sharesdk.cn/")
+                    
                     default:
                         
                         break

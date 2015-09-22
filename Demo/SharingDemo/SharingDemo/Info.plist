@@ -4,6 +4,7 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>whatsapp</string>
 		<string>mqqwpa</string>
 		<string>instagram</string>
 		<string>fbauth2</string>
@@ -153,6 +154,15 @@
 				<true/>
 			</dict>
 			<key>sina.com.cn</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>youdao.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
