@@ -1,40 +1,73 @@
-#
-# Be sure to run `pod lib lint ShareSDK.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = "ShareSDK"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of ShareSDK."
+  s.name             = 'ShareSDK'
+  s.version          = "3.1.1"
+  s.summary          = 'ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.'
+  s.license          = 'Copyright © 2012-2015 mob.com'
+  s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.homepage         = 'http://www.mob.com'
+  s.source           = { :git => "https://github.com/ShareSDKPlatform/ShareSDK.git", :tag => s.version.to_s }
+  s.platform         = :ios
+  s.ios.deployment_target = "6.0"
+  s.frameworks       = 'UIKit', 'JavaScriptCore'
+  s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ShareSDK"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "JinghuangLiu" => "liujinghuang@icloud.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ShareSDK.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.default_subspecs    = 'libraries'
+  s.vendored_frameworks = 'libraries/ShareSDK.framework'
 
-  s.platform     = :ios, '7.0'
-  s.requires_arc = true
+  # 核心模块
+    s.subspec 'libraries' do |sp|
+        sp.vendored_frameworks = 'libraries/ShareSDKConnector.framework', 'libraries/ShareSDKExtension.framework', 'libraries/MOBFoundation.framework'
+        sp.libraries = 'icucore', 'z', 'stdc++'
+        sp.resources = 'ShareSDK.bundle'
+    end
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ShareSDK' => ['Pod/Assets/*.png']
-  }
+    # ShareSDK提供的UI
+    s.subspec 'ShareSDKUI' do |sp|
+        sp.vendored_frameworks = 'libraries/ShareSDKUI.framework'
+        sp.resources = 'libraries/ShareSDKUI.bundle'
+    end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    # 各个平台的SDK
+    s.subspec 'ShareSDKPlatforms' do |sp|
+        sp.default_subspecs = 'GooglePlus', 'QQ', 'SinaWeibo', 'WeChat', 'RenRen'
+    
+        # GooglePlus
+        sp.subspec 'GooglePlus' do |ssp|
+            ssp.vendored_frameworks = 'libraries/extends/GooglePlusSDK/GoogleOpenSource.framework', 'libraries/extends/GooglePlusSDK/GooglePlus.framework'
+            ssp.resource = 'libraries/extends/GooglePlusSDK/GooglePlus.bundle'
+            ssp.frameworks = 'CoreMotion', 'CoreLocation', 'MediaPlayer', 'AssetsLibrary', 'AddressBook'
+        end
+
+        # QQ
+        sp.subspec 'QQ' do |ssp|
+            ssp.vendored_frameworks = 'libraries/extends/QQSDK/TencentOpenAPI.framework'
+            ssp.resource = 'libraries/extends/QQSDK/TencentOpenApi_IOS_Bundle.bundle'
+            ssp.libraries = 'sqlite3'
+        end
+
+        # SinaWeibo
+        sp.subspec 'SinaWeibo' do |ssp|
+            ssp.vendored_libraries = "libraries/extends/SinaWeiboSDK/*.a"
+            ssp.resource = 'libraries/extends/SinaWeiboSDK/WeiboSDK.bundle'
+            ssp.frameworks = 'ImageIO', 'AdSupport'
+            ssp.libraries = 'sqlite3'
+            ssp.source_files = "libraries/extends/SinaWeiboSDK/*.{h,m}"
+            ssp.public_header_files = "libraries/extends/SinaWeiboSDK/*.h"
+        end
+
+        # WeChat
+        sp.subspec 'WeChat' do |ssp|
+            ssp.vendored_libraries = "libraries/extends/WeChatSDK/*.a"
+            ssp.source_files = "libraries/extends/WeChatSDK/*.{h,m}"
+            ssp.public_header_files = "libraries/extends/WeChatSDK/*.h"
+            ssp.libraries = 'sqlite3'
+        end
+
+        # RenRen
+        sp.subspec 'RenRen' do |ssp|
+            ssp.vendored_frameworks = 'libraries/extends/RenRenSDK/RennSDK.framework'
+            ssp.resource = 'libraries/extends/RenRenSDK/RennSDK.bundle'
+        end
+    end
 end

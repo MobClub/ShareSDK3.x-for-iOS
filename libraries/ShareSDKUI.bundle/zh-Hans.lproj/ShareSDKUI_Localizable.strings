@@ -46,6 +46,7 @@
 "ShareType_44" = "KakaoTalk";
 "ShareType_45" = "KakaoStory";
 
+"ShareType_996" = "Evernote";
 "ShareType_997" = "微信";
 "ShareType_998" = "QQ";
 "ShareType_999" = "任何平台";
@@ -58,3 +59,4 @@
 "InputTheShareContent" = "请输入分享内容";
 "Share" = "分享";
 "AuthorizeFailed" = "授权失败";
+

@@ -16,7 +16,7 @@
 "ShareType_9" = "Pengyou";
 "ShareType_10" = "Facebook";
 "ShareType_11" = "Twitter";
-"ShareType_12" = "Evernote";
+"ShareType_12" = "Yinxiang";
 "ShareType_13" = "Foursquare";
 "ShareType_14" = "Google+";
 "ShareType_15" = "Instagram";
@@ -46,6 +46,7 @@
 "ShareType_44" = "KakaoTalk";
 "ShareType_45" = "KakaoStory";
 
+"ShareType_996" = "Evernote";
 "ShareType_997" = "Wechat";
 "ShareType_998" = "QQ";
 "ShareType_999" = "Any";

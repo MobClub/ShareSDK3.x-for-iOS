@@ -37,6 +37,7 @@
 		DE11F3361B7F23CB00C33072 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F3351B7F23CB00C33072 /* AssetsLibrary.framework */; };
 		DE11F3381B7F23D800C33072 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F3371B7F23D800C33072 /* AddressBook.framework */; };
 		DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F33F1B7F26EC00C33072 /* ImageIO.framework */; };
+		DE247F1A1BB24BD200225F1B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE247F191BB24BD200225F1B /* AdSupport.framework */; };
 		DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */; };
 		DE771F251B7F150600E2728B /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE771F1F1B7F150600E2728B /* GoogleOpenSource.framework */; };
 		DE771F261B7F150600E2728B /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE771F201B7F150600E2728B /* GooglePlus.bundle */; };
@@ -102,6 +103,7 @@
 		DE11F33B1B7F23FF00C33072 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DE11F33D1B7F249600C33072 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		DE11F33F1B7F26EC00C33072 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		DE247F191BB24BD200225F1B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DE28450F1B58E7C400856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DE2845101B58E7C400856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -110,8 +112,8 @@
 		DE771F211B7F150600E2728B /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		DE771F231B7F150600E2728B /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
 		DE771F241B7F150600E2728B /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
-		DE79433D1B58B1DB00D266E8 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShareSDKUI.bundle; path = ../ShareSDKUI.bundle; sourceTree = "<group>"; };
-		DE79433E1B58B1DB00D266E8 /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShareSDKUI.framework; path = ../ShareSDKUI.framework; sourceTree = "<group>"; };
+		DE79433D1B58B1DB00D266E8 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
+		DE79433E1B58B1DB00D266E8 /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
 		DE7943471B58B99F00D266E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE7943481B58B99F00D266E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE7943491B58B99F00D266E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE247F1A1BB24BD200225F1B /* AdSupport.framework in Frameworks */,
 				DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */,
 				DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */,
 				DE11F3381B7F23D800C33072 /* AddressBook.framework in Frameworks */,
@@ -211,6 +214,8 @@
 				D08BDA4E1B412B4600C73757 /* ShareSDK.bundle */,
 				D08BDA4F1B412B4600C73757 /* ShareSDK.framework */,
 				D08BDA501B412B4600C73757 /* ShareSDKConnector.framework */,
+				DE79433D1B58B1DB00D266E8 /* ShareSDKUI.bundle */,
+				DE79433E1B58B1DB00D266E8 /* ShareSDKUI.framework */,
 				D08BDA511B412B4600C73757 /* ShareSDKExtension.framework */,
 			);
 			name = libraries;
@@ -222,8 +227,6 @@
 			children = (
 				DE771F1E1B7F150600E2728B /* GooglePlusSDK */,
 				DE771F221B7F150600E2728B /* RenRenSDK */,
-				DE79433D1B58B1DB00D266E8 /* ShareSDKUI.bundle */,
-				DE79433E1B58B1DB00D266E8 /* ShareSDKUI.framework */,
 				D08BDA361B412B4600C73757 /* QQSDK */,
 				D08BDA391B412B4600C73757 /* SinaWeiboSDK */,
 				D08BDA491B412B4600C73757 /* WeChatSDK */,
@@ -271,6 +274,7 @@
 		DE5C7CB11BA56BEF00B7409B /* System lib */ = {
 			isa = PBXGroup;
 			children = (
+				DE247F191BB24BD200225F1B /* AdSupport.framework */,
 				D07CF92C1B43C674003CAD7A /* JavaScriptCore.framework */,
 				D08BDA611B412B6500C73757 /* libz.dylib */,
 				D08BDA5F1B412B5E00C73757 /* libstdc++.dylib */,

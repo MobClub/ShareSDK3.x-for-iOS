@@ -4,6 +4,7 @@
 <dict>
 	<key>LSApplicationQueriesSchemes - 2</key>
 	<array>
+		<string>sinaweibosso</string>
 		<string>pocket-oauth-v1</string>
 		<string>instagram</string>
 		<string>sinaweibohdsso</string>

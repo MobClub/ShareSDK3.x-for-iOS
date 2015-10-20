@@ -26,6 +26,7 @@
 		D0CD2F1A1B40EE0A00089E2A /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CD2F0F1B40EE0A00089E2A /* ShareSDK.framework */; };
 		D0CD2F1B1B40EE0A00089E2A /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CD2F101B40EE0A00089E2A /* ShareSDKConnector.framework */; };
 		D0CD2F1C1B40EE0A00089E2A /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CD2F111B40EE0A00089E2A /* ShareSDKExtension.framework */; };
+		DE0C35961BC66CC2007F2ED8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0C35951BC66CC2007F2ED8 /* libsqlite3.dylib */; };
 		DE748C901B68E26700CC1B4B /* shareImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DE748C8F1B68E26700CC1B4B /* shareImg.png */; };
 		DE7943501B58B9C500D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79434D1B58B9C500D266E8 /* Default-568h@2x.png */; };
 		DE7943511B58B9C500D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79434E1B58B9C500D266E8 /* Default.png */; };
@@ -70,6 +71,7 @@
 		D0CD2F0F1B40EE0A00089E2A /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		D0CD2F101B40EE0A00089E2A /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
 		D0CD2F111B40EE0A00089E2A /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
+		DE0C35951BC66CC2007F2ED8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DE28450D1B58E7BA00856CA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DE28450E1B58E7BA00856CA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DE748C8F1B68E26700CC1B4B /* shareImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareImg.png; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0C35961BC66CC2007F2ED8 /* libsqlite3.dylib in Frameworks */,
 				D07CF92B1B43C65F003CAD7A /* JavaScriptCore.framework in Frameworks */,
 				D08BD9FF1B40F54B00C73757 /* libstdc++.dylib in Frameworks */,
 				D08BD9FD1B40F54500C73757 /* libz.dylib in Frameworks */,
@@ -132,6 +135,7 @@
 		D0CD2ECE1B40E3CB00089E2A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DE0C35951BC66CC2007F2ED8 /* libsqlite3.dylib */,
 				DE748C8F1B68E26700CC1B4B /* shareImg.png */,
 				D0CD2ED81B40E3CB00089E2A /* Main.storyboard */,
 				D0CD2EDB1B40E3CB00089E2A /* Images.xcassets */,

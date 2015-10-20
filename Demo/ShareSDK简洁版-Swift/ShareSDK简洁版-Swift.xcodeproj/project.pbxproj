@@ -23,6 +23,7 @@
 		C846E7B61B6B91B900522792 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C846E7B41B6B91B900522792 /* LaunchScreen.xib */; };
 		C846E8001B6B93C800522792 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C846E7FF1B6B93C800522792 /* ImageIO.framework */; };
 		C8FE00D91B6DF92500D7234C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FE00D81B6DF92500D7234C /* Main.storyboard */; };
+		DE247F1C1BB24C5F00225F1B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE247F1B1BB24C5F00225F1B /* AdSupport.framework */; };
 		DEE5BE141B9D95C90010621E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5BDF41B9D95C90010621E /* GoogleOpenSource.framework */; };
 		DEE5BE151B9D95C90010621E /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DEE5BDF51B9D95C90010621E /* GooglePlus.bundle */; };
 		DEE5BE161B9D95C90010621E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE5BDF61B9D95C90010621E /* GooglePlus.framework */; };
@@ -62,6 +63,7 @@
 		C846E7CC1B6B92AB00522792 /* ShareSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		C846E7FF1B6B93C800522792 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		C8FE00D81B6DF92500D7234C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DE247F1B1BB24C5F00225F1B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DEE5BDF41B9D95C90010621E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		DEE5BDF51B9D95C90010621E /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		DEE5BDF61B9D95C90010621E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE247F1C1BB24C5F00225F1B /* AdSupport.framework in Frameworks */,
 				C809D9821B846814002585D7 /* libsqlite3.dylib in Frameworks */,
 				DEE5BE1D1B9D95C90010621E /* libWeChatSDK.a in Frameworks */,
 				C809D9801B8467FA002585D7 /* AddressBook.framework in Frameworks */,
@@ -159,6 +162,7 @@
 		C846E79D1B6B91B900522792 = {
 			isa = PBXGroup;
 			children = (
+				DE247F1B1BB24C5F00225F1B /* AdSupport.framework */,
 				C846E7CC1B6B92AB00522792 /* ShareSDK-Bridging-Header.h */,
 				C846E7A81B6B91B900522792 /* ShareSDK简洁版-Swift */,
 				C846E7A71B6B91B900522792 /* Products */,

@@ -406,4 +406,33 @@
                                  author:(NSString *)author
                                notebook:(NSString *)notebook;
 
+/**
+ *  设置Line分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param type  分享类型，仅支持Text、Image
+ */
+- (void)SSDKSetupLineParamsByText:(NSString *)text
+                            image:(id)image
+                             type:(SSDKContentType)type;
+
+/**
+ *  设置印象笔记分享参数，注：中国版和国际版都是调用此接口进行分享参数设置。
+ *
+ *  @param text     分享文本
+ *  @param images   分享图片列表,传入参数可以为单张图片信息，也可以为一个NSArray，数组元素可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，
+ *                  如: @"http://mob.com/Assets/images/logo.png?v=20150320" 或 @[@"http://mob.com/Assets/images/logo.png?v=20150320"]
+ *  @param title    标题
+ *  @param notebook 笔记本GUID
+ *  @param tags     标签GUID列表
+ *  @param platformType 分享平台类型，仅支持输入SSDKPlatformTypeYinXiang和SSDKPlatformTypeEvernote
+ */
+- (void)SSDKSetupEvernoteParamsByText:(NSString *)text
+                               images:(id)images
+                                title:(NSString *)title
+                             notebook:(NSString *)notebook
+                                 tags:(NSArray *)tags
+                         platformType:(SSDKPlatformType)platformType;
+
 @end

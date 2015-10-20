@@ -4,6 +4,7 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>line</string>
 		<string>whatsapp</string>
 		<string>mqqwpa</string>
 		<string>instagram</string>

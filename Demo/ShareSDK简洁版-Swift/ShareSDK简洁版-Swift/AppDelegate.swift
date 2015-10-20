@@ -42,7 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 SSDKPlatformType.TypeLinkedIn.rawValue,
                 SSDKPlatformType.TypeWhatsApp.rawValue,
                 SSDKPlatformType.TypeYouDaoNote.rawValue,
-                SSDKPlatformType.TypeFlickr.rawValue
+                SSDKPlatformType.TypeFlickr.rawValue,
+                SSDKPlatformType.TypeLine.rawValue,
+                SSDKPlatformType.TypeYinXiang.rawValue,
+                SSDKPlatformType.TypeEvernote.rawValue
             ],
             // onImport 里的代码,需要连接社交平台SDK时触发
             onImport: {(platform : SSDKPlatformType) -> Void in
@@ -86,9 +89,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                     case SSDKPlatformType.TypeFacebook:
                         //设置Facebook应用信息，其中authType设置为只用SSO形式授权
-                         appInfo.SSDKSetupFacebookByAppKey("107704292745179",
+
+                         appInfo.SSDKSetupFacebookByApiKey("107704292745179",
                                                  appSecret : "38053202e1a5fe26c80c753071f0b573",
                                                   authType : SSDKAuthTypeBoth)
+                    
                  
                         
                     case SSDKPlatformType.TypeTwitter:
@@ -144,10 +149,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     case SSDKPlatformType.TypeYouDaoNote:
                         //设置YouDaoNote应用信息
-                        appInfo.SSDKSetupYouDaoNoteByConsumerKey("dcde25dca105bcc36884ed4534dab940", consumerSecret: "d98217b4020e7f1874263795f44838fe", redirectUri: "http://www.sharesdk.cn/")
+                        appInfo.SSDKSetupYouDaoNoteByConsumerKey("dcde25dca105bcc36884ed4534dab940", consumerSecret: "d98217b4020e7f1874263795f44838fe", oauthCallback: "http://www.sharesdk.cn/")
+                    
+                    //印象笔记分为国内版和国际版，注意区分平台
+                    //设置印象笔记（中国版）应用信息
+                    case SSDKPlatformType.TypeYinXiang:
+                        appInfo.SSDKSetupEvernoteByConsumerKey("sharesdk-7807", consumerSecret: "d05bf86993836004", sandbox: true)
+                    
+                    //设置印象笔记（国际版）应用信息
+                    case SSDKPlatformType.TypeEvernote:
+                        appInfo.SSDKSetupEvernoteByConsumerKey("sharesdk-7807", consumerSecret: "d05bf86993836004", sandbox: true)
+                    
                     
                     default:
-                        
                         break
                         }
         })

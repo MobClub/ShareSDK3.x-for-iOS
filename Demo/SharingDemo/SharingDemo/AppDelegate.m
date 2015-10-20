@@ -32,8 +32,9 @@
 //新浪微博SDK头文件
 #import "WeiboSDK.h"
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
-//以下是新郎微博SDK的依赖库：
+//以下是新浪微博SDK的依赖库：
 //ImageIO.framework
+//AdSupport.framework
 
 //人人SDK头文件
 #import <RennSDK/RennSDK.h>
@@ -47,6 +48,10 @@
 //3、MediaPlayer.framework
 //4、AssetsLibrary.framework
 //5、AddressBook.framework
+
+@interface AppDelegate ()<WXApiDelegate>
+
+@end
 
 @implementation AppDelegate
 
@@ -80,14 +85,19 @@
                             @(SSDKPlatformTypeTumblr),
                             @(SSDKPlatformTypeFlickr),
                             @(SSDKPlatformTypeWhatsApp),
-                            @(SSDKPlatformTypeYouDaoNote)
+                            @(SSDKPlatformTypeYouDaoNote),
+                            @(SSDKPlatformTypeLine),
+                            @(SSDKPlatformTypeYinXiang),
+                            @(SSDKPlatformTypeEvernote),
+                            @(SSDKPlatformTypeYinXiang)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
                      switch (platformType)
                      {
                          case SSDKPlatformTypeWechat:
-                             [ShareSDKConnector connectWeChat:[WXApi class]];
+//                             [ShareSDKConnector connectWeChat:[WXApi class]];
+                             [ShareSDKConnector connectWeChat:[WXApi class] delegate:self];
                              break;
                          case SSDKPlatformTypeQQ:
                              [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
@@ -126,7 +136,7 @@
                       break;
                   case SSDKPlatformTypeFacebook:
                       //设置Facebook应用信息，其中authType设置为只用SSO形式授权
-                      [appInfo SSDKSetupFacebookByAppKey:@"107704292745179"
+                      [appInfo SSDKSetupFacebookByApiKey:@"107704292745179"
                                                appSecret:@"38053202e1a5fe26c80c753071f0b573"
                                                 authType:SSDKAuthTypeBoth];
                       break;
@@ -193,7 +203,18 @@
                   case SSDKPlatformTypeYouDaoNote:
                       [appInfo SSDKSetupYouDaoNoteByConsumerKey:@"dcde25dca105bcc36884ed4534dab940"
                                                  consumerSecret:@"d98217b4020e7f1874263795f44838fe"
-                                                    redirectUri:@"http://www.sharesdk.cn/"];
+                                                  oauthCallback:@"http://www.sharesdk.cn/"];
+                      break;
+                      
+                  //印象笔记分为国内版和国际版，注意区分平台
+                  //设置印象笔记（中国版）应用信息
+                  case SSDKPlatformTypeYinXiang:
+                      
+                  //设置印象笔记（国际版）应用信息
+                  case SSDKPlatformTypeEvernote:
+                      [appInfo SSDKSetupEvernoteByConsumerKey:@"sharesdk-7807"
+                                               consumerSecret:@"d05bf86993836004"
+                                                      sandbox:YES];
                       break;
                   default:
                       break;
@@ -201,6 +222,11 @@
           }];
     
     return YES;
+}
+
+-(void)onResp:(BaseResp *)resp
+{
+    NSLog(@"The response of wechat.");
 }
 
 @end

@@ -75,7 +75,7 @@
                       break;
                   case SSDKPlatformTypeFacebook:
                       //设置Facebook应用信息，其中authType设置为只用Web形式授权
-                      [appInfo SSDKSetupFacebookByAppKey:@"107704292745179"
+                      [appInfo SSDKSetupFacebookByApiKey:@"107704292745179"
                                                appSecret:@"38053202e1a5fe26c80c753071f0b573"
                                                 authType:SSDKAuthTypeWeb];
                       break;
