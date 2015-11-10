@@ -53,4 +53,18 @@
  */
 + (void)connectGooglePlus:(Class)signClass shareClass:(Class)shareClass;
 
+/**
+ *  链接支付宝好友以供ShareSDK可以正常使用支付宝进行分享
+ *
+ *  @param apOpenApiClass 支付宝好友SDK中的类型，应先导入libAPOpenSdk.a，再将[APOpenApi class]传入到此参数。注：此参数不能为nil，否则会导致无法正常分享。
+ */
++ (void)connectAliPaySocial:(Class)apOpenApiClass;
+
+/**
+ *  链接KaKao以供ShareSDK可以正常使用KaKao进行分享
+ *
+ *  @param koSessionClass KaKao SDK中的类型，应先导入KakaoOpenSDK.framework，再将[KOSession class]传入到此参数。
+ */
++ (void)connectKaKao:(Class)koSessionClass;
+
 @end

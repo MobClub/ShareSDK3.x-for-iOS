@@ -349,7 +349,7 @@
                                            type:SSDKContentTypeImage];
         
         //进行分享
-        [ShareSDK share:SSDKPlatformTypeSinaWeibo
+        [ShareSDK share:SSDKPlatformSubTypeKakaoStory
              parameters:shareParams
          onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
              
@@ -390,9 +390,49 @@
                  default:
                      break;
              }
-             
          }];
     }
+    
+//    [ShareSDK authorize:SSDKPlatformSubTypeQZone
+//               settings:nil
+//         onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+//     {
+//         switch (state) {
+//             case SSDKResponseStateSuccess:
+//             {
+//                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"授权成功"
+//                                                                     message:nil
+//                                                                    delegate:nil
+//                                                           cancelButtonTitle:@"确定"
+//                                                           otherButtonTitles:nil];
+//                 [alertView show];
+//                 break;
+//             }
+//             case SSDKResponseStateFail:
+//             {
+//                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"授权失败"
+//                                                                     message:[NSString stringWithFormat:@"%@", error]
+//                                                                    delegate:nil
+//                                                           cancelButtonTitle:@"确定"
+//                                                           otherButtonTitles:nil];
+//                 [alertView show];
+//                 break;
+//             }
+//             case SSDKResponseStateCancel:
+//             {
+//                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"授权已取消"
+//                                                                     message:nil
+//                                                                    delegate:nil
+//                                                           cancelButtonTitle:@"确定"
+//                                                           otherButtonTitles:nil];
+//                 [alertView show];
+//                 break;
+//             }
+//             default:
+//                 break;
+//         }
+//         
+//     }];
 }
 
 #pragma mark 显示分享菜单
@@ -611,7 +651,6 @@
                       [theController showLoadingView:NO];
                       [theController.tableView reloadData];
                   }
-                  
               }];
     }
 }

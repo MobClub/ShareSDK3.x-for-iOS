@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ShareSDK3'
-  s.version          = "3.1.2"
+  s.version          = "3.1.3"
   s.summary          = 'ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.'
   s.license          = 'MIT'
   s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
@@ -68,6 +68,18 @@ Pod::Spec.new do |s|
         sp.subspec 'RenRen' do |ssp|
             ssp.vendored_frameworks = 'libraries/extends/RenRenSDK/RennSDK.framework'
             ssp.resource = 'libraries/extends/RenRenSDK/RennSDK.bundle'
+        end
+
+        # 支付宝（AliPaySocial）
+        sp.subspec 'AliPaySocial' do |ssp|
+            ssp.vendored_libraries = 'libraries/extends/APSocialSDK/*.a'
+            ssp.source_files = "libraries/extends/APSocialSDK/*.{h,m}"
+            ssp.public_header_files = "libraries/extends/APSocialSDK/*.h"
+        end
+
+        # Kakao
+        sp.subspec 'Kakao' do |ssp|
+            ssp.vendored_frameworks = 'libraries/extends/KaKaoSDK/KakaoOpenSDK.framework'
         end
     end
 end

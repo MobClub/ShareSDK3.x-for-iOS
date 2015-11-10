@@ -205,5 +205,31 @@
                         consumerSecret:(NSString *)consumerSecret
                                sandbox:(BOOL)sandbox;
 
+/**
+ *  设置支付宝好友应用信息
+ *
+ *  @param appId 应用标识
+ */
+- (void)SSDKSetupAliPaySocialByAppId:(NSString *)appId;
+
+/**
+ *  设置Pinterest应用信息
+ *
+ *  @param clientId 应用标识
+ */
+- (void)SSDKSetupPinterestByClientId:(NSString *)clientId;
+
+/**
+ *  设置KaKao应用信息
+ *
+ *  @param appKey   应用标识, 当使用客户端授权分享和授权时需要传入该标识
+ *  @param restApiKey  RestApi标识
+ *  @param reidrectUri 回调地址
+ *  @param authType     授权方式
+ */
+- (void)SSDKSetupKaKaoByAppKey:(NSString *)appKey
+                    restApiKey:(NSString *)restApiKey
+                   redirectUri:(NSString *)redirectUri
+                      authType:(NSString *)authType;
 
 @end

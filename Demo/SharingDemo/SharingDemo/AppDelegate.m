@@ -34,6 +34,7 @@
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 //以下是新浪微博SDK的依赖库：
 //ImageIO.framework
+//libsqlite3.dylib
 //AdSupport.framework
 
 //人人SDK头文件
@@ -48,6 +49,14 @@
 //3、MediaPlayer.framework
 //4、AssetsLibrary.framework
 //5、AddressBook.framework
+
+//Kakao SDK头文件
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+
+//支付宝SDK
+#import "APOpenAPI.h"
+
+#import <MOBFoundation/MOBFoundation.h>
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -89,7 +98,12 @@
                             @(SSDKPlatformTypeLine),
                             @(SSDKPlatformTypeYinXiang),
                             @(SSDKPlatformTypeEvernote),
-                            @(SSDKPlatformTypeYinXiang)
+                            @(SSDKPlatformTypeYinXiang),
+                            @(SSDKPlatformTypeAliPaySocial),
+                            @(SSDKPlatformTypePinterest),
+                            @(SSDKPlatformTypeKakao),
+                            @(SSDKPlatformSubTypeKakaoTalk),
+                            @(SSDKPlatformSubTypeKakaoStory)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
@@ -100,17 +114,24 @@
                              [ShareSDKConnector connectWeChat:[WXApi class] delegate:self];
                              break;
                          case SSDKPlatformTypeQQ:
-                             [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                             [ShareSDKConnector connectQQ:[QQApiInterface class]
+                                        tencentOAuthClass:[TencentOAuth class]];
                              break;
                          case SSDKPlatformTypeSinaWeibo:
                              [ShareSDKConnector connectWeibo:[WeiboSDK class]];
                              break;
-                        case SSDKPlatformTypeRenren:
+                         case SSDKPlatformTypeRenren:
                              [ShareSDKConnector connectRenren:[RennClient class]];
                              break;
-                        case SSDKPlatformTypeGooglePlus:
+                         case SSDKPlatformTypeGooglePlus:
                              [ShareSDKConnector connectGooglePlus:[GPPSignIn class]
                                                        shareClass:[GPPShare class]];
+                             break;
+                         case SSDKPlatformTypeKakao:
+                             [ShareSDKConnector connectKaKao:[KOSession class]];
+                             break;
+                         case SSDKPlatformTypeAliPaySocial:
+                             [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
                              break;
                          default:
                              break;
@@ -216,10 +237,23 @@
                                                consumerSecret:@"d05bf86993836004"
                                                       sandbox:YES];
                       break;
+                  case SSDKPlatformTypeKakao:
+                      [appInfo SSDKSetupKaKaoByAppKey:@"48d3f524e4a636b08d81b3ceb50f1003"
+                                           restApiKey:@"ac360fa50b5002637590d24108e6cb10"
+                                          redirectUri:@"http://www.mob.com/oauth"
+                                             authType:SSDKAuthTypeBoth];
+                      break;
+                  case SSDKPlatformTypeAliPaySocial:
+                      [appInfo SSDKSetupAliPaySocialByAppId:@"2015072400185895"];
+                      break;
+                  case SSDKPlatformTypePinterest:
+                      [appInfo SSDKSetupPinterestByClientId:@"4799618093317899411"];
+                      break;
                   default:
                       break;
               }
           }];
+    
     
     return YES;
 }

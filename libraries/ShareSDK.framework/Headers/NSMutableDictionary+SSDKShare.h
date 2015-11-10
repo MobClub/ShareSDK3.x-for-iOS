@@ -435,4 +435,78 @@
                                  tags:(NSArray *)tags
                          platformType:(SSDKPlatformType)platformType;
 
+/**
+ *  设置支付宝好友分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param title 标题
+ *  @param url   分享链接
+ *  @param type  分享类型，仅支持Text、Image、WebPage
+ */
+- (void)SSDKSetupAliPaySocialParamsByText:(NSString *)text
+                                    image:(id)image
+                                    title:(NSString *)title
+                                      url:(NSURL *)url
+                                     type:(SSDKContentType)type;
+
+/**
+ *  设置Pinterest分享参数
+ *
+ *  @param image    分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param desc     图片描述
+ *  @param url      链接地址
+ *  @param boardId  Board标识
+ */
+- (void)SSDKSetupPinterestParamsByImage:(id)image
+                                   desc:(NSString *)desc
+                                    url:(NSURL *)url
+                                boardId:(NSString *)boardId;
+
+/**
+ *  设置KaKao分享参数
+ *
+ *  @param text                 分享文本
+ *  @param images               分享图片列表,传入参数可以为单张图片信息，也可以为一个NSArray，数组元素可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，
+ *                  如: @"http://mob.com/Assets/images/logo.png?v=20150320" 或 @[@"http://mob.com/Assets/images/logo.png?v=20150320"]
+ *  @param title                分享链接标题，用于SSDKPlatformSubTypeKaKaoTalk分享
+ *  @param url                  分享链接
+ *  @param permission           查看权限：F 表示好友可以查看，A 表示任何人可以查看，M 表示私有，默认为A
+ *  @param enableShare          是否允许分享，当查看权限为好友查看时，该选项有效，可以设置内容是否允许再分享。
+ *  @PARAM imageSize            图片尺寸，，用于SSDKPlatformSubTypeKaKaoTalk分享时指定图片尺寸
+ *  @param appButtonTitle       应用按钮标题,用于SSDKPlatformSubTypeKaKaoTalk分享App类型时设置
+ *  @param androidExecParam     启动安卓版应用时传入参数，如果没有可以为nil，如:@{@"key" : @"value", @"key2" : @"value2"}。
+ *  @param andoridMarkParam     安卓版应用的下载地址，如果没有可以为nil
+ *  @param iphoneExecParams     启动iPhone应用时传入参数，如果没有可以为nil，如:@{@"key" : @"value", @"key2" : @"value2"}。
+ *  @param iphoneMarkParam      iPhone应用的下载地址，如果没有可以nil
+ *  @param ipadExecParams       iPad应用时传入参数，如果没有可以为nil，如:@{@"key" : @"value", @"key2" : @"value2"}。此参数仅用于Kakao Talk平台。
+ *  @param ipadMarkParam        iPad应用的下载地址，如果没有可以为nil，此参数仅用于Kakao Talk平台。
+ *  @param type                 分享类型，仅支持Text、Image、WebPage、App
+ *  @param platformSubType      子平台类型，只能传入SSDKPlatformSubTypeKaKaoTalk或者SSDKPlatformSubTypeKaKaoStory
+ *
+ *  分享类型，平台支持情况如下：
+ *              Kakao Talk                  Kakao Story
+ *
+ *  Text        仅支持客户端分享                应用内分享和客户端分享
+ *  Image       仅支持网络图片的客户端分享        仅支持应用内分享
+ *  WebPage     仅支持客户端分享                仅支持应用内分享
+ *  App         仅支持客户端分享                不支持
+ */
+- (void)SSDKSetupKaKaoParamsByText:(NSString *)text
+                            images:(id)images
+                             title:(NSString *)title
+                               url:(NSURL *)url
+                        permission:(NSString *)permission
+                       enableShare:(BOOL)enableShare
+                         imageSize:(CGSize)imageSize
+                    appButtonTitle:(NSString *)appButtonTitle
+                  androidExecParam:(NSDictionary *)androidExecParam
+                  androidMarkParam:(NSString *)androidMarkParam
+                  iphoneExecParams:(NSDictionary *)iphoneExecParams
+                   iphoneMarkParam:(NSString *)iphoneMarkParam
+                    ipadExecParams:(NSDictionary *)ipadExecParams
+                     ipadMarkParam:(NSString *)ipadMarkParam
+                              type:(SSDKContentType)type
+                forPlatformSubType:(SSDKPlatformType)platformSubType;
+
 @end

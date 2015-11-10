@@ -36,6 +36,6 @@
 /**
  *  好友用户信息列表
  */
-@property (nonatomic, retain) NSArray *users;
+@property (nonatomic, strong) NSArray *users;
 
 @end

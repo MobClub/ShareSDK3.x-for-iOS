@@ -39,6 +39,8 @@
 		DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F33F1B7F26EC00C33072 /* ImageIO.framework */; };
 		DE247F1A1BB24BD200225F1B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE247F191BB24BD200225F1B /* AdSupport.framework */; };
 		DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */; };
+		DE5E91281BE8A4550085B746 /* libAPOpenSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5E91261BE8A4550085B746 /* libAPOpenSdk.a */; };
+		DE5E91291BE8A4550085B746 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DE5E91271BE8A4550085B746 /* README.md */; };
 		DE771F251B7F150600E2728B /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE771F1F1B7F150600E2728B /* GoogleOpenSource.framework */; };
 		DE771F261B7F150600E2728B /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE771F201B7F150600E2728B /* GooglePlus.bundle */; };
 		DE771F271B7F150600E2728B /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE771F211B7F150600E2728B /* GooglePlus.framework */; };
@@ -49,6 +51,7 @@
 		DE79434A1B58B99F00D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943471B58B99F00D266E8 /* Default-568h@2x.png */; };
 		DE79434B1B58B99F00D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943481B58B99F00D266E8 /* Default.png */; };
 		DE79434C1B58B99F00D266E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943491B58B99F00D266E8 /* Default@2x.png */; };
+		DEF4D7931BE8A575001E5139 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF4D7921BE8A575001E5139 /* KakaoOpenSDK.framework */; };
 		DEFF89AD1B58DD2F00AEA8B0 /* shareImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DEFF89AC1B58DD2F00AEA8B0 /* shareImg.png */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +110,10 @@
 		DE28450F1B58E7C400856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DE2845101B58E7C400856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DE5E91241BE8A4550085B746 /* APOpenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APOpenAPI.h; sourceTree = "<group>"; };
+		DE5E91251BE8A4550085B746 /* APOpenAPIObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APOpenAPIObject.h; sourceTree = "<group>"; };
+		DE5E91261BE8A4550085B746 /* libAPOpenSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPOpenSdk.a; sourceTree = "<group>"; };
+		DE5E91271BE8A4550085B746 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE771F1F1B7F150600E2728B /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		DE771F201B7F150600E2728B /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		DE771F211B7F150600E2728B /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
@@ -117,6 +124,7 @@
 		DE7943471B58B99F00D266E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE7943481B58B99F00D266E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE7943491B58B99F00D266E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DEF4D7921BE8A575001E5139 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		DEFF89AC1B58DD2F00AEA8B0 /* shareImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +142,7 @@
 				DE11F3321B7F239800C33072 /* CoreLocation.framework in Frameworks */,
 				DE11F3301B7F238700C33072 /* CoreMotion.framework in Frameworks */,
 				D07CF92D1B43C674003CAD7A /* JavaScriptCore.framework in Frameworks */,
+				DE5E91281BE8A4550085B746 /* libAPOpenSdk.a in Frameworks */,
 				D08BDA621B412B6500C73757 /* libz.dylib in Frameworks */,
 				DE771F251B7F150600E2728B /* GoogleOpenSource.framework in Frameworks */,
 				DE771F291B7F150600E2728B /* RennSDK.framework in Frameworks */,
@@ -141,6 +150,7 @@
 				D08BDA5E1B412B5800C73757 /* libicucore.dylib in Frameworks */,
 				D08BDA5C1B412B4600C73757 /* ShareSDKExtension.framework in Frameworks */,
 				D08BDA521B412B4600C73757 /* TencentOpenAPI.framework in Frameworks */,
+				DEF4D7931BE8A575001E5139 /* KakaoOpenSDK.framework in Frameworks */,
 				D08BDA581B412B4600C73757 /* MOBFoundation.framework in Frameworks */,
 				D08BDA5B1B412B4600C73757 /* ShareSDKConnector.framework in Frameworks */,
 				DE771F271B7F150600E2728B /* GooglePlus.framework in Frameworks */,
@@ -225,6 +235,8 @@
 		D08BDA351B412B4600C73757 /* extends */ = {
 			isa = PBXGroup;
 			children = (
+				DEF4D7911BE8A575001E5139 /* KaKaoSDK */,
+				DE5E91231BE8A4550085B746 /* APSocialSDK */,
 				DE771F1E1B7F150600E2728B /* GooglePlusSDK */,
 				DE771F221B7F150600E2728B /* RenRenSDK */,
 				D08BDA361B412B4600C73757 /* QQSDK */,
@@ -293,6 +305,17 @@
 			name = "System lib";
 			sourceTree = "<group>";
 		};
+		DE5E91231BE8A4550085B746 /* APSocialSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DE5E91241BE8A4550085B746 /* APOpenAPI.h */,
+				DE5E91251BE8A4550085B746 /* APOpenAPIObject.h */,
+				DE5E91261BE8A4550085B746 /* libAPOpenSdk.a */,
+				DE5E91271BE8A4550085B746 /* README.md */,
+			);
+			path = APSocialSDK;
+			sourceTree = "<group>";
+		};
 		DE771F1E1B7F150600E2728B /* GooglePlusSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +333,14 @@
 				DE771F241B7F150600E2728B /* RennSDK.framework */,
 			);
 			path = RenRenSDK;
+			sourceTree = "<group>";
+		};
+		DEF4D7911BE8A575001E5139 /* KaKaoSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DEF4D7921BE8A575001E5139 /* KakaoOpenSDK.framework */,
+			);
+			path = KaKaoSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +429,7 @@
 			files = (
 				D0CA76BB1B4267A100CFD580 /* AuthListViewController.m in Sources */,
 				D08BDA171B412A8400C73757 /* ViewController.m in Sources */,
+				DE5E91291BE8A4550085B746 /* README.md in Sources */,
 				D08BDA141B412A8400C73757 /* AppDelegate.m in Sources */,
 				D08BDA111B412A8400C73757 /* main.m in Sources */,
 			);
@@ -520,12 +552,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
 				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../libraries/extends/QQSDK",
 					"$(SRCROOT)/../../libraries",
 					"$(SRCROOT)/../../libraries/extends/GooglePlusSDK",
 					"$(SRCROOT)/../../libraries/extends/RenRenSDK",
+					"$(SRCROOT)/../../libraries/extends/KaKaoSDK",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -534,6 +568,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../libraries/extends/SinaWeiboSDK",
 					"$(SRCROOT)/../../libraries/extends/WeChatSDK",
+					"$(SRCROOT)/../../libraries/extends/APSocialSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,6 +589,7 @@
 					"$(SRCROOT)/../../libraries",
 					"$(SRCROOT)/../../libraries/extends/GooglePlusSDK",
 					"$(SRCROOT)/../../libraries/extends/RenRenSDK",
+					"$(SRCROOT)/../../libraries/extends/KaKaoSDK",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -562,6 +598,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../libraries/extends/SinaWeiboSDK",
 					"$(SRCROOT)/../../libraries/extends/WeChatSDK",
+					"$(SRCROOT)/../../libraries/extends/APSocialSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
