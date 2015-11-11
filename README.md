@@ -18,4 +18,6 @@
  
 **3、doc（包含Objective-C、swift版集成文档和新功能介绍）**
 
-官方下载地址和文档：http://www.mob.com/#/downloadDetail/ShareSDK/ios
+官方下载地址：http://www.mob.com/#/downloadDetail/ShareSDK/ios
+集成文档地址：http://wiki.mob.com/ios简洁版快速集成/
+使用CocoaPods集成ShareSDK文档地址：http://wiki.mob.com/使用cocoapods集成sharesdk/
