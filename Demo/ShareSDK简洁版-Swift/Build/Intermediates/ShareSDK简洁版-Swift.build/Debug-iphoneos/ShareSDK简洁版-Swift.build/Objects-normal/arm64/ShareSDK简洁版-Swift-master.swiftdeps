@@ -1,6 +1,0 @@
-version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
-options: "deb82f8772c23fd8e1c33c1ddbfad8e1"
-build_time: [501834395, 420249000]
-inputs:
-  "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/ShareSDK\u7B80\u6D01\u7248-Swift/AppDelegate.swift": [498108128, 0]
-  "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/ShareSDK\u7B80\u6D01\u7248-Swift/ViewController.swift": [495647438, 0]
