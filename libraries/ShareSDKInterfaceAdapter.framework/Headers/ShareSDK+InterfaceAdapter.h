@@ -714,6 +714,28 @@
 
 ///#begin zh-cn
 /**
+ *	@brief	链接Pinterest,此平台需要引用PinterestConnection.framework、Pinterest.framework框架。
+ *          http://developers.pinterest.com/上注册应用，并将相关信息填写以下字段。
+ *
+ *	@param 	clientId 	应用Key
+ *	@param 	pinterestCls 	Pinterest类型，应先导入Pinterest.framework，然后在此参数中传入
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize Pinterest platform, This platform need import PinterestConnection.framework and Pinterest.framework
+ *          Go to http://developers.pinterest.com/ register app，Then fill in the relevant information into the field below
+ *
+ *	@param 	clientId 	Client id.
+ *	@param 	pinterestCls 	Pinterest class，You should import Pinterest.framework，Then passed this parameter.
+ */
+///#end
++ (void)connectPinterestWithClientId:(NSString *)clientId
+                        pinterestCls:(Class)pinterestCls;
+
+
+///#begin zh-cn
+/**
  *	@brief	链接Flickr,此平台需要引用FlickrConnection.framework框架。
  *          http://www.flickr.com/services/apps/create/上注册应用，并将相关信息填写以下字段。
  *
@@ -759,6 +781,28 @@
 
 ///#begin zh-cn
 /**
+ *	@brief	连接Dropbox，此平台需要引用DropboxConnection.framework框架
+ *          https://www.dropbox.com/developers/apps上注册应用，并将相关信息填写以下字段。
+ *
+ *	@param 	appKey 	应用Key
+ *	@param 	appSecret 	应用密钥
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize Dropbox platform，This platform need import DropboxConnection.framework
+ *          Go to https://www.dropbox.com/developers/apps register app，Then fill in the relevant information into the field below
+ *
+ *	@param 	appKey 	App key
+ *	@param 	appSecret 	App secret
+ */
+///#end
++ (void)connectDropboxWithAppKey:(NSString *)appKey
+                       appSecret:(NSString *)appSecret
+                     callbackUrl:(NSString *)callbackUrl;
+
+///#begin zh-cn
+/**
  *	@brief	连接Instagram,此平台需要引用InstagramConnection.framework框架
  *          http://instagram.com/developer/clients/register/上注册应用，并将相关信息填写以下字段
  *
@@ -780,6 +824,27 @@
 + (void)connectInstagramWithClientId:(NSString *)clientId
                         clientSecret:(NSString *)clientSecret
                          redirectUri:(NSString *)redirectUri;
+
+///#begin zh-cn
+/**
+ *	@brief	链接VKontakte，此平台需要引用VKontakteConnection.framework框架
+ *          http://vk.com/editapp?act=create上注册应用，并将相关信息填写以下字段
+ *
+ *	@param 	appKey 	应用Key
+ *	@param 	secretKey 	应用密钥
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize VKontakte platform，This platform need import VKontakteConnection.framework
+ *          Go to http://vk.com/editapp?act=create register app，Then fill in the relevant information into the field below
+ *
+ *	@param 	appKey 	App key
+ *	@param 	secretKey 	Secret key
+ */
+///#end
++ (void)connectVKontakteWithAppKey:(NSString *)appKey
+                         secretKey:(NSString *)secretKey;
 
 ///#begin zh-cn
 /**
@@ -914,6 +979,34 @@
 
 ///#begin zh-cn
 /**
+ *	@brief	链接明道应用以使用相关功能，此应用需要引用MingDaoConnection.framework
+ *          http://open.mingdao.com/上注册应用，并将相关信息填写以下字段。
+ *
+ *  @since  ver2.9.0
+ *
+ *	@param 	appKey 	应用Key
+ *	@param 	appSecret 	应用密钥
+ *	@param 	redirectUri 	回调地址
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize MingDao platform，This platform need import MingDaoConnection.framework
+ *          Go to http://open.mingdao.com/ register app，Then fill in the relevant information into the field below
+ *
+ *  @since  ver2.9.0
+ *
+ *	@param 	appKey 	App key
+ *	@param 	appSecret 	App secret
+ *	@param 	redirectUri 	Redirect URI
+ */
+///#end
++ (void)connectMingDaoWithAppKey:(NSString *)appKey
+                       appSecret:(NSString *)appSecret
+                     redirectUri:(NSString *)redirectUri;
+
+///#begin zh-cn
+/**
  *	@brief	链接Line以使用相关功能。
  *
  *  @since  ver2.9.0
@@ -945,6 +1038,44 @@
  */
 ///#end
 + (void)connectWhatsApp;
+
+///#begin zh-cn
+/**
+ *	@brief	链接支付宝朋友以使用相关功能
+ *
+ *  @since  ver2.11.2
+ *
+ *	@param 	appId               应用ID
+ *  @param 	openApiCls          头文件导入文件"APOpenAPI.h",将[APOpenAPI class]传入此参数
+ *  @param 	mediaMessageCls     将[APMediaMessage class]传入此参数
+ *  @param 	shareTextObjectCls  将[APShareTextObject class]传入此参数
+ *  @param 	shareImgObjectCls   将[APShareImageObject class]传入此参数
+ *  @param 	webObjectCls        将[APShareWebObject class]传入此参数
+ *  @param 	sendMsgToAPReqCls   将[APSendMessageToAPReq class]传入此参数
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize YiXin Session platform.
+ *
+ *  @since  ver2.11.2
+ *
+ *	@param 	appId 	App id
+ *  @param 	openApiCls          import "APOpenAPI.h",then passed [APOpenAPI class] this parameter.
+ *  @param 	mediaMessageCls     passed [APMediaMessage class] this parameter
+ *  @param 	shareTextObjectCls  passed [APShareTextObject class] this parameter
+ *  @param 	shareImgObjectCls   passed [APShareImageObject class] this parameter
+ *  @param 	webObjectCls        passed [APShareWebObject class] this parameter
+ *  @param 	sendMsgToAPReqCls   passed [APSendMessageToAPReq class] this parameter
+ */
+///#end
++ (void)connectAliPaySocialWithAppID:(NSString*)appId
+                          openApiCls:(Class)openApiCls
+                     mediaMessageCls:(Class)mediaMessageCls
+                  shareTextObjectCls:(Class)shareTextObjectCls
+                   shareImgObjectCls:(Class)shareImgObjectCls
+                   shareWebObjectCls:(Class)webObjectCls
+               sendMessageToAPReqCls:(Class)sendMsgToAPReqCls;
 
 ///#begin zh-cn
 /**
@@ -1086,6 +1217,43 @@
 ///#end
 + (void)importGooglePlusClass:(Class)signInClass
                    shareClass:(Class)shareClass;
+
+///#begin zh-cn
+/**
+ *	@brief	导入支付宝朋友所需要的类型，如果不使用支付宝朋友可以不调用
+ *
+ *  @since  ver2.11.2
+ *
+ *  @param 	openApiCls          头文件导入文件"APOpenAPI.h",将[APOpenAPI class]传入此参数
+ *  @param 	mediaMessageCls     将[APMediaMessage class]传入此参数
+ *  @param 	shareTextObjectCls  将[APShareTextObject class]传入此参数
+ *  @param 	shareImgObjectCls   将[APShareImageObject class]传入此参数
+ *  @param 	webObjectCls        将[APShareWebObject class]传入此参数
+ *  @param 	sendMsgToAPReqCls   将[APSendMessageToAPReq class]传入此参数
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Import Alipay classes，If you not use the Alipay platform when not in call
+ *
+ *  @since  ver2.11.2
+ *
+ *  @param 	openApiCls          import "APOpenAPI.h",then passed [APOpenAPI class] this parameter.
+ *  @param 	mediaMessageCls     passed [APMediaMessage class] this parameter
+ *  @param 	shareTextObjectCls  passed [APShareTextObject class] this parameter
+ *  @param 	shareImgObjectCls   passed [APShareImageObject class] this parameter
+ *  @param 	webObjectCls        passed [APShareWebObject class] this parameter
+ *  @param 	sendMsgToAPReqCls   passed [APSendMessageToAPReq class] this parameter
+ */
+///#end
+
++ (void)importAlipayOpenApiCls:(Class)openApiCls
+               mediaMessageCls:(Class)mediaMessageCls
+            shareTextObjectCls:(Class)shareTextObjectCls
+             shareImgObjectCls:(Class)shareImgObjectCls
+             shareWebObjectCls:(Class)webObjectCls
+         sendMessageToAPReqCls:(Class)sendMsgToAPReqCls;
+
 
 #pragma mark 辅助
 

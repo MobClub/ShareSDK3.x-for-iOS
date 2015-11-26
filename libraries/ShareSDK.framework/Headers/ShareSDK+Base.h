@@ -140,5 +140,26 @@ onStateChanged:(SSDKShareStateChangedHandler)stateChangedHandler;
     onAuthorize:(SSDKNeedAuthorizeHandler)authorizeHandler
  onStateChanged:(SSDKCallApiStateChangedHandler)stateChangedHandler;
 
+/**
+ *  调用分享平台API
+ *
+ *  @since v3.1.4
+ *
+ *  @param type                平台类型
+ *  @param url                 接口请求地址
+ *  @param method              请求方式：GET/POST/DELETE
+ *  @param parameters          请求参数
+ *  @param headers             请求头
+ *  @param authorizeHandler    授权处理器
+ *  @param stateChangedHandler 状态变更回调处理
+ */
++ (void)callApi:(SSDKPlatformType)type
+            url:(NSString *)url
+         method:(NSString *)method
+     parameters:(NSMutableDictionary *)parameters
+        headers:(NSMutableDictionary *)headers
+    onAuthorize:(SSDKNeedAuthorizeHandler)authorizeHandler
+ onStateChanged:(SSDKCallApiStateChangedHandler)stateChangedHandler;
+
 
 @end

@@ -509,4 +509,48 @@
                               type:(SSDKContentType)type
                 forPlatformSubType:(SSDKPlatformType)platformSubType;
 
+/**
+ *  设置Dropbox分享参数
+ *
+ *  @param attachment 分享附件。附可以为NSData、UIImage、NSString、NSURL（文件路径）、SSDKData、SSDKImage，注：只允许指定本地资源
+ */
+- (void)SSDKSetupDropboxParamsByAttachment:(id)attachment;
+
+/**
+ *  设置VKontakte分享参数
+ *
+ *  @param text        分享文本
+ *  @param images      分享图片列表,传入参数可以为单张图片信息，也可以为一个NSArray，数组元素可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage，
+ *                  如: @"http://mob.com/Assets/images/logo.png?v=20150320" 或 @[@"http://mob.com/Assets/images/logo.png?v=20150320"]
+ *  @param url         分享的链接
+ *  @param groupId     圈子标识，默认为nil，分享到share圈子
+ *  @param friendsOnly 是否为好友可见，默认为NO，表示所有人可以看到。
+ *  @param latitude    纬度
+ *  @param longitude   经度
+ *  @param type        分享类型，仅支持Text、Image、WebPage
+ */
+- (void)SSDKSetupVKontakteParamsByText:(NSString *)text
+                                images:(id)images
+                                   url:(NSURL *)url
+                               groupId:(NSString *)groupId
+                           friendsOnly:(BOOL)friendsOnly
+                              latitude:(double)latitude
+                             longitude:(double)longitude
+                                  type:(SSDKContentType)type;
+
+/**
+ *  设置明道分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。分享WebPage时需要指定为网络图片
+ *  @param url   分享链接，仅在WebPage时有效。
+ *  @param title   标题，仅在WebPage时有效
+ *  @param type  分享类型，仅支持Text、Image、WebPage
+ */
+- (void)SSDKSetupMingDaoParamsByText:(NSString *)text
+                               image:(id)image
+                                 url:(NSURL *)url
+                               title:(NSString *)title
+                                type:(SSDKContentType)type;
+
 @end

@@ -103,7 +103,10 @@
                             @(SSDKPlatformTypePinterest),
                             @(SSDKPlatformTypeKakao),
                             @(SSDKPlatformSubTypeKakaoTalk),
-                            @(SSDKPlatformSubTypeKakaoStory)
+                            @(SSDKPlatformSubTypeKakaoStory),
+                            @(SSDKPlatformTypeDropbox),
+                            @(SSDKPlatformTypeVKontakte),
+                            @(SSDKPlatformTypeMingDao)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
@@ -249,6 +252,19 @@
                   case SSDKPlatformTypePinterest:
                       [appInfo SSDKSetupPinterestByClientId:@"4799618093317899411"];
                       break;
+                  case SSDKPlatformTypeDropbox:
+                      [appInfo SSDKSetupDropboxByAppKey:@"i5vw2mex1zcgjcj"
+                                              appSecret:@"3i9xifsgb4omr0s"
+                                          oauthCallback:@"https://www.sharesdk.cn"];
+                      break;
+                  case SSDKPlatformTypeVKontakte:
+                      [appInfo SSDKSetupVKontakteByApplicationId:@"3921561"
+                                                       secretKey:@"6Qf883ukLDyz4OBepYF1"];
+                      break;
+                  case SSDKPlatformTypeMingDao:
+                      [appInfo SSDKSetupMingDaoByAppKey:@"EEEE9578D1D431D3215D8C21BF5357E3"
+                                              appSecret:@"5EDE59F37B3EFA8F65EEFB9976A4E933"
+                                            redirectUri:@"http://sharesdk.cn"];
                   default:
                       break;
               }

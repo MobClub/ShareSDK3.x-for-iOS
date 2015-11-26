@@ -155,9 +155,21 @@ typedef NS_ENUM(NSUInteger, SSDKPlatformType){
      */
     SSDKPlatformTypeFlickr              = 34,
     /**
+     *  Dropbox
+     */
+    SSDKPlatformTypeDropbox             = 35,
+    /**
+     *  VKontakte
+     */
+    SSDKPlatformTypeVKontakte           = 36,
+    /**
      *  微信收藏
      */
     SSDKPlatformSubTypeWechatFav        = 37,
+    /**
+     *  明道
+     */
+    SSDKPlatformTypeMingDao             = 41,
     /**
      *  Line
      */

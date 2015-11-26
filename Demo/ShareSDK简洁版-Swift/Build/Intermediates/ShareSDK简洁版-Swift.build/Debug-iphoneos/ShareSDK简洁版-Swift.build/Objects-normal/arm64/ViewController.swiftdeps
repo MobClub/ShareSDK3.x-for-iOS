@@ -1,0 +1,624 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController"
+provides-member:
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", ""]
+provides-dynamic-lookup:
+- "ShowShareMenu"
+- "ShowShareEditor"
+- "viewDidLoad"
+- "OAuth"
+- "SimpleShare"
+depends-top-level:
+- !private "NSURL"
+- !private "SSDKResponseState"
+- !private "AnyObject"
+- !private "UIImage"
+- "ViewController"
+- "UIViewController"
+- !private "SSDKPlatformType"
+- !private "print"
+- !private "NSError"
+- !private "SSDKUser"
+- !private "StringLiteralType"
+- !private "NSObject"
+- !private "UIAlertView"
+- "UIButton"
+- !private "ShareSDK"
+- !private "SSDKContentEntity"
+- !private "Void"
+- !private "NSMutableDictionary"
+- !private "SSDKContentType"
+depends-member:
+- !private ["PSs9AnyObject", "NSMutableDictionary"]
+- !private ["PSs9AnyObject", "NSURL"]
+- ["PSs9AnyObject", "OAuth"]
+- !private ["PSs9AnyObject", "SSDKContentType"]
+- !private ["PSs9AnyObject", "SSDKPlatformType"]
+- !private ["PSs9AnyObject", "SSDKSetupShareParamsByText"]
+- !private ["PSs9AnyObject", "ShareSDK"]
+- ["PSs9AnyObject", "ShowShareEditor"]
+- ["PSs9AnyObject", "ShowShareMenu"]
+- ["PSs9AnyObject", "SimpleShare"]
+- !private ["PSs9AnyObject", "UIAlertView"]
+- !private ["PSs9AnyObject", "UIImage"]
+- !private ["PSs9AnyObject", "authorize"]
+- !private ["PSs9AnyObject", "credential"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "print"]
+- !private ["PSs9AnyObject", "share"]
+- !private ["PSs9AnyObject", "show"]
+- !private ["PSs9AnyObject", "showShareActionSheet"]
+- !private ["PSs9AnyObject", "showShareEditor"]
+- !private ["PSs9AnyObject", "view"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- !private ["Sb", "deinit"]
+- !private ["PSs11CVarArgType", "NSMutableDictionary"]
+- !private ["PSs11CVarArgType", "NSURL"]
+- ["PSs11CVarArgType", "OAuth"]
+- !private ["PSs11CVarArgType", "SSDKContentType"]
+- !private ["PSs11CVarArgType", "SSDKPlatformType"]
+- !private ["PSs11CVarArgType", "SSDKSetupShareParamsByText"]
+- !private ["PSs11CVarArgType", "ShareSDK"]
+- ["PSs11CVarArgType", "ShowShareEditor"]
+- ["PSs11CVarArgType", "ShowShareMenu"]
+- ["PSs11CVarArgType", "SimpleShare"]
+- !private ["PSs11CVarArgType", "UIAlertView"]
+- !private ["PSs11CVarArgType", "UIImage"]
+- !private ["PSs11CVarArgType", "authorize"]
+- !private ["PSs11CVarArgType", "credential"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "print"]
+- !private ["PSs11CVarArgType", "share"]
+- !private ["PSs11CVarArgType", "show"]
+- !private ["PSs11CVarArgType", "showShareActionSheet"]
+- !private ["PSs11CVarArgType", "showShareEditor"]
+- !private ["PSs11CVarArgType", "view"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- !private ["VSs9Character", "deinit"]
+- !private ["PSs10Comparable", "init"]
+- !private ["PSs28CustomDebugStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "NSMutableDictionary"]
+- !private ["PSs23CustomStringConvertible", "NSURL"]
+- ["PSs23CustomStringConvertible", "OAuth"]
+- !private ["PSs23CustomStringConvertible", "SSDKContentType"]
+- !private ["PSs23CustomStringConvertible", "SSDKPlatformType"]
+- !private ["PSs23CustomStringConvertible", "SSDKSetupShareParamsByText"]
+- !private ["PSs23CustomStringConvertible", "ShareSDK"]
+- ["PSs23CustomStringConvertible", "ShowShareEditor"]
+- ["PSs23CustomStringConvertible", "ShowShareMenu"]
+- ["PSs23CustomStringConvertible", "SimpleShare"]
+- !private ["PSs23CustomStringConvertible", "UIAlertView"]
+- !private ["PSs23CustomStringConvertible", "UIImage"]
+- !private ["PSs23CustomStringConvertible", "authorize"]
+- !private ["PSs23CustomStringConvertible", "credential"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "print"]
+- !private ["PSs23CustomStringConvertible", "share"]
+- !private ["PSs23CustomStringConvertible", "show"]
+- !private ["PSs23CustomStringConvertible", "showShareActionSheet"]
+- !private ["PSs23CustomStringConvertible", "showShareEditor"]
+- !private ["PSs23CustomStringConvertible", "view"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs28DictionaryLiteralConvertible", "SSDKSetupShareParamsByText"]
+- !private ["PSs28DictionaryLiteralConvertible", "init"]
+- !private ["Sd", "deinit"]
+- !private ["PSs9Equatable", "Auto"]
+- !private ["PSs9Equatable", "Cancel"]
+- !private ["PSs9Equatable", "Fail"]
+- !private ["PSs9Equatable", "Image"]
+- !private ["PSs9Equatable", "NSMutableDictionary"]
+- !private ["PSs9Equatable", "NSURL"]
+- ["PSs9Equatable", "OAuth"]
+- !private ["PSs9Equatable", "SSDKContentType"]
+- !private ["PSs9Equatable", "SSDKPlatformType"]
+- !private ["PSs9Equatable", "SSDKSetupShareParamsByText"]
+- !private ["PSs9Equatable", "ShareSDK"]
+- ["PSs9Equatable", "ShowShareEditor"]
+- ["PSs9Equatable", "ShowShareMenu"]
+- ["PSs9Equatable", "SimpleShare"]
+- !private ["PSs9Equatable", "Success"]
+- !private ["PSs9Equatable", "TypeSinaWeibo"]
+- !private ["PSs9Equatable", "UIAlertView"]
+- !private ["PSs9Equatable", "UIImage"]
+- !private ["PSs9Equatable", "authorize"]
+- !private ["PSs9Equatable", "credential"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "print"]
+- !private ["PSs9Equatable", "share"]
+- !private ["PSs9Equatable", "show"]
+- !private ["PSs9Equatable", "showShareActionSheet"]
+- !private ["PSs9Equatable", "showShareEditor"]
+- !private ["PSs9Equatable", "view"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["PSs8Hashable", "Auto"]
+- !private ["PSs8Hashable", "Cancel"]
+- !private ["PSs8Hashable", "Fail"]
+- !private ["PSs8Hashable", "Image"]
+- !private ["PSs8Hashable", "NSMutableDictionary"]
+- !private ["PSs8Hashable", "NSURL"]
+- ["PSs8Hashable", "OAuth"]
+- !private ["PSs8Hashable", "SSDKContentType"]
+- !private ["PSs8Hashable", "SSDKPlatformType"]
+- !private ["PSs8Hashable", "SSDKSetupShareParamsByText"]
+- !private ["PSs8Hashable", "ShareSDK"]
+- ["PSs8Hashable", "ShowShareEditor"]
+- ["PSs8Hashable", "ShowShareMenu"]
+- ["PSs8Hashable", "SimpleShare"]
+- !private ["PSs8Hashable", "Success"]
+- !private ["PSs8Hashable", "TypeSinaWeibo"]
+- !private ["PSs8Hashable", "UIAlertView"]
+- !private ["PSs8Hashable", "UIImage"]
+- !private ["PSs8Hashable", "authorize"]
+- !private ["PSs8Hashable", "credential"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "print"]
+- !private ["PSs8Hashable", "share"]
+- !private ["PSs8Hashable", "show"]
+- !private ["PSs8Hashable", "showShareActionSheet"]
+- !private ["PSs8Hashable", "showShareEditor"]
+- !private ["PSs8Hashable", "view"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["Si", "deinit"]
+- !private ["VSs5Int16", "deinit"]
+- !private ["VSs5Int32", "deinit"]
+- !private ["VSs5Int64", "deinit"]
+- !private ["VSs4Int8", "deinit"]
+- !private ["PSs14MirrorPathType", "init"]
+- !private ["PSo8NSCoding", "NSMutableDictionary"]
+- !private ["PSo8NSCoding", "NSURL"]
+- ["PSo8NSCoding", "OAuth"]
+- !private ["PSo8NSCoding", "SSDKContentType"]
+- !private ["PSo8NSCoding", "SSDKPlatformType"]
+- !private ["PSo8NSCoding", "SSDKSetupShareParamsByText"]
+- !private ["PSo8NSCoding", "ShareSDK"]
+- ["PSo8NSCoding", "ShowShareEditor"]
+- ["PSo8NSCoding", "ShowShareMenu"]
+- ["PSo8NSCoding", "SimpleShare"]
+- !private ["PSo8NSCoding", "UIAlertView"]
+- !private ["PSo8NSCoding", "UIImage"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "print"]
+- !private ["PSo8NSCoding", "show"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "SSDKSetupShareParamsByText"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["CSo12NSDictionary", "SSDKSetupShareParamsByText"]
+- !private ["CSo12NSDictionary", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "NSMutableDictionary"]
+- !private ["PSo26NSExtensionRequestHandling", "NSURL"]
+- ["PSo26NSExtensionRequestHandling", "OAuth"]
+- !private ["PSo26NSExtensionRequestHandling", "SSDKContentType"]
+- !private ["PSo26NSExtensionRequestHandling", "SSDKPlatformType"]
+- !private ["PSo26NSExtensionRequestHandling", "ShareSDK"]
+- ["PSo26NSExtensionRequestHandling", "ShowShareEditor"]
+- ["PSo26NSExtensionRequestHandling", "ShowShareMenu"]
+- ["PSo26NSExtensionRequestHandling", "SimpleShare"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertView"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo17NSFastEnumeration", "SSDKSetupShareParamsByText"]
+- !private ["PSo17NSFastEnumeration", "init"]
+- !private ["PSo16NSMutableCopying", "SSDKSetupShareParamsByText"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo19NSMutableDictionary", "SSDKSetupShareParamsByText"]
+- !private ["CSo19NSMutableDictionary", "init"]
+- !private ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSMutableDictionary"]
+- !private ["CSo8NSObject", "NSObject"]
+- !private ["CSo8NSObject", "NSURL"]
+- ["CSo8NSObject", "OAuth"]
+- !private ["CSo8NSObject", "SSDKContentEntity"]
+- !private ["CSo8NSObject", "SSDKContentType"]
+- !private ["CSo8NSObject", "SSDKPlatformType"]
+- !private ["CSo8NSObject", "SSDKResponseState"]
+- !private ["CSo8NSObject", "SSDKSetupShareParamsByText"]
+- !private ["CSo8NSObject", "SSDKUser"]
+- !private ["CSo8NSObject", "ShareSDK"]
+- ["CSo8NSObject", "ShowShareEditor"]
+- ["CSo8NSObject", "ShowShareMenu"]
+- ["CSo8NSObject", "SimpleShare"]
+- !private ["CSo8NSObject", "UIAlertView"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UIImage"]
+- !private ["CSo8NSObject", "Void"]
+- !private ["CSo8NSObject", "authorize"]
+- !private ["CSo8NSObject", "credential"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "share"]
+- !private ["CSo8NSObject", "show"]
+- !private ["CSo8NSObject", "showShareActionSheet"]
+- !private ["CSo8NSObject", "showShareEditor"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "NSMutableDictionary"]
+- !private ["PSo16NSObjectProtocol", "NSURL"]
+- ["PSo16NSObjectProtocol", "OAuth"]
+- !private ["PSo16NSObjectProtocol", "SSDKContentType"]
+- !private ["PSo16NSObjectProtocol", "SSDKPlatformType"]
+- !private ["PSo16NSObjectProtocol", "SSDKSetupShareParamsByText"]
+- !private ["PSo16NSObjectProtocol", "ShareSDK"]
+- ["PSo16NSObjectProtocol", "ShowShareEditor"]
+- ["PSo16NSObjectProtocol", "ShowShareMenu"]
+- ["PSo16NSObjectProtocol", "SimpleShare"]
+- !private ["PSo16NSObjectProtocol", "UIAlertView"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "authorize"]
+- !private ["PSo16NSObjectProtocol", "credential"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "share"]
+- !private ["PSo16NSObjectProtocol", "show"]
+- !private ["PSo16NSObjectProtocol", "showShareActionSheet"]
+- !private ["PSo16NSObjectProtocol", "showShareEditor"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "SSDKSetupShareParamsByText"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo5NSURL", "init"]
+- !private ["Sq", "deinit"]
+- !private ["PSs16OutputStreamType", "init"]
+- !private ["PSs16RawRepresentable", "Auto"]
+- !private ["PSs16RawRepresentable", "Cancel"]
+- !private ["PSs16RawRepresentable", "Fail"]
+- !private ["PSs16RawRepresentable", "Image"]
+- !private ["PSs16RawRepresentable", "Success"]
+- !private ["PSs16RawRepresentable", "TypeSinaWeibo"]
+- !private ["OSC15SSDKContentType", "Auto"]
+- !private ["OSC15SSDKContentType", "Image"]
+- !private ["OSC16SSDKPlatformType", "TypeSinaWeibo"]
+- !private ["OSC17SSDKResponseState", "Cancel"]
+- !private ["OSC17SSDKResponseState", "Fail"]
+- !private ["OSC17SSDKResponseState", "Success"]
+- !private ["CSo8SSDKUser", "credential"]
+- !private ["PSs12SequenceType", "SSDKSetupShareParamsByText"]
+- !private ["PSs12SequenceType", "init"]
+- !private ["CSo8ShareSDK", "authorize"]
+- !private ["CSo8ShareSDK", "share"]
+- !private ["CSo8ShareSDK", "showShareActionSheet"]
+- !private ["CSo8ShareSDK", "showShareEditor"]
+- !private ["PSs10Streamable", "init"]
+- !private ["SS", "init"]
+- !private ["PSs30StringInterpolationConvertible", "init"]
+- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "show"]
+- !private ["CSo11UIAlertView", "init"]
+- !private ["CSo11UIAlertView", "show"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "show"]
+- !private ["PSo21UIAppearanceContainer", "NSMutableDictionary"]
+- !private ["PSo21UIAppearanceContainer", "NSURL"]
+- ["PSo21UIAppearanceContainer", "OAuth"]
+- !private ["PSo21UIAppearanceContainer", "SSDKContentType"]
+- !private ["PSo21UIAppearanceContainer", "SSDKPlatformType"]
+- !private ["PSo21UIAppearanceContainer", "ShareSDK"]
+- ["PSo21UIAppearanceContainer", "ShowShareEditor"]
+- ["PSo21UIAppearanceContainer", "ShowShareMenu"]
+- ["PSo21UIAppearanceContainer", "SimpleShare"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertView"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "print"]
+- !private ["PSo21UIAppearanceContainer", "show"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "NSMutableDictionary"]
+- !private ["PSo18UIContentContainer", "NSURL"]
+- ["PSo18UIContentContainer", "OAuth"]
+- !private ["PSo18UIContentContainer", "SSDKContentType"]
+- !private ["PSo18UIContentContainer", "SSDKPlatformType"]
+- !private ["PSo18UIContentContainer", "ShareSDK"]
+- ["PSo18UIContentContainer", "ShowShareEditor"]
+- ["PSo18UIContentContainer", "ShowShareMenu"]
+- ["PSo18UIContentContainer", "SimpleShare"]
+- !private ["PSo18UIContentContainer", "UIAlertView"]
+- !private ["PSo18UIContentContainer", "UIImage"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "print"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "show"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "show"]
+- !private ["PSo18UIFocusEnvironment", "NSMutableDictionary"]
+- !private ["PSo18UIFocusEnvironment", "NSURL"]
+- ["PSo18UIFocusEnvironment", "OAuth"]
+- !private ["PSo18UIFocusEnvironment", "SSDKContentType"]
+- !private ["PSo18UIFocusEnvironment", "SSDKPlatformType"]
+- !private ["PSo18UIFocusEnvironment", "ShareSDK"]
+- ["PSo18UIFocusEnvironment", "ShowShareEditor"]
+- ["PSo18UIFocusEnvironment", "ShowShareMenu"]
+- ["PSo18UIFocusEnvironment", "SimpleShare"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertView"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "print"]
+- !private ["PSo18UIFocusEnvironment", "show"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UIImage", "init"]
+- !private ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "NSError"]
+- !private ["CSo11UIResponder", "NSMutableDictionary"]
+- !private ["CSo11UIResponder", "NSObject"]
+- !private ["CSo11UIResponder", "NSURL"]
+- ["CSo11UIResponder", "OAuth"]
+- !private ["CSo11UIResponder", "SSDKContentEntity"]
+- !private ["CSo11UIResponder", "SSDKContentType"]
+- !private ["CSo11UIResponder", "SSDKPlatformType"]
+- !private ["CSo11UIResponder", "SSDKResponseState"]
+- !private ["CSo11UIResponder", "SSDKUser"]
+- !private ["CSo11UIResponder", "ShareSDK"]
+- ["CSo11UIResponder", "ShowShareEditor"]
+- ["CSo11UIResponder", "ShowShareMenu"]
+- ["CSo11UIResponder", "SimpleShare"]
+- !private ["CSo11UIResponder", "UIAlertView"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UIImage"]
+- !private ["CSo11UIResponder", "Void"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "print"]
+- !private ["CSo11UIResponder", "show"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "NSMutableDictionary"]
+- !private ["PSo16UIStateRestoring", "NSURL"]
+- ["PSo16UIStateRestoring", "OAuth"]
+- !private ["PSo16UIStateRestoring", "SSDKContentType"]
+- !private ["PSo16UIStateRestoring", "SSDKPlatformType"]
+- !private ["PSo16UIStateRestoring", "ShareSDK"]
+- ["PSo16UIStateRestoring", "ShowShareEditor"]
+- ["PSo16UIStateRestoring", "ShowShareMenu"]
+- ["PSo16UIStateRestoring", "SimpleShare"]
+- !private ["PSo16UIStateRestoring", "UIAlertView"]
+- !private ["PSo16UIStateRestoring", "UIImage"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "print"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "NSMutableDictionary"]
+- !private ["PSo18UITraitEnvironment", "NSURL"]
+- ["PSo18UITraitEnvironment", "OAuth"]
+- !private ["PSo18UITraitEnvironment", "SSDKContentType"]
+- !private ["PSo18UITraitEnvironment", "SSDKPlatformType"]
+- !private ["PSo18UITraitEnvironment", "ShareSDK"]
+- ["PSo18UITraitEnvironment", "ShowShareEditor"]
+- ["PSo18UITraitEnvironment", "ShowShareMenu"]
+- ["PSo18UITraitEnvironment", "SimpleShare"]
+- !private ["PSo18UITraitEnvironment", "UIAlertView"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "print"]
+- !private ["PSo18UITraitEnvironment", "show"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "show"]
+- !private ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "NSError"]
+- !private ["CSo16UIViewController", "NSMutableDictionary"]
+- !private ["CSo16UIViewController", "NSObject"]
+- !private ["CSo16UIViewController", "NSURL"]
+- ["CSo16UIViewController", "OAuth"]
+- !private ["CSo16UIViewController", "SSDKContentEntity"]
+- !private ["CSo16UIViewController", "SSDKContentType"]
+- !private ["CSo16UIViewController", "SSDKPlatformType"]
+- !private ["CSo16UIViewController", "SSDKResponseState"]
+- !private ["CSo16UIViewController", "SSDKUser"]
+- !private ["CSo16UIViewController", "ShareSDK"]
+- ["CSo16UIViewController", "ShowShareEditor"]
+- ["CSo16UIViewController", "ShowShareMenu"]
+- ["CSo16UIViewController", "SimpleShare"]
+- !private ["CSo16UIViewController", "UIAlertView"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UIImage"]
+- !private ["CSo16UIViewController", "Void"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "print"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["VSs6UInt16", "deinit"]
+- !private ["VSs6UInt32", "deinit"]
+- !private ["VSs6UInt64", "deinit"]
+- !private ["VSs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "AnyObject"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "NSError"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "NSMutableDictionary"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "NSObject"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "NSURL"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "OAuth"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "SSDKContentEntity"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "SSDKContentType"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "SSDKPlatformType"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "SSDKResponseState"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "SSDKUser"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "ShareSDK"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "ShowShareEditor"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "ShowShareMenu"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "SimpleShare"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "UIAlertView"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "UIButton"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "UIImage"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "Void"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "deinit"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "init"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "print"]
+- !private ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "view"]
+- ["CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController", "viewDidLoad"]
+- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
+- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs16_CocoaStringType", "init"]
+- !private ["PSs32_FileReferenceLiteralConvertible", "init"]
+- !private ["PSs24_ImageLiteralConvertible", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["PSs12_Reflectable", "SSDKSetupShareParamsByText"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "show"]
+depends-nominal:
+- "PSs9AnyObject"
+- !private "Sb"
+- "PSs11CVarArgType"
+- !private "VSs9Character"
+- !private "PSs10Comparable"
+- !private "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- !private "PSs28DictionaryLiteralConvertible"
+- !private "Sd"
+- "PSs9Equatable"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- "PSs8Hashable"
+- !private "SQ"
+- !private "Si"
+- !private "VSs5Int16"
+- !private "VSs5Int32"
+- !private "VSs5Int64"
+- !private "VSs4Int8"
+- !private "PSs14MirrorPathType"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo12NSDictionary"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
+- !private "CSo19NSMutableDictionary"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo5NSURL"
+- !private "Sq"
+- !private "PSs16OutputStreamType"
+- !private "PSs16RawRepresentable"
+- !private "OSC15SSDKContentType"
+- !private "OSC16SSDKPlatformType"
+- !private "OSC17SSDKResponseState"
+- !private "CSo8SSDKUser"
+- !private "PSs12SequenceType"
+- !private "CSo8ShareSDK"
+- !private "PSs10Streamable"
+- !private "SS"
+- !private "PSs30StringInterpolationConvertible"
+- !private "PSs24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "CSo11UIAlertView"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo7UIImage"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Su"
+- !private "VSs6UInt16"
+- !private "VSs6UInt32"
+- !private "VSs6UInt64"
+- !private "VSs5UInt8"
+- !private "Sc"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- "CX28ShareSDK_Swift_xeEFavIHciAJa14ViewController"
+- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "PSs32_BuiltinStringLiteralConvertible"
+- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
+- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "PSs16_CocoaStringType"
+- !private "PSs32_FileReferenceLiteralConvertible"
+- !private "PSs24_ImageLiteralConvertible"
+- !private "PSs21_ObjectiveCBridgeable"
+- !private "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/ShareSDK-Bridging-Header.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/ShareSDK.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/NSMutableDictionary+SSDKInit.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKTypeDefine.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/NSMutableDictionary+SSDKShare.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKImage.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKData.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKUserQueryConditional.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKContentEntity.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKUser.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKCredential.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDK.framework/Headers/SSDKAuthViewStyle.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDKConnector.framework/Headers/ShareSDKConnector.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDKUI.framework/Headers/ShareSDK+SSUI.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDKUI.framework/Headers/SSUIShareActionSheetController.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDKUI.framework/Headers/SSUITypeDef.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/ShareSDKUI.framework/Headers/SSUIShareContentEditorViewController.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/QQSDK/TencentOpenAPI.framework/Headers/TencentOAuth.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/QQSDK/TencentOpenAPI.framework/Headers/sdkdef.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/QQSDK/TencentOpenAPI.framework/Headers/TencentOAuthObject.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/QQSDK/TencentOpenAPI.framework/Headers/QQApiInterface.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/QQSDK/TencentOpenAPI.framework/Headers/QQApiInterfaceObject.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/WeChatSDK/WXApi.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/WeChatSDK/WXApiObject.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WeiboSDK.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBHttpRequest.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBHttpRequest+WeiboUser.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBHttpRequest+WeiboShare.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBHttpRequest+WeiboToken.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBHttpRequest+WeiboGame.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBSDKRelationshipButton.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBSDKBasicButton.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/libraries/extends/SinaWeiboSDK/WBSDKCommentButton.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennSDK.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennClient.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennAccessToken.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennLoginService.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennService.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennHttpRequest.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/RenRenSDK/RennSDK.framework/Headers/RennParam.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/GooglePlusSDK/GooglePlus.framework/Headers/GooglePlus.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/GooglePlusSDK/GooglePlus.framework/Headers/GPPDeepLink.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/GooglePlusSDK/GooglePlus.framework/Headers/GPPShare.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/GooglePlusSDK/GooglePlus.framework/Headers/GPPSignIn.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/GooglePlusSDK/GooglePlus.framework/Headers/GPPSignInButton.h"
+- "/Users/liujinghuang/Desktop/v3.1.4/Demo/ShareSDK\u7B80\u6D01\u7248-Swift/../../libraries/extends/GooglePlusSDK/GooglePlus.framework/Headers/GPPURLHandler.h"
+interface-hash: "4b763cb73fdb2a477d340b6518c57ecc"

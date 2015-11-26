@@ -232,4 +232,35 @@
                    redirectUri:(NSString *)redirectUri
                       authType:(NSString *)authType;
 
+/**
+ *  设置Dropbox应用信息
+ *
+ *  @param appKey        应用标识
+ *  @param appSecret     应用密钥
+ *  @param oauthCallback 回调地址
+ */
+- (void)SSDKSetupDropboxByAppKey:(NSString *)appKey
+                       appSecret:(NSString *)appSecret
+                   oauthCallback:(NSString *)oauthCallback;
+
+/**
+ *  设置VKontakte应用信息
+ *
+ *  @param applicationId 应用标识
+ *  @param secretKey     应用密钥
+ */
+- (void)SSDKSetupVKontakteByApplicationId:(NSString *)applicationId
+                                secretKey:(NSString *)secretKey;
+
+/**
+ *  设置明道应用信息
+ *
+ *  @param appKey      应用标识
+ *  @param appSecret   应用密钥
+ *  @param redirectUri 回调地址
+ */
+- (void)SSDKSetupMingDaoByAppKey:(NSString *)appKey
+                       appSecret:(NSString *)appSecret
+                     redirectUri:(NSString *)redirectUri;
+
 @end
