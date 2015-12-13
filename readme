@@ -1,6 +1,387 @@
-ShareSDK简洁版文件包含：
+## ShareSDK
+* ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.
 
-1、libraries（ShareSDK类库），其中包含：
+## Contents
+* Getting Started
+    * [Features](#Features)
+    * [How to integrate ShareSDK easily](#How to integrate ShareSDK easily)
+    * [Option Configuration(Wechat\QQ\Google+)](#Option Configuration(Wechat\QQ\Google+))
+    * [Category structure【ShareSDK Category structure】](#ShareSDK Category structure)
+* 常见API
+	* [ShareSDK.h](#ShareSDK.h)
+* Examples
+    * [无UI分享](#无UI分享)
+    * [弹出编辑内容框进行分享](#弹出编辑内容框进行分享)
+    * [授权登录](#授权登录)
+* Notice
+
+## <a id="Features"></a>Features
+* Share to third-party SNS platforms.
+* Third party log in.
+
+## <a id="How to integrate ShareSDK easily"></a>How to integrate ShareSDK easily
+
+## Step 1：Import the ShareSDK to your project
+* cocoapods import：
+`# 主模块(必须)
+ pod 'ShareSDK3'
+ 
+ # UI模块(非必须，需要用到ShareSDK提供的分享菜单栏和分享编辑页面需要以下1行)
+ pod 'ShareSDK3/ShareSDKUI'
+ 
+ # 平台SDK模块(对照一下平台，需要的加上。如果只需要QQ、微信、新浪微博，只需要以下3行)
+ pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+ pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+ pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+ 
+ pod 'ShareSDK3/ShareSDKPlatforms/GooglePlus'
+ pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
+ pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
+ pod 'ShareSDK3/ShareSDKPlatforms/Kakao'`
+ 
+* Manually import：
+    * dragged `libraries` into the project
+    * add the necessary Frameworks
+
+Indispensable Framework：
+`libicucore.dylib
+libz.dylib
+libstdc++.dylib
+JavaScriptCore.framework`
+
+Optional Framework：
+
+necessary for the SSO Login of Sina weibo
+`ImageIO.framework
+AdSupport.framework
+libsqlite3.dylib`
+
+necessary for the SSO Login of WeChat
+`libsqlite3.dylib`
+
+necessary for the SSO Login of QZone or QQ Friend share
+`libsqlite3.dylib`
+
+necessary for Mail or SMS
+`MessageUI.framework`
+
+necessary for Google+ platform
+`CoreMotion.framework
+CoreLocation.framework
+MediaPlayer.framework
+AssetsLibrary.framework`
+
+The steps of adding the framework:
+
+## Step 2: import the header files and register for a Appkey，and choose the platforms that you need and initialize them 
+
+`1、Log in to http://reg.sharesdk.cn/ to register to be a Mob developer , and click here to create a Mob application, then you will get the Appkey.
+2、Open AppDelegate.m to import the .h file
+3、每个社交平台申请key，可以参阅：http://bbs.mob.com/forum.php?mod=viewthread&tid=275&page=1&extra=#pid860`
+
+`#import <ShareSDK/ShareSDK.h>`
+//链接原生SDK使用
+`#import <ShareSDKConnector/ShareSDKConnector.h>` 
+//若使用ShareSDK提供的UI
+`#import <ShareSDKUI/ShareSDKUI.h>`
+
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+//微信SDK头文件
+#import "WXApi.h"
+
+//新浪微博SDK头文件
+#import "WeiboSDK.h"
+//新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
+
+//人人SDK头文件
+#import <RennSDK/RennSDK.h>
+
+//GooglePlus SDK头文件
+#import <GooglePlus/GooglePlus.h>
+
+and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOptions: method
+
+```objc
+-   (BOOL)application:(UIApplication )application didFinishLaunchingWithOptions:(NSDictionary )launchOptions 
+{     
+     [ShareSDK registerApp:@"*****"  // *** is the AppKey that you just got 
+           activePlatforms:@[
+                            @(SSDKPlatformTypeSinaWeibo),
+                            @(SSDKPlatformTypeMail),
+                            @(SSDKPlatformTypeSMS),
+                            @(SSDKPlatformTypeCopy),
+                            @(SSDKPlatformTypeWechat),
+                            @(SSDKPlatformTypeQQ),
+                            @(SSDKPlatformTypeRenren),
+                            @(SSDKPlatformTypeGooglePlus)]
+           onImport:^(SSDKPlatformType platformType)    
+           {
+               switch (platformType)
+               {
+                  case SSDKPlatformTypeWechat:
+                       [ShareSDKConnector connectWeChat:[WXApi class]];
+                    break;
+                  case SSDKPlatformTypeQQ:
+                       [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                    break;
+                  case SSDKPlatformTypeSinaWeibo:
+                          [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                    break;
+                  case SSDKPlatformTypeRenren:
+                          [ShareSDKConnector connectRenren:[RennClient class]];
+                    break;
+                  case SSDKPlatformTypeGooglePlus:
+                          [ShareSDKConnector connectGooglePlus:[GPPSignIn class]
+                                                       shareClass:[GPPShare class]];
+                    break;
+                  default:
+                    break;
+                }
+          }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) 
+          {
+                switch (platformType)
+                {
+                  case SSDKPlatformTypeSinaWeibo:
+                      //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                      [appInfo SSDKSetupSinaWeiboByAppKey:@"568898243"
+                                                appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+                                              redirectUri:@"http://www.sharesdk.cn"
+                                                 authType:SSDKAuthTypeBoth];
+                   break;
+                  case SSDKPlatformTypeWechat:
+                      [appInfo SSDKSetupWeChatByAppId:@"wx4868b35061f87885"
+                                            appSecret:@"64020361b8ec4c99936c0e3999a9f249"];
+                   break;
+                  case SSDKPlatformTypeQQ:
+                      [appInfo SSDKSetupQQByAppId:@"100371282"
+                                           appKey:@"aed9b0303e3ed1e27bae87c33761161d"
+                                         authType:SSDKAuthTypeBoth];
+                   break;
+                  case SSDKPlatformTypeRenren:
+                      [appInfo        SSDKSetupRenRenByAppId:@"226427"
+                                               appKey:@"fc5b8aed373c4c27a05b712acba0f8c3"
+                                            secretKey:@"f29df781abdd4f49beca5a2194676ca4"
+                                             authType:SSDKAuthTypeBoth];
+                    break;
+                   case SSDKPlatformTypeGooglePlus:
+                      [appInfo SSDKSetupGooglePlusByClientID:@"232554794995.apps.googleusercontent.com"
+                                                clientSecret:@"PEdFgtrMw97aCvf0joQj7EMk"
+                                                 redirectUri:@"http://localhost"
+                                                    authType:SSDKAuthTypeBoth];
+                    break;
+                   default:
+                    break;
+              }
+          }];
+ return YES;
+}
+```
+## Step 3：construct the share content and share it
+
+1、Create Share parameters. Please refer to ShareSDK.h in ShareSDK.framework or Demo to get the specific usage.
+2、To show the share content view ,you need to call the showShareActionSheet… method.
+
+```objc
+    //1、Create Share parameters
+    NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
+    if (imageArray) {
+ 
+        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+        [shareParams SSDKSetupShareParamsByText:@"Share Content"
+                                         images:imageArray
+                                            url:[NSURL URLWithString:@"http://mob.com"]
+                                          title:@"ShareTitle"
+                                           type:SSDKContentTypeAuto];
+        //2、To show the share content view
+        [ShareSDK showShareActionSheet:nil //要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的按钮对象或者自己创建小的view 对象，iPhone可以传nil不会影响
+                                 items:nil
+                           shareParams:shareParams
+                   onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+ 
+                       switch (state) {
+                           case SSDKResponseStateSuccess:
+                           {
+                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Share Success!"
+                                                                                   message:nil
+                                                                                  delegate:nil
+                                                                         cancelButtonTitle:@"OK"
+                                                                         otherButtonTitles:nil];
+                               [alertView show];
+                               break;
+                           }
+                           case SSDKResponseStateFail:
+                           {
+                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Share Fail"
+                                                                                   message:[NSString stringWithFormat:@"%@",error]
+                                                                                  delegate:nil
+                                                                         cancelButtonTitle:@"OK"
+                                                                         otherButtonTitles:nil, nil];
+                                [alert show];
+                                break;
+                               }
+                            default:
+                               break;
+                       }
+ 
+                   }];
+```
+Congratulations!you make it and the result may look like the following snapshop.
+![(ShareSDK提供的UI界面分享)](http://images2015.cnblogs.com/blog/708376/201512/708376-20151206163027597-624321518.gif)
+
+## <a id="Option Configuration(QQ\Wechat\Google+)"></a>Option Configuration(QQ\Wechat\Google+)
+## Option 1：the specific way to integrate QQ
+1、Log in to Open QQ platform (http://open.qq.com/)to become a developer and create a application to get the app’s AppID.
+
+2、Back to your project, choose the -Info.plist (- represents your project name) file. Add a URL Scheme for key, the value’s format is: "QQ" +the hexadecimal number of AppID (if the length of hexadecimal number is less than 8,then fill with zero to make sure the length is 8). Here is a example,if the hexadecimal number of your AppID is 5FB8B52,then the final value of the URL Scheme is QQ05FB8B52.
+![(QQ url schemes)](https://camo.githubusercontent.com/e8d3ae0e323bc18db3a45440b2daf5e18fc19181/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d392e706e67)
+
+3、Open -AppDelegate.m ( -represents your project name), import QQSDK header file:
+`
+#import <TencentOpenAPI/QQApiInterface.h> 
+#import <TencentOpenAPI/TencentOAuth.h>
+`
+4、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
+```objc
+-   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{        
+//...        
+//Initialize QQ Platform  
+[ShareSDK registerApp:@"********"  // *** is the AppKey that you just got 
+          activePlatforms:@[@(SSDKPlatformTypeQQ)]
+          onImport:^(SSDKPlatformType platformType) {
+               switch (platformType)
+               {  
+                  case SSDKPlatformTypeQQ:
+                  // link to Native QQSDK
+                  [ShareSDKConnector connectQQ:[QQApiInterface class]
+                                    tencentOAuthClass:[TencentOAuth class]];
+                  break;
+                  default:
+                      break;
+               }
+          }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) { 
+               switch (platformType)
+               {
+                  case SSDKPlatformTypeQQ:
+                  //The parameter “100371282” is the AppID of QQ App   
+                  [appInfo SSDKSetupQQByAppId:@"100371282"
+                                       appKey:@"aed9b0303e3ed1e27bae87c33761161d"
+                                     authType:SSDKAuthTypeBoth];
+                  break;
+                  default:
+                      break;
+               }
+          }];
+
+      //... 
+}
+```
+
+## Option 2：the specific way to integrate Wechat
+1、Log in to WeChat open platform (http://open.weixin.qq.com/) to become a WeChat developer and create a application to get the app’s AppID,AppSecret.
+
+2、Back to your project,choose the -Info.plist (- represents your project name) file. Add a WeChat URL Scheme key, the value is WeChat AppID (eg: wx4868b35061f87885). Here is a example:
+![(Wechat url schemes)](https://camo.githubusercontent.com/731992b8c3790d15cecf40b96c9c0c5055d10064/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d382e706e67)
+
+3、Open -AppDelegate.m ( -represents your project name), import WechatSDK header file:
+`
+#import "WXApi.h"
+`
+4、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
+```objc
+-   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{        
+//...        
+//Initialize wechat Platform  
+[ShareSDK registerApp:@"********"  // *** is the AppKey that you just got 
+          activePlatforms:@[@(SSDKPlatformTypeWechat)]
+          onImport:^(SSDKPlatformType platformType) {
+               switch (platformType)
+               {  
+                  case SSDKPlatformTypeWechat:
+                  // link to Native WechatSDK
+                   [ShareSDKConnector connectWeChat:[WXApi class] delegate:self];
+                  break;
+                  default:
+                      break;
+               }
+          }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) { 
+               switch (platformType)
+               {
+                  case SSDKPlatformTypeWechat:
+                       //The parameter “wx6dd7a9b94f3dd72a” is the AppID of WeChat App     
+                       [appInfo SSDKSetupWeChatByAppId:@"wx4868b35061f87885"
+                                             appSecret:@"64020361b8ec4c99936c0e3999a9f249"];
+                  break;
+                  default:
+                      break;
+               }
+          }];
+
+      //... 
+}
+```
+
+## Option 3：the specific way to integrate Google+
+1、 Log in to Google+ Developer platform to become a developer (https://console.developers.google.com/home/) and create a application to get the app’s ClientID.
+
+2、Back to your project , add “-ObjC” to Other linker flags. Here are steps:
+![(Google+ -ObjC)](https://camo.githubusercontent.com/731992b8c3790d15cecf40b96c9c0c5055d10064/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d382e706e67)
+
+3、Back to your project , choose the -Info.plist (- represents your project name) file. Add a Google+ URL Scheme key and a URL identifier key, the value both are the BundleID (eg cn.appgo.sharebyone),and the value must same as Google+ dashboard's setting. Here are steps:
+![(Google+ url schemes)](http://bbs.mob.com/data/attachment/forum/201512/04/160940o399nbtt34fhk99z.png)
+
+4、Open -AppDelegate.m ( -represents your project name), import WechatSDK header file:
+`
+#import <GooglePlus/GooglePlus.h>
+`
+5、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
+```objc
+-   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{        
+//...        
+//Initialize wechat Platform  
+[ShareSDK registerApp:@"********"  // *** is the AppKey that you just got 
+          activePlatforms:@[@(SSDKPlatformTypeGooglePlus)]
+          onImport:^(SSDKPlatformType platformType) {
+               switch (platformType)
+               {  
+                  //link to navite Google+ SDK
+                   case SSDKPlatformTypeGooglePlus:
+                        [ShareSDKConnector connectGooglePlus:[GPPSignIn class]
+                                                  shareClass:[GPPShare class]];
+                   break;
+                   default:
+                      break;
+               }
+          }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) { 
+               switch (platformType)
+               {
+                  case SSDKPlatformTypeGooglePlus:
+                       [appInfo SSDKSetupGooglePlusByClientID:@"***********" // Google+ clientID
+                                                 clientSecret:@""
+                                                  redirectUri:@""
+                                                     authType:SSDKAuthTypeBoth];
+                  break;
+                  default:
+                      break;
+               }
+          }];
+
+      //... 
+}
+```
+
+## <a id="Category structure【ShareSDK Category structure】"></a>Category structure【ShareSDK Category structure】
+
+ShareSDK libraries（ShareSDK类库），其中包含：
    （1）extends：第三方平台SDK。（不需要的平台的SDK可直接移除）
 
    （2）MOBFoundation.framework：基础功能框架。（必要）
@@ -9,12 +390,80 @@ ShareSDK简洁版文件包含：
    （5）ShareSDKConnector.framework：用于ShareSDK框架与外部框架连接的代理框架插件。使用第三方SDK时必要。
    （6）ShareSDKExtension.framework：对ShareSDK功能的扩展框架插件。目前主要提供第三方平台登录、一键分享、截屏分享、摇一摇分享等相关功能。需要使用以上功能时必要。
 
-    (7)ShareSDKInterfaceAdapter.framework：ShareSDK v2.x对简洁版的接口兼容包。(建议直接使用简洁版接口，尽量不使用这个兼容包)
+    (7) ShareSDKInterfaceAdapter.framework：ShareSDK v2.x对简洁版的接口兼容包。(建议直接使用简洁版接口，尽量不使用这个兼容包)
 
    （8）ShareSDKUI.bundle：分享菜单栏和分享编辑页面资源包。（如果自定义这些UI可直接移除）
    （9）ShareSDKUI.framework：分享菜单栏和分享编辑页面。（如果自定义这些UI可直接移除）
 
-2、Demo（包含Objective-C、swift版示例Demo）。
-3、doc（包含Objective-C、swift版集成文档和新功能介绍）
+## <a id="ShareSDK.h"></a>ShareSDK.h
+```objc
+/**
+ *  ShareSDK APIs
+ */
+@interface ShareSDK : NSObject
 
+#pragma mark - 初始化
 
+/**
+ *  初始化ShareSDK应用
+ *
+ *  @param appKey                   ShareSDK应用标识，可在http://mob.com中登录并创建App后获得
+ *  @param activePlatforms          使用的分享平台集合，如:@[@(SSDKPlatformTypeSinaWeibo), @(SSDKPlatformTypeTencentWeibo)];
+ *  @param connectHandler           导入回调处理，当某个平台的功能需要依赖原平台提供的SDK支持时，需要在此方法中对原平台SDK进行导入操作。具体的导入方式可以参考ShareSDKConnector.framework中所提供的方法。
+ *  @param configurationHandler     配置回调处理，在此方法中根据设置的platformType来填充应用配置信息
+ */
++ (void)registerApp:(NSString *)appKey
+    activePlatforms:(NSArray *)activePlatforms
+           onImport:(SSDKImportHandler)importHandler
+    onConfiguration:(SSDKConfigurationHandler)configurationHandler;
+
+#pragma mark - authorize
+
+/**
+ *  authorize
+ *
+ *  @param platformType       
+ *  @param @param settings    授权设置,目前只接受SSDKAuthSettingKeyScopes属性设置，如：@{SSDKAuthSettingKeyScopes : @[@"all", @"mail"]}
+ *  @param stateChangeHandler 
+ */
++ (void)authorize:(SSDKPlatformType)platformType
+         settings:(NSDictionary *)settings
+   onStateChanged:(SSDKAuthorizeStateChangedHandler)stateChangedHandler;
+
+/**
+ *  judgment weather to authorize
+ *
+ *  @param platformType 
+ *  @return YES :has Authorized，NO : Not Authorized
+ */
++ (BOOL)hasAuthorized:(SSDKPlatformType)platformTypem;
+
+/**
+ *  cancelAuthorize
+ *
+ *  @param platformType  
+ */
++ (void)cancelAuthorize:(SSDKPlatformType)platformType;
+
+#pragma mark - User
+
+/**
+ *  Get User Info
+ *
+ *  @param platformType    
+ *  @param stateChangeHandler 
+ */
++ (void)getUserInfo:(SSDKPlatformType)platformType
+     onStateChanged:(SSDKGetUserStateChangedHandler)stateChangedHandler;
+     
+/**
+ *  Share Content
+ *
+ *  @param platformType             
+ *  @param parameters               
+ *  @param stateChangeHandler       
+ */
++ (void)share:(SSDKPlatformType)platformType
+   parameters:(NSMutableDictionary *)parameters
+onStateChanged:(SSDKShareStateChangedHandler)stateChangedHandler;
+```
