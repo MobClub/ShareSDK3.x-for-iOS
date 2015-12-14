@@ -6,7 +6,7 @@
     * [Features](#Features)
     * [Category structure【ShareSDK Category structure】](#Category structure【ShareSDK Category structure】)
     * [How to integrate ShareSDK easily](#How to integrate ShareSDK easily)
-    * [Option Configuration: QQ\Wechat\Google+](#Option Configuration: QQ\Wechat\Google+)
+    * [Option Configuration](#Option Configuration)
 * common API
     * [ShareSDK.h](#ShareSDK.h)
 * Examples
@@ -271,7 +271,7 @@ and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOpt
 Congratulations!you make it and the result may look like the following snapshop.
 ![(ShareSDK提供的UI界面分享)](http://images2015.cnblogs.com/blog/708376/201512/708376-20151206163027597-624321518.gif)
 
-## <a id="Option Configuration: QQ\Wechat\Google+"></a>Option Configuration: QQ\Wechat\Google+
+## <a id="Option Configuration"></a>Option Configuration
 ## Option 1：the specific way to integrate QQ
 
 1、Log in to Open QQ platform (http://open.qq.com/)to become a developer and create a application to get the app’s AppID.
