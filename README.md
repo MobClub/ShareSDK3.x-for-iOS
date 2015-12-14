@@ -48,6 +48,7 @@
 
 ## Step 1：Import the ShareSDK to your project
 * cocoapods import：
+
   main module(necessary)
   ```objc
   pod 'ShareSDK3'
@@ -74,40 +75,40 @@
     * add the necessary Frameworks
   
   Indispensable Framework：
-```objc
-libicucore.dylib
-libz.dylib
-libstdc++.dylib
-JavaScriptCore.framework
-```
+  ```objc
+  libicucore.dylib
+  libz.dylib
+  libstdc++.dylib
+  JavaScriptCore.framework
+  ```
 
   Optional Framework：
 
   necessary for the SSO Login of Sina weibo
-```objc
-ImageIO.framework
-AdSupport.framework
-libsqlite3.dylib
-```
+  ```objc
+  ImageIO.framework
+  AdSupport.framework
+  libsqlite3.dylib
+  ```
   necessary for the SSO Login of WeChat
-```objc
-libsqlite3.dylib
-```
+  ```objc
+  libsqlite3.dylib
+  ```
   necessary for the SSO Login of QZone or QQ Friend share
-```objc
-libsqlite3.dylib
-```
+  ```objc
+  libsqlite3.dylib
+  ```
   necessary for Mail or SMS
-```objc
-MessageUI.framework
-```
+  ```objc
+  MessageUI.framework
+  ```
   necessary for Google+ platform
-```objc
-CoreMotion.framework
-CoreLocation.framework
-MediaPlayer.framework
-AssetsLibrary.framework
-```
+  ```objc
+  CoreMotion.framework
+  CoreLocation.framework
+  MediaPlayer.framework
+  AssetsLibrary.framework
+  ```
 
 The steps of adding the framework:
 
@@ -115,29 +116,39 @@ The steps of adding the framework:
 
 ## Step 2: import the header files and register for a Appkey，and choose the platforms that you need and initialize them 
 
-`1、Log in to http://reg.sharesdk.cn/ to register to be a Mob developer , and click here to create a Mob application, then you will get the Appkey.
+1、Log in to http://reg.sharesdk.cn/ to register to be a Mob developer , and click here to create a Mob application, then you will get the Appkey.
+
 2、Open AppDelegate.m to import the .h file
+
 3、appliance each SNS's Open Platform key，refer to：http://bbs.mob.com/forum.php?mod=viewthread&tid=275&page=1&extra=#pid860`
-
-`#import <ShareSDK/ShareSDK.h>`
+```objc
+#import <ShareSDK/ShareSDK.h>
+```
 //Links Native SDK use
-`#import <ShareSDKConnector/ShareSDKConnector.h>` 
+```objc
+#import <ShareSDKConnector/ShareSDKConnector.h>
+```
 //Use ShareSDK's UI(Share menu bar and share editorial page) needs
-`#import <ShareSDKUI/ShareSDKUI.h>`
-
+```objc
+#import <ShareSDKUI/ShareSDKUI.h>
+```
 //QQ SDK header file
+```objc
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-
+```
 //Wechat SDK header file
+```objc
 #import "WXApi.h"
-
+```
 //SinaWeibo SDK header file
+```objc
 #import "WeiboSDK.h"
-//add “-ObjC” to Build Settings ---> Other linker flags
-
+```
 //GooglePlus SDK header file
+```objc
 #import <GooglePlus/GooglePlus.h>
+```
 //add “-ObjC” to Build Settings ---> Other linker flags
 
 and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOptions: method
