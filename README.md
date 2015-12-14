@@ -83,27 +83,31 @@
   ```
 
   Optional Framework：
-
-  necessary for the SSO Login of Sina weibo
   ```objc
+  necessary for the SSO Login of Sina weibo
+  
   ImageIO.framework
   AdSupport.framework
   libsqlite3.dylib
   ```
+  ```objc
   necessary for the SSO Login of WeChat
-  ```objc
+  
   libsqlite3.dylib
   ```
+  ```objc
   necessary for the SSO Login of QZone or QQ Friend share
-  ```objc
+  
   libsqlite3.dylib
   ```
-  necessary for Mail or SMS
   ```objc
+  necessary for Mail or SMS
+  
   MessageUI.framework
   ```
-  necessary for Google+ platform
   ```objc
+  necessary for Google+ platform
+  
   CoreMotion.framework
   CoreLocation.framework
   MediaPlayer.framework
