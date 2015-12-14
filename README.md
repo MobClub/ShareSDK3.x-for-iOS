@@ -21,7 +21,7 @@
 
 ## <a id="Category structure【ShareSDK Category structure】"></a>Category structure【ShareSDK Category structure】
 
-## ShareSDK include：
+ShareSDK include：
 
 **1、libraries（ShareSDK Library），Contains：**
 
