@@ -120,36 +120,31 @@ The steps of adding the framework:
 
 2、Open AppDelegate.m to import the .h file
 
-3、appliance each SNS's Open Platform key，refer to：http://bbs.mob.com/forum.php?mod=viewthread&tid=275&page=1&extra=#pid860`
+3、appliance each SNS's Open Platform key，refer to：http://bbs.mob.com/forum.php?mod=viewthread&tid=275&page=1&extra=#pid860
+
 ```objc
 #import <ShareSDK/ShareSDK.h>
-```
+
 //Links Native SDK use
-```objc
 #import <ShareSDKConnector/ShareSDKConnector.h>
-```
+
 //Use ShareSDK's UI(Share menu bar and share editorial page) needs
-```objc
 #import <ShareSDKUI/ShareSDKUI.h>
-```
+
 //QQ SDK header file
-```objc
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-```
+
 //Wechat SDK header file
-```objc
 #import "WXApi.h"
-```
+
 //SinaWeibo SDK header file
-```objc
 #import "WeiboSDK.h"
-```
+
 //GooglePlus SDK header file
-```objc
 #import <GooglePlus/GooglePlus.h>
-```
 //add “-ObjC” to Build Settings ---> Other linker flags
+```
 
 and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOptions: method
 
@@ -222,6 +217,7 @@ and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOpt
 ## Step 3：construct the share content and share it
 
 1、Create Share parameters. Please refer to ShareSDK.h in ShareSDK.framework or Demo to get the specific usage.
+
 2、To show the share content view ,you need to call the showShareActionSheet… method.
 
 ```objc
@@ -273,16 +269,19 @@ Congratulations!you make it and the result may look like the following snapshop.
 
 ## <a id="Option Configuration(QQ\Wechat\Google+)"></a>Option Configuration(QQ\Wechat\Google+)
 ## Option 1：the specific way to integrate QQ
+
 1、Log in to Open QQ platform (http://open.qq.com/)to become a developer and create a application to get the app’s AppID.
 
 2、Back to your project, choose the -Info.plist (- represents your project name) file. Add a URL Scheme for key, the value’s format is: "QQ" +the hexadecimal number of AppID (if the length of hexadecimal number is less than 8,then fill with zero to make sure the length is 8). Here is a example,if the hexadecimal number of your AppID is 5FB8B52,then the final value of the URL Scheme is QQ05FB8B52.
-![(QQ url schemes)](https://camo.githubusercontent.com/e8d3ae0e323bc18db3a45440b2daf5e18fc19181/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d392e706e67)
+
+![(QQ url schemes)](http://www.mob.com/html/images/github/sharesdk-integrate-9.png)
 
 3、Open -AppDelegate.m ( -represents your project name), import QQSDK header file:
-`
+```objc
 #import <TencentOpenAPI/QQApiInterface.h> 
 #import <TencentOpenAPI/TencentOAuth.h>
-`
+```
+
 4、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
 ```objc
 -   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
@@ -322,15 +321,18 @@ Congratulations!you make it and the result may look like the following snapshop.
 ```
 
 ## Option 2：the specific way to integrate Wechat
+
 1、Log in to WeChat open platform (http://open.weixin.qq.com/) to become a WeChat developer and create a application to get the app’s AppID,AppSecret.
 
 2、Back to your project,choose the -Info.plist (- represents your project name) file. Add a WeChat URL Scheme key, the value is WeChat AppID (eg: wx4868b35061f87885). Here is a example:
+
 ![(Wechat url schemes)](https://camo.githubusercontent.com/731992b8c3790d15cecf40b96c9c0c5055d10064/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d382e706e67)
 
 3、Open -AppDelegate.m ( -represents your project name), import WechatSDK header file:
-`
+```objc
 #import "WXApi.h"
-`
+````
+
 4、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
 ```objc
 -   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
@@ -368,18 +370,22 @@ Congratulations!you make it and the result may look like the following snapshop.
 ```
 
 ## Option 3：the specific way to integrate Google+
+
 1、 Log in to Google+ Developer platform to become a developer (https://console.developers.google.com/home/) and create a application to get the app’s ClientID.
 
 2、Back to your project , add “-ObjC” to Other linker flags. Here are steps:
+
 ![(Google+ -ObjC)](https://camo.githubusercontent.com/731992b8c3790d15cecf40b96c9c0c5055d10064/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d382e706e67)
 
 3、Back to your project , choose the -Info.plist (- represents your project name) file. Add a Google+ URL Scheme key and a URL identifier key, the value both are the BundleID (eg cn.appgo.sharebyone),and the value must same as Google+ dashboard's setting. Here are steps:
+
 ![(Google+ url schemes)](http://bbs.mob.com/data/attachment/forum/201512/04/160940o399nbtt34fhk99z.png)
 
 4、Open -AppDelegate.m ( -represents your project name), import WechatSDK header file:
-`
+```objc
 #import <GooglePlus/GooglePlus.h>
-`
+```
+
 5、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
 ```objc
 -   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
@@ -419,6 +425,7 @@ Congratulations!you make it and the result may look like the following snapshop.
 ```
 
 ## <a id="ShareSDK.h"></a>ShareSDK.h
+
 ```objc
 /**
  *  ShareSDK APIs
