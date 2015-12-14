@@ -48,12 +48,15 @@
 
 ## Step 1：Import the ShareSDK to your project
 * cocoapods import：
-  main module(necessary)
- `pod 'ShareSDK3'`
- 
-  UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
- `pod 'ShareSDK3/ShareSDKUI'`
   
+  main module(necessary)
+  ```objc
+  pod 'ShareSDK3'
+  ```
+  UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
+  ```objc
+  pod 'ShareSDK3/ShareSDKUI'
+  ```
   SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
   ```objc
   pod 'ShareSDK3/ShareSDKPlatforms/QQ'
