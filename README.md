@@ -47,7 +47,7 @@
 ## <a id="How to integrate ShareSDK easily"></a>How to integrate ShareSDK easily
 
 ## Step 1：Import the ShareSDK to your project
-* cocoapods import：
+* **cocoapods import：**
 
   main module(necessary)
   ```objc
@@ -70,7 +70,7 @@
   pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
   pod 'ShareSDK3/ShareSDKPlatforms/Kakao'
   ```
-* Manually import：
+* **Manually import：**
     * dragged `libraries` into the project
     * add the necessary Frameworks
   
