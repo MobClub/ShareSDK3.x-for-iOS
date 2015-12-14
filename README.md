@@ -4,7 +4,7 @@
 ## Contents
 * Getting Started
     * [Features](#Features)
-    * [Category structure【ShareSDK Category structure】](#ShareSDK Category structure)
+    * [Category structure【ShareSDK Category structure】](#Category structure【ShareSDK Category structure】)
     * [How to integrate ShareSDK easily](#How to integrate ShareSDK easily)
     * [Option Configuration(Wechat\QQ\Google+)](#Option Configuration(Wechat\QQ\Google+))
 * common API
@@ -12,7 +12,6 @@
 * Examples
     * [simplyShare](#simplyShare)
     * [showShareEditor](#showShareEditor)
-    * [授权登录](#授权登录)
 * Notice
 
 ## <a id="Features"></a>Features
@@ -21,7 +20,7 @@
 
 ## <a id="Category structure【ShareSDK Category structure】"></a>Category structure【ShareSDK Category structure】
 
-ShareSDK include：
+**ShareSDK include：**
 
 **1、libraries（ShareSDK Library），Contains：**
 
@@ -49,21 +48,21 @@ ShareSDK include：
 
 ## Step 1：Import the ShareSDK to your project
 * cocoapods import：
-`# main module(necessary)
- pod 'ShareSDK3'
+ # main module(necessary)
+ `pod 'ShareSDK3'`
  
  # UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
- pod 'ShareSDK3/ShareSDKUI'
+ `pod 'ShareSDK3/ShareSDKUI'`
  
  # SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
- pod 'ShareSDK3/ShareSDKPlatforms/QQ'
- pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
- pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+ `pod 'ShareSDK3/ShareSDKPlatforms/QQ'`
+ `pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'`
+ `pod 'ShareSDK3/ShareSDKPlatforms/WeChat'`
  
- pod 'ShareSDK3/ShareSDKPlatforms/GooglePlus'
- pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
- pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
- pod 'ShareSDK3/ShareSDKPlatforms/Kakao'`
+ `pod 'ShareSDK3/ShareSDKPlatforms/GooglePlus'`
+ `pod 'ShareSDK3/ShareSDKPlatforms/RenRen'`
+ `pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'`
+ `pod 'ShareSDK3/ShareSDKPlatforms/Kakao'`
  
 * Manually import：
     * dragged `libraries` into the project
