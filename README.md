@@ -379,7 +379,7 @@ Congratulations!you make it and the result may look like the following snapshop.
 
 2、Back to your project , add “-ObjC” to Other linker flags. Here are steps:
 
-![(Google+ -ObjC)](https://camo.githubusercontent.com/731992b8c3790d15cecf40b96c9c0c5055d10064/687474703a2f2f7777772e6d6f622e636f6d2f68746d6c2f696d616765732f6769746875622f736861726573646b2d696e746567726174652d382e706e67)
+![(Google+ -ObjC)](http://www.mob.com/html/images/github/sharesdk-integrate-10.png)
 
 3、Back to your project , choose the -Info.plist (- represents your project name) file. Add a Google+ URL Scheme key and a URL identifier key, the value both are the BundleID (eg cn.appgo.sharebyone),and the value must same as Google+ dashboard's setting. Here are steps:
 
