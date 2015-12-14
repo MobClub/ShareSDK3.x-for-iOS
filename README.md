@@ -48,15 +48,17 @@
 
 ## Step 1：Import the ShareSDK to your project
 * cocoapods import：
-      * main module(necessary)
+  main module(necessary)
   ```objc
   pod 'ShareSDK3'
   ```
-      * UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
+  
+  UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
   ```objc
   pod 'ShareSDK3/ShareSDKUI'
   ```
-      * SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
+  
+  SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
   ```objc
   pod 'ShareSDK3/ShareSDKPlatforms/QQ'
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
@@ -71,7 +73,7 @@
     * dragged `libraries` into the project
     * add the necessary Frameworks
   
-      * Indispensable Framework：
+  Indispensable Framework：
 ```objc
 libicucore.dylib
 libz.dylib
@@ -79,30 +81,27 @@ libstdc++.dylib
 JavaScriptCore.framework
 ```
 
-      * Optional Framework：
+  Optional Framework：
 
-      * necessary for the SSO Login of Sina weibo
+  necessary for the SSO Login of Sina weibo
 ```objc
 ImageIO.framework
 AdSupport.framework
 libsqlite3.dylib
 ```
-necessary for the SSO Login of WeChat
+  necessary for the SSO Login of WeChat
 ```objc
 libsqlite3.dylib
 ```
-
-necessary for the SSO Login of QZone or QQ Friend share
+  necessary for the SSO Login of QZone or QQ Friend share
 ```objc
 libsqlite3.dylib
 ```
-
-necessary for Mail or SMS
+  necessary for Mail or SMS
 ```objc
 MessageUI.framework
 ```
-
-necessary for Google+ platform
+  necessary for Google+ platform
 ```objc
 CoreMotion.framework
 CoreLocation.framework
