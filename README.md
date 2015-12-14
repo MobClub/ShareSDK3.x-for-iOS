@@ -6,7 +6,7 @@
     * [Features](#Features)
     * [Category structure【ShareSDK Category structure】](#Category structure【ShareSDK Category structure】)
     * [How to integrate ShareSDK easily](#How to integrate ShareSDK easily)
-    * [Option Configuration(QQ\Wechat\Google+))](#Option Configuration(QQ\Wechat\Google+))
+    * [Option Configuration(QQ\Wechat\Google+)](#Option Configuration(QQ\Wechat\Google+))
 * common API
     * [ShareSDK.h](#ShareSDK.h)
 * Examples
