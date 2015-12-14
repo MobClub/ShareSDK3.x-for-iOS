@@ -48,16 +48,15 @@
 
 ## Step 1：Import the ShareSDK to your project
 * cocoapods import：
-  
-  main module(necessary)
+      * main module(necessary)
   ```objc
   pod 'ShareSDK3'
   ```
-  UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
+      * UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
   ```objc
   pod 'ShareSDK3/ShareSDKUI'
   ```
-  SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
+      * SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
   ```objc
   pod 'ShareSDK3/ShareSDKPlatforms/QQ'
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
@@ -71,17 +70,18 @@
 * Manually import：
     * dragged `libraries` into the project
     * add the necessary Frameworks
-
-Indispensable Framework：
+  
+      * Indispensable Framework：
 ```objc
 libicucore.dylib
 libz.dylib
 libstdc++.dylib
 JavaScriptCore.framework
 ```
-Optional Framework：
 
-necessary for the SSO Login of Sina weibo
+      * Optional Framework：
+
+      * necessary for the SSO Login of Sina weibo
 ```objc
 ImageIO.framework
 AdSupport.framework
@@ -93,10 +93,14 @@ libsqlite3.dylib
 ```
 
 necessary for the SSO Login of QZone or QQ Friend share
-`libsqlite3.dylib`
+```objc
+libsqlite3.dylib
+```
 
 necessary for Mail or SMS
-`MessageUI.framework`
+```objc
+MessageUI.framework
+```
 
 necessary for Google+ platform
 ```objc
@@ -107,6 +111,7 @@ AssetsLibrary.framework
 ```
 
 The steps of adding the framework:
+
 ![img](http://www.mob.com/html/images/github/sharesdk-integrate-4.png)
 
 ## Step 2: import the header files and register for a Appkey，and choose the platforms that you need and initialize them 
