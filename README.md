@@ -80,11 +80,11 @@
        (2)、Select the ShareSDK file and drag into your project (or just holding down the Control key on your keyboard and click your project,namely right-click your project, and choose “Add Files to …”).
 then you will see the following window, check the "Copy items into destination group's folder (if needed)" and click "Finish" button.
 
-        ![img](http://www.mob.com/html/images/github/sharesdk-integrate-2.png)
+        ![img](http://images2015.cnblogs.com/blog/708376/201512/708376-20151217214621381-255952184.png)
 
        (3)、Now you have added the ShareSDK file to your project and it will look like this:  
 
-        ![img](http://www.mob.com/html/images/github/sharesdk-integrate-3.png)
+        ![img](http://images2015.cnblogs.com/blog/708376/201512/708376-20151217214758443-1212347912.png)
 
 * 2、add the necessary Framework
 
