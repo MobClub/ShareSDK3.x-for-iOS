@@ -75,7 +75,7 @@
    
        (1)、Download the latest version of the ShareSDK, then you will get the following files.
 
-        ![img](http://images2015.cnblogs.com/blog/708376/201512/708376-20151217213156318-1517262214.png)
+        ![img](http://images2015.cnblogs.com/blog/708376/201512/708376-20151217215634646-932311230.png)
 
        (2)、Select the ShareSDK file and drag into your project (or just holding down the Control key on your keyboard and click your project,namely right-click your project, and choose “Add Files to …”).
 then you will see the following window, check the "Copy items into destination group's folder (if needed)" and click "Finish" button.
