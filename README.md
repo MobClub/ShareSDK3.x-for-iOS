@@ -84,7 +84,7 @@ then you will see the following window, check the "Copy items into destination g
 
        (3)、Now you have added the ShareSDK file to your project and it will look like this:  
 
-        ![img](http://images2015.cnblogs.com/blog/708376/201512/708376-20151217214758443-1212347912.png)
+        ![img](http://images2015.cnblogs.com/blog/708376/201512/708376-20151217215149318-1957357410.png)
 
 * 2、add the necessary Framework
 
