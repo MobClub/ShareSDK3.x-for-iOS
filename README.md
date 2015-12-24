@@ -52,6 +52,8 @@
   main module(necessary)
   ```objc
   pod 'ShareSDK3'
+  
+  pod 'MOBFoundation'
   ```
   
   UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
