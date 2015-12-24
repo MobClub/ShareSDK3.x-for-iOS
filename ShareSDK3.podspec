@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ShareSDK3'
-  s.version          = "3.1.5"
+  s.version          = "3.1.6"
   s.summary          = 'ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.'
   s.license          = 'MIT'
   s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   # 核心模块
     s.subspec 'libraries' do |sp|
-        sp.vendored_frameworks = 'libraries/ShareSDKConnector.framework', 'libraries/ShareSDKExtension.framework', 'libraries/MOBFoundation.framework'
+        sp.vendored_frameworks = 'libraries/ShareSDKConnector.framework', 'libraries/ShareSDKExtension.framework'
         sp.libraries = 'icucore', 'z', 'stdc++'
         sp.resources = 'libraries/ShareSDK.bundle'
     end
