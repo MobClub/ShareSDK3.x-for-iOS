@@ -15,6 +15,8 @@
 #import <ShareSDKUI/SSUIShareActionSheetCustomItem.h>
 #import <ShareSDK/ShareSDK+Base.h>
 
+#import <ShareSDKExtension/ShareSDK+Extension.h>
+
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 /**
@@ -413,10 +415,10 @@
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
                                      images:imageArray
-                                        url:[NSURL URLWithString:@"http://mob.com"]
+                                        url:[NSURL URLWithString:@"http://www.mob.com"]
                                       title:@"分享标题"
                                        type:SSDKContentTypeAuto];
-    
+
     //1.2、自定义分享平台（非必要）
     NSMutableArray *activePlatforms = [NSMutableArray arrayWithArray:[ShareSDK activePlatforms]];
     //添加一个自定义的平台（非必要）
@@ -814,14 +816,13 @@
             
             NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
             
-            if (imageArray) {
-                
+            if (imageArray)
+            {
                 [shareParams SSDKSetupShareParamsByText:@"摇着摇着就可以分享出去了，使用ShareSDK分享就是便捷方便。"
                                                  images:imageArray
                                                     url:nil
                                                   title:nil
                                                    type:SSDKContentTypeImage];
-                
                 //显示等待界面
                 [theController showLoadingView:YES];
                 
@@ -830,7 +831,6 @@
                 {
                     shareHandler (SSDKPlatformTypeSinaWeibo, shareParams);
                 }
-
             }
         }
                          onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {

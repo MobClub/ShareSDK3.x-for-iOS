@@ -456,6 +456,28 @@
 
 ///#begin zh-cn
 /**
+ *	@brief	连接Instapaper应用以使用相关功能，此应用需要引用InstapaperConnection.framework
+ *          http://www.instapaper.com/main/request_oauth_consumer_token上注册Instapaper应用，并将相关信息填写到以下字段
+ *
+ *	@param 	appKey 	应用Key
+ *	@param 	appSecret 	应用密钥
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize Instapaper platform. This platform need import InstapaperConnection.framework
+ *          Go to http://www.instapaper.com/main/request_oauth_consumer_token register app，Then fill in the relevant information into the field below
+ *
+ *	@param 	appKey 	App key
+ *	@param 	appSecret 	App secret
+ */
+///#end
++ (void)connectInstapaperWithAppKey:(NSString *)appKey
+                          appSecret:(NSString *)appSecret;
+
+
+///#begin zh-cn
+/**
  *	@brief	连接有道云笔记应用以使用相关功能，此应用需要引用YouDaoNoteConnection.framework
  *          http://note.youdao.com/open/developguide.html#app上注册应用，并将相关信息填写到以下字段
  *
@@ -600,6 +622,73 @@
 + (void)connectWeChatWithAppId:(NSString *)appId
                      appSecret:(NSString *)appSecret
                      wechatCls:(Class)wechatCls;
+
+///#begin zh-cn
+/**
+ *	@brief	链接易信好友
+ *
+ *  @since  ver2.7.0
+ *
+ *	@param 	appId 	应用ID，必须要和朋友圈传入ID一致
+ *	@param 	yixinCls 	易信Api类型，引入YXApi.h后，将[YXApi class]传入此参数
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize YiXin Session platform.
+ *
+ *  @since  ver2.7.0
+ *
+ *	@param 	appId 	App id，Must be consistent and YiXin Timeline passed ID
+ *	@param 	yixinCls 	YXApi class，You should import YXApi.h，then passed [YXApi class] this parameter.
+ */
+///#end
++ (void)connectYiXinSessionWithAppId:(NSString *)appId
+                            yixinCls:(Class)yixinCls;
+
+///#begin zh-cn
+/**
+ *	@brief	链接易信朋友圈
+ *
+ *  @since  ver2.7.0
+ *
+ *	@param 	appId 	应用ID，必须和易信好友传入ID一致
+ *	@param 	yixinCls 	易信Api类型，引入YXApi.h后，将[YXApi class]传入此参数
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize YiXin Timeline platform.
+ *
+ *  @since  ver2.7.0
+ *
+ *	@param 	appId 	App id，Must be consistent and YiXin Session passed ID
+ *	@param 	yixinCls 	YXApi class，You should import YXApi.h，then passed [YXApi class] this parameter.
+ */
+///#end
++ (void)connectYiXinTimelineWithAppId:(NSString *)appId
+                             yixinCls:(Class)yixinCls;
+
+///#begin zh-cn
+/**
+ *	@brief	连接易信应用以使用相关功能，此应用需要引用YiXinConnection.framework和易信官方SDK
+ *          http://open.yixin.im/上注册应用，并将相关信息填写以下字段
+ *
+ *	@param 	appId 	应用ID
+ *	@param 	yixinCls 	易信Api类型，引入YXApi.h后，将[YXApi class]传入此参数
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize YiXin platform，This platform need import YiXinConnection.framework and libYXSDK.a
+ *          Go to http://open.yixin.im/ register app，Then fill in the relevant information into the field below
+ *
+ *	@param 	appId 	App id，
+ *	@param 	yixinCls 	YXApi class，You should import YXApi.h，then passed [YXApi class] this parameter.
+ */
+///#end
++ (void)connectYiXinWithAppId:(NSString *)appId
+                     yixinCls:(Class)yixinCls;
 
 ///#begin zh-cn
 /**
@@ -880,6 +969,22 @@
 
 ///#begin zh-cn
 /**
+ *	@brief	连接打印
+ *
+ *  @since  ver2.6.0
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Initialize Print.
+ *
+ *  @since  ver2.6.0
+ */
+///#end
++ (void)connectAirPrint;
+
+///#begin zh-cn
+/**
  *	@brief	连接拷贝
  *
  *  @since  ver2.6.0
@@ -1079,6 +1184,39 @@
 
 ///#begin zh-cn
 /**
+ *  链接Kakao Talk/Story以使用相关功能
+ *  需要根据选择的平台导入 KaKaoTalkConnection.framework/KaKaoStoryConnection.framework
+ *  @param type        平台类型，可以选择ShareTypeKaKaoTalk 或 ShareTypeKaKaoStory
+ *  @param appKey      应用key
+ *  @param restApiKey  应用restApiKey
+ *  @param redirectUri 回调地址
+ *  @param sessionCls  导入 KakaoOpenSDK.framework, 然后传入[KOSession class];
+ *
+ *  @since ver2.12.2
+ */
+///#end
+///#begin en
+/**
+ *  Initialize KaKao Talk/Story platform
+ *  This platform need import KaKaoTalkConnection.framework/KaKaoStoryConnection.framework
+ *
+ *  @param type        platformType，which can be ShareTypeKaKaoTalk or ShareTypeKaKaoStory
+ *  @param appKey      AppKey
+ *  @param restApiKey  RestApiKey
+ *  @param redirectUri Redirect URI
+ *  @param sessionCls  import KakaoOpenSDK, then pass[KOSession class];
+ *
+ *  @since ver2.12.2
+ */
+///#end
++ (void)connectKakaoWithType:(ShareType)type
+                    ByAppKey:(NSString *)appKey
+                  restApiKey:(NSString *)restApiKey
+                 redirectUri:(NSString *)redirectUri
+                    KakaoCls:(Class)sessionCls;
+
+///#begin zh-cn
+/**
  *	@brief	处理请求打开链接,如果集成新浪微博(SSO)、Facebook(SSO)、微信、QQ分享功能需要加入此方法
  *
  *	@param 	url 	链接
@@ -1220,6 +1358,22 @@
 
 ///#begin zh-cn
 /**
+ *	@brief	导入易信所需要的类型，对于应用信息托管方式下（即registerApp中的useAppTrusteeship为YES）需要调用此方法，注：如果不使用易信可以不调用
+ *
+ *	@param 	yixinClass 	易信接口类型。引入libYixinSDK.a后，将[YXApi class]传入此参数
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Import YiXin classes，For application information hosting (ie registerApp in useAppTrusteeship is YES) need to call this method. Note：You not use the YiXin platform when not in call
+ *
+ *	@param 	yixinClass 	YXApi class。You should import libYixinSDK.a，Then passed [YXApi class] this parameter.
+ */
+///#end
++ (void)importYiXinClass:(Class)yixinClass;
+
+///#begin zh-cn
+/**
  *	@brief	导入支付宝朋友所需要的类型，如果不使用支付宝朋友可以不调用
  *
  *  @since  ver2.11.2
@@ -1254,6 +1408,21 @@
              shareWebObjectCls:(Class)webObjectCls
          sendMessageToAPReqCls:(Class)sendMsgToAPReqCls;
 
+///#begin zh-cn
+/**
+ *	@brief	在使用应用托管的时候才需要调用
+ *
+ *	@param 	sessionCls 	Kakao接口类型。导入 KakaoOpenSDK.framework, 然后传入[KOSession class]
+ */
+///#end
+///#begin en
+/**
+ *	@brief	Import Kakao classes if need
+ *
+ *	@param 	sessionCls 	Kakao class。You should import KakaoOpenSDK.framework，Then passed [KOSession class] this parameter.
+ */
+///#end
++ (void)importKakaoCls:(Class)sessionCls;
 
 #pragma mark 辅助
 

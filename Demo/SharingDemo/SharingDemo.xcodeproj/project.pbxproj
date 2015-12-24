@@ -51,6 +51,7 @@
 		DE79434A1B58B99F00D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943471B58B99F00D266E8 /* Default-568h@2x.png */; };
 		DE79434B1B58B99F00D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943481B58B99F00D266E8 /* Default.png */; };
 		DE79434C1B58B99F00D266E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943491B58B99F00D266E8 /* Default@2x.png */; };
+		DED0827E1C27ABF300A3CF0E /* libYixinSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0827B1C27ABF300A3CF0E /* libYixinSDK.a */; };
 		DEF4D7931BE8A575001E5139 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF4D7921BE8A575001E5139 /* KakaoOpenSDK.framework */; };
 		DEFF89AD1B58DD2F00AEA8B0 /* shareImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DEFF89AC1B58DD2F00AEA8B0 /* shareImg.png */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,9 @@
 		DE7943471B58B99F00D266E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE7943481B58B99F00D266E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE7943491B58B99F00D266E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DED0827B1C27ABF300A3CF0E /* libYixinSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYixinSDK.a; sourceTree = "<group>"; };
+		DED0827C1C27ABF300A3CF0E /* YXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApi.h; sourceTree = "<group>"; };
+		DED0827D1C27ABF300A3CF0E /* YXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApiObject.h; sourceTree = "<group>"; };
 		DEF4D7921BE8A575001E5139 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		DEFF89AC1B58DD2F00AEA8B0 /* shareImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED0827E1C27ABF300A3CF0E /* libYixinSDK.a in Frameworks */,
 				DE247F1A1BB24BD200225F1B /* AdSupport.framework in Frameworks */,
 				DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */,
 				DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */,
@@ -235,6 +240,7 @@
 		D08BDA351B412B4600C73757 /* extends */ = {
 			isa = PBXGroup;
 			children = (
+				DED0827A1C27ABF300A3CF0E /* YiXinSDK */,
 				DEF4D7911BE8A575001E5139 /* KaKaoSDK */,
 				DE5E91231BE8A4550085B746 /* APSocialSDK */,
 				DE771F1E1B7F150600E2728B /* GooglePlusSDK */,
@@ -333,6 +339,16 @@
 				DE771F241B7F150600E2728B /* RennSDK.framework */,
 			);
 			path = RenRenSDK;
+			sourceTree = "<group>";
+		};
+		DED0827A1C27ABF300A3CF0E /* YiXinSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DED0827B1C27ABF300A3CF0E /* libYixinSDK.a */,
+				DED0827C1C27ABF300A3CF0E /* YXApi.h */,
+				DED0827D1C27ABF300A3CF0E /* YXApiObject.h */,
+			);
+			path = YiXinSDK;
 			sourceTree = "<group>";
 		};
 		DEF4D7911BE8A575001E5139 /* KaKaoSDK */ = {
@@ -569,6 +585,7 @@
 					"$(SRCROOT)/../../libraries/extends/SinaWeiboSDK",
 					"$(SRCROOT)/../../libraries/extends/WeChatSDK",
 					"$(SRCROOT)/../../libraries/extends/APSocialSDK",
+					"$(SRCROOT)/../../libraries/extends/YiXinSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -599,6 +616,7 @@
 					"$(SRCROOT)/../../libraries/extends/SinaWeiboSDK",
 					"$(SRCROOT)/../../libraries/extends/WeChatSDK",
 					"$(SRCROOT)/../../libraries/extends/APSocialSDK",
+					"$(SRCROOT)/../../libraries/extends/YiXinSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

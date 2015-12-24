@@ -7,7 +7,7 @@
 //
 
 #import <ShareSDK/ShareSDK.h>
-#import "SSDKAuthView.h"
+#import "ISSDKAuthView.h"
 
 /**
  *  ShareSDK基础APIs

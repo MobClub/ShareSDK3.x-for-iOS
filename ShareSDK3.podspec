@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ShareSDK3'
-  s.version          = "3.1.4"
+  s.version          = "3.1.5"
   s.summary          = 'ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.'
   s.license          = 'MIT'
   s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
@@ -80,6 +80,13 @@ Pod::Spec.new do |s|
         # Kakao
         sp.subspec 'Kakao' do |ssp|
             ssp.vendored_frameworks = 'libraries/extends/KaKaoSDK/KakaoOpenSDK.framework'
+        end
+
+        # Yixin
+        sp.subspec 'Yixin' do |ssp|
+            ssp.vendored_libraries = "libraries/extends/YiXinSDK/*.a"
+            ssp.source_files = "libraries/extends/YiXinSDK/*.{h,m}"
+            ssp.public_header_files = "libraries/extends/YiXinSDK/*.h"
         end
     end
 end
