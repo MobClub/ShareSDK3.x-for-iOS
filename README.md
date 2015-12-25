@@ -52,7 +52,6 @@
   main module(necessary)
   ```objc
   pod 'ShareSDK3'
-  
   pod 'MOBFoundation'
   ```
   
@@ -71,6 +70,7 @@
   pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
   pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
   pod 'ShareSDK3/ShareSDKPlatforms/Kakao'
+  pod 'ShareSDK3/ShareSDKPlatforms/Yixin'
   ```
 * **Manually import：**
   * 1、Download the latest version of the ShareSDK, and drag into your project
