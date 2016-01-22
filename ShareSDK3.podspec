@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform         = :ios
   s.ios.deployment_target = "6.0"
   s.frameworks       = 'UIKit', 'JavaScriptCore'
-  s.ShareSDK        = 'icucore', 'z.1.2.5', 'stdc++'
+  s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
 
   s.default_subspecs    = 'ShareSDK'
   s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
     # 各个平台的SDK
     s.subspec 'ShareSDKPlatforms' do |sp|
-        sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat', 'RenRen','Yixin','Messenger'
+        sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat', 'RenRen', 'Yixin', 'Messenger'
 
         # QQ
         sp.subspec 'QQ' do |ssp|
