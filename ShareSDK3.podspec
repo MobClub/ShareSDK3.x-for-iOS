@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
         sp.subspec 'SinaWeibo' do |ssp|
             ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.a"
             ssp.resource = 'ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle'
-            ssp.frameworks = 'ImageIO', 'AdSupport'
+            ssp.frameworks = 'ImageIO'
             ssp.libraries = 'sqlite3'
             ssp.source_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.{h,m}"
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.h"

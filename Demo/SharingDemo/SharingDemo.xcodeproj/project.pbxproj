@@ -28,7 +28,6 @@
 		DE11F3361B7F23CB00C33072 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F3351B7F23CB00C33072 /* AssetsLibrary.framework */; };
 		DE11F3381B7F23D800C33072 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F3371B7F23D800C33072 /* AddressBook.framework */; };
 		DE11F3401B7F26EC00C33072 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE11F33F1B7F26EC00C33072 /* ImageIO.framework */; };
-		DE247F1A1BB24BD200225F1B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE247F191BB24BD200225F1B /* AdSupport.framework */; };
 		DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */; };
 		DE79434A1B58B99F00D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943471B58B99F00D266E8 /* Default-568h@2x.png */; };
 		DE79434B1B58B99F00D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943481B58B99F00D266E8 /* Default.png */; };
@@ -141,7 +140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE247F1A1BB24BD200225F1B /* AdSupport.framework in Frameworks */,
 				E2501AD91C50853300D1BDBC /* libWeiboSDK.a in Frameworks */,
 				DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */,
 				E2501AD41C50853300D1BDBC /* KakaoOpenSDK.framework in Frameworks */,
