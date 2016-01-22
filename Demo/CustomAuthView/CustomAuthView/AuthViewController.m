@@ -7,14 +7,14 @@
 //
 
 #import "AuthViewController.h"
-#import <ShareSDK/SSDKAuthView.h>
+#import <ShareSDK/ISSDKAuthView.h>
 
 @interface AuthViewController ()
 
 /**
  *  授权视图
  */
-@property (nonatomic, strong) SSDKAuthView *authView;
+@property (nonatomic, strong) UIView<ISSDKAuthView> *authView;
 
 /**
  *  关注按钮
@@ -43,7 +43,7 @@
     [self.followBtn addTarget:self action:@selector(followBtnClickHandler:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (instancetype)initWithAuthView:(SSDKAuthView *)authView
+- (instancetype)initWithAuthView:(UIView<ISSDKAuthView> *)authView
 {
     if (self = [super init])
     {
@@ -75,7 +75,6 @@
                     }];
                 }
             }
-            
             [theController dismissModalViewControllerAnimated:YES];
         }];
     }

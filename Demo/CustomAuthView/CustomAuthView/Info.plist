@@ -2,15 +2,46 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>yixinfav</string>
+		<string>yixinoauth</string>
+		<string>yixinopenapi</string>
+		<string>yixin</string>
+		<string>pinit</string>
+		<string>kakaolink</string>
+		<string>kakao48d3f524e4a636b08d81b3ceb50f1003</string>
+		<string>alipay</string>
+		<string>storykompassauth</string>
+		<string>pinterestsdk.v1</string>
+		<string>kakaokompassauth</string>
+		<string>alipayshare</string>
+		<string>pinit</string>
+		<string>line</string>
+		<string>whatsapp</string>
+		<string>mqqwpa</string>
+		<string>instagram</string>
+		<string>fbauth2</string>
+		<string>renren</string>
+		<string>renrenios</string>
+		<string>renrenapi</string>
+		<string>rm226427com.mob.demoShareSDK</string>
+		<string>mqq</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqqopensdkapiV3</string>
+		<string>wtloginmqq2</string>
+		<string>mqqapi</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>sinaweibohdsso</string>
+		<string>sinaweibosso</string>
+		<string>wechat</string>
+		<string>weixin</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string></string>
-	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

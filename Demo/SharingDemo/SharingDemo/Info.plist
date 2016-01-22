@@ -2,10 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FacebookAppID</key>
+	<string>107704292745179</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>48d3f524e4a636b08d81b3ceb50f1003</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fb-messenger</string>
 		<string>yixinfav</string>
 		<string>yixinoauth</string>
 		<string>yixinopenapi</string>

@@ -97,7 +97,7 @@
     __weak ViewController *theController = self;
     [ShareSDK authorize:SSDKPlatformTypeSinaWeibo
                settings:nil
-          onViewDisplay:^(SSDKAuthView *view)
+          onViewDisplay:^(UIView<ISSDKAuthView> *view)
     {
               
               //在此回调中进行授权视图自定义

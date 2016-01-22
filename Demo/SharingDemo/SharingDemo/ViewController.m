@@ -412,6 +412,7 @@
     
     //1、创建分享参数（必要）
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+    [shareParams SSDKEnableUseClientShare];
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
                                      images:imageArray
@@ -449,7 +450,7 @@
     
     //2、分享
     [ShareSDK showShareActionSheet:view
-                             items:activePlatforms
+                             items:nil
                        shareParams:shareParams
                onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
                    
@@ -462,6 +463,12 @@
                        }
                        case SSDKResponseStateSuccess:
                        {
+                           //Facebook Messenger、WhatsApp等平台捕获不到分享成功或失败的状态，最合适的方式就是对这些平台区别对待
+                           if (platformType == SSDKPlatformTypeFacebookMessenger)
+                           {
+                               break;
+                           }
+                           
                            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享成功"
                                                                                message:nil
                                                                               delegate:nil

@@ -21,6 +21,6 @@
  *
  *  @return 视图控制器
  */
-- (instancetype)initWithAuthView:(SSDKAuthView *)authView;
+- (instancetype)initWithAuthView:(UIView<ISSDKAuthView> *)authView;
 
 @end

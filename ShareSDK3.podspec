@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ShareSDK3'
-  s.version          = "3.1.8"
+  s.version          = "3.1.9"
   s.summary          = 'ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.'
   s.license          = 'MIT'
   s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
@@ -10,83 +10,82 @@ Pod::Spec.new do |s|
   s.platform         = :ios
   s.ios.deployment_target = "6.0"
   s.frameworks       = 'UIKit', 'JavaScriptCore'
-  s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
+  s.ShareSDK        = 'icucore', 'z.1.2.5', 'stdc++'
 
-  s.default_subspecs    = 'libraries'
-  s.vendored_frameworks = 'libraries/ShareSDK.framework'
+  s.default_subspecs    = 'ShareSDK'
+  s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
 
   # 核心模块
-    s.subspec 'libraries' do |sp|
-        sp.vendored_frameworks = 'libraries/ShareSDKConnector.framework', 'libraries/ShareSDKExtension.framework'
+    s.subspec 'ShareSDK' do |sp|
+        sp.vendored_frameworks = 'ShareSDK/Support/Required/ShareSDKConnector.framework', 'ShareSDK/Support/Optional/ShareSDKExtension.framework'
         sp.libraries = 'icucore', 'z', 'stdc++'
-        sp.resources = 'libraries/ShareSDK.bundle'
+        sp.resources = 'ShareSDK/Support/Required/ShareSDK.bundle'
     end
 
     # ShareSDK提供的UI
     s.subspec 'ShareSDKUI' do |sp|
-        sp.vendored_frameworks = 'libraries/ShareSDKUI.framework'
-        sp.resources = 'libraries/ShareSDKUI.bundle'
+        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKUI.framework'
+        sp.resources = 'ShareSDK/Support/Optional/ShareSDKUI.bundle'
     end
 
     # 各个平台的SDK
     s.subspec 'ShareSDKPlatforms' do |sp|
-        sp.default_subspecs = 'GooglePlus', 'QQ', 'SinaWeibo', 'WeChat', 'RenRen'
-    
-        # GooglePlus
-        sp.subspec 'GooglePlus' do |ssp|
-            ssp.vendored_frameworks = 'libraries/extends/GooglePlusSDK/GoogleOpenSource.framework', 'libraries/extends/GooglePlusSDK/GooglePlus.framework'
-            ssp.resource = 'libraries/extends/GooglePlusSDK/GooglePlus.bundle'
-            ssp.frameworks = 'CoreMotion', 'CoreLocation', 'MediaPlayer', 'AssetsLibrary', 'AddressBook'
-        end
+        sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat', 'RenRen','Yixin','Messenger'
 
         # QQ
         sp.subspec 'QQ' do |ssp|
-            ssp.vendored_frameworks = 'libraries/extends/QQSDK/TencentOpenAPI.framework'
-            ssp.resource = 'libraries/extends/QQSDK/TencentOpenApi_IOS_Bundle.bundle'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenAPI.framework'
+            ssp.resource = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle'
             ssp.libraries = 'sqlite3'
         end
 
         # SinaWeibo
         sp.subspec 'SinaWeibo' do |ssp|
-            ssp.vendored_libraries = "libraries/extends/SinaWeiboSDK/*.a"
-            ssp.resource = 'libraries/extends/SinaWeiboSDK/WeiboSDK.bundle'
+            ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.a"
+            ssp.resource = 'ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle'
             ssp.frameworks = 'ImageIO', 'AdSupport'
             ssp.libraries = 'sqlite3'
-            ssp.source_files = "libraries/extends/SinaWeiboSDK/*.{h,m}"
-            ssp.public_header_files = "libraries/extends/SinaWeiboSDK/*.h"
+            ssp.source_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.{h,m}"
+            ssp.public_header_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.h"
         end
 
         # WeChat
         sp.subspec 'WeChat' do |ssp|
-            ssp.vendored_libraries = "libraries/extends/WeChatSDK/*.a"
-            ssp.source_files = "libraries/extends/WeChatSDK/*.{h,m}"
-            ssp.public_header_files = "libraries/extends/WeChatSDK/*.h"
+            ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.a"
+            ssp.source_files = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.{h,m}"
+            ssp.public_header_files = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.h"
             ssp.libraries = 'sqlite3'
         end
 
         # RenRen
         sp.subspec 'RenRen' do |ssp|
-            ssp.vendored_frameworks = 'libraries/extends/RenRenSDK/RennSDK.framework'
-            ssp.resource = 'libraries/extends/RenRenSDK/RennSDK.bundle'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.framework'
+            ssp.resource = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.bundle'
         end
 
         # 支付宝（AliPaySocial）
         sp.subspec 'AliPaySocial' do |ssp|
-            ssp.vendored_libraries = 'libraries/extends/APSocialSDK/*.a'
-            ssp.source_files = "libraries/extends/APSocialSDK/*.{h,m}"
-            ssp.public_header_files = "libraries/extends/APSocialSDK/*.h"
+            ssp.vendored_libraries = 'ShareSDK/Support/PlatformSDK/APSocialSDK/*.a'
+            ssp.source_files = "ShareSDK/Support/PlatformSDK/APSocialSDK/*.{h,m}"
+            ssp.public_header_files = "ShareSDK/Support/PlatformSDK/APSocialSDK/*.h"
         end
 
         # Kakao
         sp.subspec 'Kakao' do |ssp|
-            ssp.vendored_frameworks = 'libraries/extends/KaKaoSDK/KakaoOpenSDK.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/KaKaoSDK/KakaoOpenSDK.framework'
         end
 
         # Yixin
         sp.subspec 'Yixin' do |ssp|
-            ssp.vendored_libraries = "libraries/extends/YiXinSDK/*.a"
-            ssp.source_files = "libraries/extends/YiXinSDK/*.{h,m}"
-            ssp.public_header_files = "libraries/extends/YiXinSDK/*.h"
+            ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.a"
+            ssp.source_files = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.{h,m}"
+            ssp.public_header_files = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.h"
         end
+
+        # Messenger
+        sp.subspec 'Messenger' do |ssp|
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/FacebookMessengerSDK/FBSDKMessengerShareKit.framework'
+        end
+
     end
 end
