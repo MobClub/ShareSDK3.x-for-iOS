@@ -66,7 +66,7 @@
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
   pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
  
-  pod 'ShareSDK3/ShareSDKPlatforms/GooglePlus'
+  pod 'ShareSDK3/ShareSDKPlatforms/Messenger'
   pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
   pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
   pod 'ShareSDK3/ShareSDKPlatforms/Kakao'
