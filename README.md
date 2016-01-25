@@ -139,7 +139,6 @@ The steps of adding the framework:
 //Links Native SDK use
 #import <ShareSDKConnector/ShareSDKConnector.h>
 
-//Use ShareSDK's UI(Share menu bar and share editorial page) needs
 #import <ShareSDKUI/ShareSDKUI.h>
 
 //QQ SDK header file
@@ -152,9 +151,6 @@ The steps of adding the framework:
 //SinaWeibo SDK header file
 #import "WeiboSDK.h"
 
-//GooglePlus SDK header file
-#import <GooglePlus/GooglePlus.h>
-//add “-ObjC” to Build Settings ---> Other linker flags
 ```
 
 and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOptions: method
@@ -184,10 +180,6 @@ and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOpt
                   case SSDKPlatformTypeSinaWeibo:
                           [ShareSDKConnector connectWeibo:[WeiboSDK class]];
                     break;
-                  case SSDKPlatformTypeGooglePlus:
-                          [ShareSDKConnector connectGooglePlus:[GPPSignIn class]
-                                                       shareClass:[GPPShare class]];
-                    break;
                   default:
                     break;
                 }
@@ -215,8 +207,7 @@ and add the initialize code to the -(BOOL)application: didFinishLaunchingWithOpt
                    case SSDKPlatformTypeGooglePlus:
                       [appInfo SSDKSetupGooglePlusByClientID:@"232554794995.apps.googleusercontent.com"
                                                 clientSecret:@"PEdFgtrMw97aCvf0joQj7EMk"
-                                                 redirectUri:@"http://localhost"
-                                                    authType:SSDKAuthTypeBoth];
+                                                 redirectUri:@"http://localhost"];
                     break;
                    default:
                     break;
@@ -384,20 +375,13 @@ Congratulations!you make it and the result may look like the following snapshop.
 
 1、 Log in to Google+ Developer platform to become a developer (https://console.developers.google.com/home/) and create a application to get the app’s ClientID.
 
-2、Back to your project , add “-ObjC” to Other linker flags. Here are steps:
 
-![(Google+ -ObjC)](http://www.mob.com/html/images/github/sharesdk-integrate-10.png)
-
-3、Back to your project , choose the -Info.plist (- represents your project name) file. Add a Google+ URL Scheme key and a URL identifier key, the value both are the BundleID (eg cn.appgo.sharebyone),and the value must same as Google+ dashboard's setting. Here are steps:
+2、Back to your project , choose the -Info.plist (- represents your project name) file. Add a Google+ URL Scheme key and a URL identifier key, the value both are the BundleID (eg cn.appgo.sharebyone),and the value must same as Google+ dashboard's setting. Here are steps:
 
 ![(Google+ url schemes)](http://bbs.mob.com/data/attachment/forum/201512/04/160940o399nbtt34fhk99z.png)
 
-4、Open -AppDelegate.m ( -represents your project name), import WechatSDK header file:
-```objc
-#import <GooglePlus/GooglePlus.h>
-```
 
-5、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
+3、Add the codes in -(BOOL)application: didFinishLaunchingWithOptions: method
 ```objc
 -   (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {        
@@ -423,8 +407,7 @@ Congratulations!you make it and the result may look like the following snapshop.
                   case SSDKPlatformTypeGooglePlus:
                        [appInfo SSDKSetupGooglePlusByClientID:@"***********" // Google+ clientID
                                                  clientSecret:@""
-                                                  redirectUri:@""
-                                                     authType:SSDKAuthTypeBoth];
+                                                  redirectUri:@""];
                   break;
                   default:
                       break;
