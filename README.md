@@ -103,7 +103,6 @@ then you will see the following window, check the "Copy items into destination g
   necessary for the SSO Login of Sina weibo
   
   ImageIO.framework
-  AdSupport.framework
   libsqlite3.dylib
   ```
   ```objc
@@ -120,14 +119,6 @@ then you will see the following window, check the "Copy items into destination g
   necessary for Mail or SMS
   
   MessageUI.framework
-  ```
-  ```objc
-  necessary for Google+ platform
-  
-  CoreMotion.framework
-  CoreLocation.framework
-  MediaPlayer.framework
-  AssetsLibrary.framework
   ```
 
 The steps of adding the framework:
