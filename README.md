@@ -24,7 +24,7 @@
 
 **1、ShareSDK（ShareSDK Library），Contains：**
 
-'''
+```
 (1) ShareSDK.framework：Core Framework。（necessary）
 (2) Support Folder. Contains:
      (a) Required :
@@ -39,7 +39,7 @@
          ----- ShareSDKUI.framework：Share menu bar and share editorial page。（customize these UI can be removed directly）
  
      (c) PlatformSDK:Third-party platform's SDK（Platform SDK does not require can be removable）
-'''
+```
 
 
 
