@@ -22,18 +22,26 @@
 
 **ShareSDK include：**
 
-**1、libraries（ShareSDK Library），Contains：**
+**1、ShareSDK（ShareSDK Library），Contains：**
 
-     1. extends：Third-party platform's SDK。（Platform SDK does not require can be removable）
-     2. MOBFoundation.framework：Basic Functions Framework。（necessary）
-     3. ShareSDK.bundle：ShareSDK Resources。（necessary）
-     4. ShareSDK.framework：Core Framework。（necessary）
-     5. ShareSDKConnector.framework：Acting framework for plug-ShareSDK frame and outer frame connection. When necessary, use a third-party SDK.
-     
-     6. ShareSDKExtension.framework：ShareSDK framework for functional expansion plug. Currently the main provider of third-party platform login, onekey share, screenshots sharing, shake sharing and other related functions. We need to use the above functions necessary。
-     7. ShareSDKInterfaceAdapter.framework：The interface-compatible package to ShareSDK v2.X。(Use ShareSDK v3.X of the proposal directly interfaces)
-     8. ShareSDKUI.bundle：Share menu bar and share editorial page Resources。（customize these UI can be removed directly）
-     9. ShareSDKUI.framework：Share menu bar and share editorial page。（customize these UI can be removed directly）
+'''
+(1) ShareSDK.framework：Core Framework。（necessary）
+(2) Support Folder. Contains:
+     (a) Required :
+         ----- MOBFoundation.framework：Basic Functions Framework。（necessary)
+         ----- ShareSDK.bundle：ShareSDK Resources。（necessary）
+         ----- ShareSDKConnector.framework：Acting framework for plug-ShareSDK frame and outer frame connection. When necessary, use a third-party SDK.
+ 
+     (b) Optional :
+         ----- ShareSDKExtension.framework：ShareSDK framework for functional expansion plug. Currently the main provider of third-party platform login, onekey share, screenshots sharing, shake sharing and other related functions. We need to use the above functions necessary。
+         ----- ShareSDKInterfaceAdapter.framework：The interface-compatible package to ShareSDK v2.X。(Use ShareSDK v3.X of the proposal directly interfaces)
+         ----- ShareSDKUI.bundle：Share menu bar and share editorial page Resources。（customize these UI can be removed directly）
+         ----- ShareSDKUI.framework：Share menu bar and share editorial page。（customize these UI can be removed directly）
+ 
+     (c) PlatformSDK:Third-party platform's SDK（Platform SDK does not require can be removable）
+'''
+
+
 
 **2、Demo（It contains Objective-C, swift sample Demo）**
  
