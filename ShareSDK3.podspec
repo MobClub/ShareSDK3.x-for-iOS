@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
     # 各个平台的SDK
     s.subspec 'ShareSDKPlatforms' do |sp|
-        sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat', 'RenRen', 'Yixin', 'Messenger'
+        #sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat', 'RenRen', 'Yixin', 'Messenger' - Errors: Can't set `default_subspecs` attribute for subspecs
 
         # QQ
         sp.subspec 'QQ' do |ssp|
