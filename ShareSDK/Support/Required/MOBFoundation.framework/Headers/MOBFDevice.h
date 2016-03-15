@@ -189,4 +189,11 @@ typedef NS_ENUM(NSUInteger, MOBFNetworkType)
  */
 + (NSString *)ipAddress;
 
+/**
+ *  获取开发商ID
+ *
+ *  @return 开发商ID
+ */
++ (NSString *)idfv;
+
 @end

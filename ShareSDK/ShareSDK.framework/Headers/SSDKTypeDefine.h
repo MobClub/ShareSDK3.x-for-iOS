@@ -325,6 +325,11 @@ typedef NS_ENUM(NSUInteger, SSDKContentType){
      *  视频
      */
     SSDKContentTypeVideo        = 6,
+    
+    /**
+     *  文件类型(暂时仅微信可用)
+     */
+    SSDKContentTypeFile         = 7
 
 };
 

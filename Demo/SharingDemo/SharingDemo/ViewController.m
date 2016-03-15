@@ -346,7 +346,7 @@
         
         [shareParams SSDKSetupShareParamsByText:@"分享内容"
                                          images:imageArray
-                                            url:[NSURL URLWithString:@"http://mob.com"]
+                                            url:[NSURL URLWithString:@"http://www.mob.com"]
                                           title:@"分享标题"
                                            type:SSDKContentTypeImage];
         
@@ -412,7 +412,7 @@
     
     //1、创建分享参数（必要）
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    [shareParams SSDKEnableUseClientShare];
+    
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
                                      images:imageArray

@@ -84,6 +84,11 @@
 + (void)setRightButtonRightMargin:(CGFloat)margin;
 
 /**
+ *  设置支持的页面方向
+ */
++ (void)setSupportedInterfaceOrientation:(UIInterfaceOrientationMask)toInterfaceOrientation;
+
+/**
  *  设置状态栏样式
  *
  *  @param style 样式

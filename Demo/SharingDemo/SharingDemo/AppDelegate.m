@@ -139,7 +139,6 @@
                          default:
                              break;
                      }
-                     
                  }
           onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
               
@@ -258,8 +257,8 @@
                                           oauthCallback:@"https://www.sharesdk.cn"];
                       break;
                   case SSDKPlatformTypeVKontakte:
-                      [appInfo SSDKSetupVKontakteByApplicationId:@"3921561"
-                                                       secretKey:@"6Qf883ukLDyz4OBepYF1"];
+                      [appInfo SSDKSetupVKontakteByApplicationId:@"5312801"
+                                                       secretKey:@"ZHG2wGymmNUCRLG2r6CY"];
                       break;
                   case SSDKPlatformTypeMingDao:
                       [appInfo SSDKSetupMingDaoByAppKey:@"EEEE9578D1D431D3215D8C21BF5357E3"

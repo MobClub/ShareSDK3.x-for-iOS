@@ -125,6 +125,58 @@
                  forPlatformSubType:(SSDKPlatformType)platformSubType;
 
 /**
+ *  设置微信分享参数
+ *
+ *  @param text                 文本
+ *  @param title                标题
+ *  @param url                  分享链接
+ *  @param thumbImage           缩略图，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
+ *  @param image                图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
+ *  @param musicFileURL         音乐文件链接地址
+ *  @param extInfo              扩展信息
+ *  @param fileData             文件数据，可以为NSData、UIImage、NSString、NSURL（文件路径）、SSDKData、SSDKImage
+ *  @param emoticonData         表情数据，可以为NSData、UIImage、NSURL（文件路径）、SSDKData、SSDKImage
+ *  @param sourceFileExtension  源文件后缀名
+ *  @param sourceFileData       源文件数据，可以为NSData、NSString、NSURL（文件路径）、SSDKData
+ *  @param type                 分享类型，支持SSDKContentTypeText、SSDKContentTypeImage、SSDKContentTypeWebPage、SSDKContentTypeApp、SSDKContentTypeAudio和SSDKContentTypeVideo
+ *  @param platformType 平台子类型，只能传入SSDKPlatformTypeWechatSession、SSDKPlatformTypeWechatTimeline和SSDKPlatformTypeWechatFav其中一个
+ *
+ *  分享文本时：
+ *  设置type为SSDKContentTypeText, 并填入text参数
+ *
+ *  分享图片时：
+ *  设置type为SSDKContentTypeImage, 非gif图片时：填入title和image参数，如果为gif图片则需要填写title和emoticonData参数
+ *
+ *  分享网页时：
+ *  设置type为SSDKContentTypeWebPage, 并设置text、title、url以及thumbImage参数，如果尚未设置thumbImage则会从image参数中读取图片并对图片进行缩放操作。
+ *
+ *  分享应用时：
+ *  设置type为SSDKContentTypeApp，并设置text、title、extInfo（可选）以及fileData（可选）参数。
+ *
+ *  分享音乐时：
+ *  设置type为SSDKContentTypeAudio，并设置text、title、url以及musicFileURL（可选）参数。
+ *
+ *  分享视频时：
+ *  设置type为SSDKContentTypeVideo，并设置text、title、url参数
+ *
+ *  分享文件时：
+ *  设置type为SSDKContentTypeFile（例如.mp3、.mp4、.pdf、.docx的分享），设置title、sourceFileExtension、sourceFileData，以及thumbImage参数，如果尚未设置thumbImage则会从image参数中读取图片并对图片进行缩放操作参数
+ */
+- (void)SSDKSetupWeChatParamsByText:(NSString *)text
+                              title:(NSString *)title
+                                url:(NSURL *)url
+                         thumbImage:(id)thumbImage
+                              image:(id)image
+                       musicFileURL:(NSURL *)musicFileURL
+                            extInfo:(NSString *)extInfo
+                           fileData:(id)fileData
+                       emoticonData:(id)emoticonData
+                sourceFileExtension:(NSString *)fileExtension
+                     sourceFileData:(id)sourceFileData
+                               type:(SSDKContentType)type
+                 forPlatformSubType:(SSDKPlatformType)platformSubType;
+
+/**
  *  设置Twitter分享参数
  *
  *  @param text      分享内容

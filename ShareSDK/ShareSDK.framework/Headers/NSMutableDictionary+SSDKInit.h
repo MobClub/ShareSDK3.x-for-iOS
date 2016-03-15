@@ -246,9 +246,14 @@
  *
  *  @param applicationId 应用标识
  *  @param secretKey     应用密钥
+ *  @param authType    授权方式。值可以是：SSDKAuthTypeSSO、SSDKAuthTypeWeb、SSDKAuthTypeBoth，分别代表SSO、网页授权、SSO＋网页授权。
  */
 - (void)SSDKSetupVKontakteByApplicationId:(NSString *)applicationId
                                 secretKey:(NSString *)secretKey;
+
+- (void)SSDKSetupVKontakteByApplicationId:(NSString *)applicationId
+                                secretKey:(NSString *)secretKey
+                                 authType:(NSString *)authType;
 
 /**
  *  设置明道应用信息
