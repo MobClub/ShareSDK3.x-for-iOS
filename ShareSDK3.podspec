@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ShareSDK3'
-  s.version          = "3.2.2"
+  s.version          = "3.2.3"
   s.summary          = 'ShareSDK is the most comprehensive Social SDK in the world,which share easily with 40+ platforms.'
   s.license          = 'MIT'
   s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
