@@ -49,7 +49,6 @@
 		E2501AD91C50853300D1BDBC /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AB11C50853300D1BDBC /* libWeiboSDK.a */; };
 		E2501ADA1C50853300D1BDBC /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2501ABB1C50853300D1BDBC /* WeiboSDK.bundle */; };
 		E2501ADB1C50853300D1BDBC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501ABF1C50853300D1BDBC /* libWeChatSDK.a */; };
-		E2501ADC1C50853300D1BDBC /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2501AC01C50853300D1BDBC /* read_me.txt */; };
 		E2501ADD1C50853300D1BDBC /* libYixinSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AC51C50853300D1BDBC /* libYixinSDK.a */; };
 		E2501ADE1C50853300D1BDBC /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AC91C50853300D1BDBC /* MOBFoundation.framework */; };
 		E2501ADF1C50853300D1BDBC /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2501ACA1C50853300D1BDBC /* ShareSDK.bundle */; };
@@ -123,7 +122,6 @@
 		E2501ABC1C50853300D1BDBC /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		E2501ABD1C50853300D1BDBC /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
 		E2501ABF1C50853300D1BDBC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		E2501AC01C50853300D1BDBC /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		E2501AC11C50853300D1BDBC /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		E2501AC21C50853300D1BDBC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		E2501AC31C50853300D1BDBC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				E2501ABF1C50853300D1BDBC /* libWeChatSDK.a */,
-				E2501AC01C50853300D1BDBC /* read_me.txt */,
 				E2501AC11C50853300D1BDBC /* WechatAuthSDK.h */,
 				E2501AC21C50853300D1BDBC /* WXApi.h */,
 				E2501AC31C50853300D1BDBC /* WXApiObject.h */,
@@ -452,7 +449,6 @@
 				DE79434B1B58B99F00D266E8 /* Default.png in Resources */,
 				DE79434C1B58B99F00D266E8 /* Default@2x.png in Resources */,
 				E2501ACF1C50853300D1BDBC /* ShareSDKUI.bundle in Resources */,
-				E2501ADC1C50853300D1BDBC /* read_me.txt in Resources */,
 				D08BDA1A1B412A8400C73757 /* Main.storyboard in Resources */,
 				D08BDA1F1B412A8400C73757 /* LaunchScreen.xib in Resources */,
 				DE79434A1B58B99F00D266E8 /* Default-568h@2x.png in Resources */,
@@ -595,8 +591,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -629,8 +625,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghuang Liu (H4ZH7W6LU4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen GangQiang (785VZN2ZN7)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

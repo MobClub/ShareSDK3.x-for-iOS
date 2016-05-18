@@ -8,6 +8,7 @@
 	<string>48d3f524e4a636b08d81b3ceb50f1003</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>weibosdk</string>
 		<string>sinaweibohd</string>
 		<string>sinaweibo</string>
 		<string>vkauthorize</string>

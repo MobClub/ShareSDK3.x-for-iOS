@@ -211,6 +211,28 @@
              forPlatformSubType:(SSDKPlatformType)platformSubType;
 
 /**
+ *  设置QQ分享参数
+ *
+ *  @param text            分享内容
+ *  @param title           分享标题
+ *  @param url             分享链接
+ *  @param audioFlashURL   分享音频时缩略图播放源,仅平台子类型为SSDKPlatformSubTypeQQFriend,且分享类型为Audio时生效
+ *  @param videoFlashURL   分享视频时缩略图播放源,仅平台子类型为SSDKPlatformSubTypeQQFriend,且分享类型为Video时生效
+ *  @param thumbImage      缩略图，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
+ *  @param image           图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
+ *  @param type            分享类型, 仅支持Text（仅QQFriend）、Image（仅QQFriend）、WebPage、Audio、Video类型
+ *  @param platformSubType 平台子类型，只能传入SSDKPlatformSubTypeQZone或者SSDKPlatformSubTypeQQFriend其中一个
+ */
+- (void)SSDKSetupQQParamsByText:(NSString *)text
+                          title:(NSString *)title
+                            url:(NSURL *)url
+                  audioFlashURL:(NSURL *)audioFlashURL
+                  videoFlashURL:(NSURL *)videoFlashURL
+                     thumbImage:(id)thumbImage
+                          image:(id)image
+                           type:(SSDKContentType)type
+             forPlatformSubType:(SSDKPlatformType)platformSubType;
+/**
  *  设置Facebook分享参数
  *
  *  @param text  分享内容

@@ -36,7 +36,6 @@
 		DE148BAF1C50AE0300B50AAD /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B871C50AE0300B50AAD /* libWeiboSDK.a */; };
 		DE148BB01C50AE0300B50AAD /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE148B911C50AE0300B50AAD /* WeiboSDK.bundle */; };
 		DE148BB11C50AE0300B50AAD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B951C50AE0300B50AAD /* libWeChatSDK.a */; };
-		DE148BB21C50AE0300B50AAD /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE148B961C50AE0300B50AAD /* read_me.txt */; };
 		DE148BB41C50AE0300B50AAD /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B9F1C50AE0300B50AAD /* MOBFoundation.framework */; };
 		DE148BB51C50AE0300B50AAD /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE148BA01C50AE0300B50AAD /* ShareSDK.bundle */; };
 		DE148BB61C50AE0300B50AAD /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148BA11C50AE0300B50AAD /* ShareSDKConnector.framework */; };
@@ -87,7 +86,6 @@
 		DE148B921C50AE0300B50AAD /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		DE148B931C50AE0300B50AAD /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
 		DE148B951C50AE0300B50AAD /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		DE148B961C50AE0300B50AAD /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		DE148B971C50AE0300B50AAD /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		DE148B981C50AE0300B50AAD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		DE148B991C50AE0300B50AAD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -319,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				DE148B951C50AE0300B50AAD /* libWeChatSDK.a */,
-				DE148B961C50AE0300B50AAD /* read_me.txt */,
 				DE148B971C50AE0300B50AAD /* WechatAuthSDK.h */,
 				DE148B981C50AE0300B50AAD /* WXApi.h */,
 				DE148B991C50AE0300B50AAD /* WXApiObject.h */,
@@ -401,7 +398,6 @@
 				C846E7B61B6B91B900522792 /* LaunchScreen.xib in Resources */,
 				DE148BB01C50AE0300B50AAD /* WeiboSDK.bundle in Resources */,
 				DE148BAC1C50AE0300B50AAD /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				DE148BB21C50AE0300B50AAD /* read_me.txt in Resources */,
 				DE148BB51C50AE0300B50AAD /* ShareSDK.bundle in Resources */,
 				C846E7B31B6B91B900522792 /* Images.xcassets in Resources */,
 			);

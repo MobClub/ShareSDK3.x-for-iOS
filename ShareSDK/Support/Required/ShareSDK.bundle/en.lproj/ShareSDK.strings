@@ -14,3 +14,13 @@
 
 "AUTH_VIEW_TITLE" = "Authorize";
 "AUTH_VIEW_CANCEL_BUTTON" = "Cancel";
+"AUTH_VIEW_SIGN_IN" = "Sign In";
+"AUTH_VIEW_ACCOUNT" = "Account(e.g. name@example.com)";
+"AUTH_VIEW_PASS" = "Password";
+"AUTH_VIEW_ALERT_TITLE" = "Tips";
+"AUTH_VIEW_ALERT_CANCEL_BUTTON" = "I known";
+"AUTH_VIEW_INPUT_ACCOUNT" = "Input your account";
+"AUTH_VIEW_INPUT_PASSWORD" = "Input your password";
+"AUTH_VIEW_UNAUTHORIZED" = "Account or password is not correct";
+"SHARE_VIEW_DONE" = "Done";
+"SHARE_VIEW_TITLE" = "Share";

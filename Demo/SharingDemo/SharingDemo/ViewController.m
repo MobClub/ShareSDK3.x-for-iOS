@@ -339,7 +339,7 @@
     
     //创建分享参数
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    
+    [shareParams SSDKEnableUseClientShare];
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     
     if (imageArray) {
@@ -349,6 +349,7 @@
                                             url:[NSURL URLWithString:@"http://www.mob.com"]
                                           title:@"分享标题"
                                            type:SSDKContentTypeImage];
+        
         
         //进行分享
         [ShareSDK share:SSDKPlatformTypeSinaWeibo
