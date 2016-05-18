@@ -21,11 +21,11 @@ typedef NS_ENUM(NSUInteger, MOBFNetworkType)
     /**
      *  蜂窝网络
      */
-    MOBFNetworkTypeCellular     = 1,
+    MOBFNetworkTypeCellular     = 2,
     /**
      *  WIFI
      */
-    MOBFNetworkTypeWifi         = 2,
+    MOBFNetworkTypeWifi         = 1,
     /**
      *  2G网络
      */
