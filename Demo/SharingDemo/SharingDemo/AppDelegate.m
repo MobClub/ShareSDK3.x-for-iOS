@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.m
 //  SharingDemo
 //
@@ -249,7 +249,7 @@
                       [appInfo SSDKSetupAliPaySocialByAppId:@"2015072400185895"];
                       break;
                   case SSDKPlatformTypePinterest:
-                      [appInfo SSDKSetupPinterestByClientId:@"4799618093317899411"];
+                      [appInfo SSDKSetupPinterestByClientId:@"4797078908495202393"];
                       break;
                   case SSDKPlatformTypeDropbox:
                       [appInfo SSDKSetupDropboxByAppKey:@"i5vw2mex1zcgjcj"
@@ -279,8 +279,7 @@
                       break;
               }
           }];
-    
-    
+
     return YES;
 }
 

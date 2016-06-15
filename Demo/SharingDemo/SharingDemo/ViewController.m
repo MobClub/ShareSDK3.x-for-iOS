@@ -809,7 +809,6 @@
          * 当取得摇一摇事件通知后，如果shareHandler入口不满足分享需求（如需要弹出分享菜单而不是直接分享），可以不调用shareHandler进行分享，而是在block中写入自定义的分享操作。
          * 这样的话摇一摇分享接口实质只充当捕获摇一摇通知的功能。
          **/
-        
         __weak ViewController *theController = self;
         
         //开启摇一摇分享功能
