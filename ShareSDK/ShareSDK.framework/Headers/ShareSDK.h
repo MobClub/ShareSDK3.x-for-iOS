@@ -123,4 +123,17 @@
    parameters:(NSMutableDictionary *)parameters
 onStateChanged:(SSDKShareStateChangedHandler)stateChangedHandler;
 
+/**
+ *  使用配置文件的方式分享
+ *
+ *  @param contentName         ShareContent.xml内<Content>标签name属性的值
+ *  @param platformType        平台类型
+ *  @param customFields        自定义字段
+ *  @param stateChangedHandler 状态变更回调处理
+ */
++ (void)shareWithContentName:(NSString *)contentName
+                    platform:(SSDKPlatformType)platformType
+                customFields:(NSDictionary *)customFields
+              onStateChanged:(SSDKShareStateChangedHandler)stateChangedHandler;
+
 @end

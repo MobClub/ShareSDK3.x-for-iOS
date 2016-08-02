@@ -15,6 +15,15 @@
 @interface NSMutableDictionary (SSDKInit)
 
 /**
+ *  设置平台的授权配置
+ *
+ *  @param authSettings 授权配置信息
+ *                      例如在配置新浪微博的初始化信息中设置授权配置信息:
+ *                      [appInfo SSDKSetAuthSettings:@[@"follow_app_official_microblog"]];
+ */
+- (void)SSDKSetAuthSettings:(NSArray *)authSettings;
+
+/**
  *  设置新浪微博应用信息
  *
  *  @param appKey       应用标识

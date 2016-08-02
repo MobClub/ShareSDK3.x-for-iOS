@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:IntergratingShareSDKWithConfigurationFile/IntergratingShareSDKWithConfigurationFile.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ShareSDK&#x7b80;&#x6d01;&#x7248;-Swift/ShareSDK&#x7b80;&#x6d01;&#x7248;-Swift.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CustomAuthView/CustomAuthView.xcodeproj">
    </FileRef>
    <FileRef

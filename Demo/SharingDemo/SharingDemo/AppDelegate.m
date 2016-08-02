@@ -229,11 +229,11 @@
                                                   oauthCallback:@"http://www.sharesdk.cn/"];
                       break;
                       
-                  //印象笔记分为国内版和国际版，注意区分平台
-                  //设置印象笔记（中国版）应用信息
+                      //印象笔记分为国内版和国际版，注意区分平台
+                      //设置印象笔记（中国版）应用信息
                   case SSDKPlatformTypeYinXiang:
                       
-                  //设置印象笔记（国际版）应用信息
+                      //设置印象笔记（国际版）应用信息
                   case SSDKPlatformTypeEvernote:
                       [appInfo SSDKSetupEvernoteByConsumerKey:@"sharesdk-7807"
                                                consumerSecret:@"d05bf86993836004"
@@ -279,7 +279,7 @@
                       break;
               }
           }];
-
+    
     return YES;
 }
 

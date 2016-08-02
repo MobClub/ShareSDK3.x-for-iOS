@@ -12,7 +12,7 @@
 /**
  *  分享菜单项
  */
-@interface SSUIShareActionSheetItem : NSObject
+@interface SSUIShareActionSheetItem : UIControl
 {
     UIImage *_icon;
     NSString *_label;

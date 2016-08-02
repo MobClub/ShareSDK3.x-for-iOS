@@ -59,7 +59,7 @@
 		C846E7AD1B6B91B900522792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C846E7B21B6B91B900522792 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		C846E7B51B6B91B900522792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C846E7CC1B6B92AB00522792 /* ShareSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		C846E7CC1B6B92AB00522792 /* ShareSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ShareSDK-Bridging-Header.h"; path = "../ShareSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		C846E7FF1B6B93C800522792 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		C8FE00D81B6DF92500D7234C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DE148B6F1C50AE0300B50AAD /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
@@ -163,8 +163,7 @@
 		C846E79D1B6B91B900522792 = {
 			isa = PBXGroup;
 			children = (
-				DE247F1B1BB24C5F00225F1B /* AdSupport.framework */,
-				C846E7CC1B6B92AB00522792 /* ShareSDK-Bridging-Header.h */,
+				DE148B6E1C50AE0300B50AAD /* ShareSDK */,
 				C846E7A81B6B91B900522792 /* ShareSDK简洁版-Swift */,
 				C846E7A71B6B91B900522792 /* Products */,
 			);
@@ -181,6 +180,7 @@
 		C846E7A81B6B91B900522792 /* ShareSDK简洁版-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C846E7CC1B6B92AB00522792 /* ShareSDK-Bridging-Header.h */,
 				C846E7AB1B6B91B900522792 /* AppDelegate.swift */,
 				C846E7AD1B6B91B900522792 /* ViewController.swift */,
 				C846E7CB1B6B928600522792 /* Other */,
@@ -200,7 +200,6 @@
 		C846E7CB1B6B928600522792 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				DE148B6E1C50AE0300B50AAD /* ShareSDK */,
 				C846E8091B6C702000522792 /* 导入的依赖库 */,
 				C846E7B21B6B91B900522792 /* Images.xcassets */,
 				C846E7B41B6B91B900522792 /* LaunchScreen.xib */,
@@ -212,6 +211,7 @@
 		C846E8091B6C702000522792 /* 导入的依赖库 */ = {
 			isa = PBXGroup;
 			children = (
+				DE247F1B1BB24C5F00225F1B /* AdSupport.framework */,
 				C809D9751B8467C1002585D7 /* JavaScriptCore.framework */,
 				C809D9731B8467BA002585D7 /* libstdc++.dylib */,
 				C809D9711B8467B2002585D7 /* libz.dylib */,
@@ -231,7 +231,7 @@
 				DE148B701C50AE0300B50AAD /* Support */,
 			);
 			name = ShareSDK;
-			path = ../../../../ShareSDK;
+			path = ../../ShareSDK;
 			sourceTree = "<group>";
 		};
 		DE148B701C50AE0300B50AAD /* Support */ = {

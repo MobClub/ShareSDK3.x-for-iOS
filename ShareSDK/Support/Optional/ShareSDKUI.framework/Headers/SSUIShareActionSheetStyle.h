@@ -12,6 +12,19 @@
 @interface SSUIShareActionSheetStyle : NSObject
 
 /**
+ *  ShareSDK UI风格
+ */
+typedef NS_ENUM(NSInteger, ShareActionSheetStyle)  {
+    ShareActionSheetStyleSystem     = 0,    // 系统类型，默认
+    ShareActionSheetStyleSimple     = 1,    // 简洁类型
+};
+
+/**
+ *  设置ShareSDK UI风格
+ */
++ (void)setShareActionSheetStyle:(ShareActionSheetStyle)style;
+
+/**
  *  设置分享菜单栏颜色
  *
  *  @param color 背景颜色

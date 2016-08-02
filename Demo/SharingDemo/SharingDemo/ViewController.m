@@ -16,6 +16,7 @@
 #import <ShareSDK/ShareSDK+Base.h>
 
 #import <ShareSDKExtension/ShareSDK+Extension.h>
+#import <MOBFoundation/MOBFoundation.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -350,6 +351,7 @@
                                           title:@"分享标题"
                                            type:SSDKContentTypeImage];
         
+        [shareParams SSDKEnableUseClientShare];
         
         //进行分享
         [ShareSDK share:SSDKPlatformTypeSinaWeibo
@@ -413,13 +415,12 @@
     
     //1、创建分享参数（必要）
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
                                      images:imageArray
                                         url:[NSURL URLWithString:@"http://www.mob.com"]
                                       title:@"分享标题"
-                                       type:SSDKContentTypeAuto];
+                                       type:SSDKContentTypeImage];
 
     //1.2、自定义分享平台（非必要）
     NSMutableArray *activePlatforms = [NSMutableArray arrayWithArray:[ShareSDK activePlatforms]];

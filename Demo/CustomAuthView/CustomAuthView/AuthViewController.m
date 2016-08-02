@@ -78,7 +78,6 @@
             [theController dismissModalViewControllerAnimated:YES];
         }];
     }
-    
     return self;
 }
 
