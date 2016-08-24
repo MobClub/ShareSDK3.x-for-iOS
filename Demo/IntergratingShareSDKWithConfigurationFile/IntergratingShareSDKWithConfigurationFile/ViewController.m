@@ -48,7 +48,7 @@
     //1.比需在项目中存在ShareContent.xml 文件，且符合xml文件格式, <Content>节点之name 属性填上您的标识
     //2.在下面接口的首个参数传入对应的<Content>节点的name
     
-    [ShareSDK shareWithContentName:@"mob"
+    [ShareSDK shareWithContentName:@"ShareSDK"
                           platform:SSDKPlatformTypeSinaWeibo
                       customFields:nil
                     onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
@@ -114,7 +114,7 @@
     {
         NSDictionary *customFields = @{@"imgUrl" : imgPath};
         
-        [ShareSDK shareWithContentName:@"sharesdk"
+        [ShareSDK shareWithContentName:@"ShareSDK"
                               platform:SSDKPlatformTypeSinaWeibo
                           customFields:customFields
                         onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {

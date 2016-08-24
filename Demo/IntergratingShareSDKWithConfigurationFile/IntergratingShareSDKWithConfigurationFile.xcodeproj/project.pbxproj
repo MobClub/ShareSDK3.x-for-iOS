@@ -41,8 +41,6 @@
 		DEE69DCF1D4AFE1800341D58 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE69DCE1D4AFE1800341D58 /* JavaScriptCore.framework */; };
 		DEE69DD11D4AFE2100341D58 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE69DD01D4AFE2100341D58 /* ImageIO.framework */; };
 		DEE69DD51D4AFEAE00341D58 /* Sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEE69DD21D4AFEAE00341D58 /* Sample.jpg */; };
-		DEE69DD61D4AFEAE00341D58 /* ShareContent.xml in Resources */ = {isa = PBXBuildFile; fileRef = DEE69DD31D4AFEAE00341D58 /* ShareContent.xml */; };
-		DEE69DD71D4AFEAE00341D58 /* ShareSDK.xml in Resources */ = {isa = PBXBuildFile; fileRef = DEE69DD41D4AFEAE00341D58 /* ShareSDK.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,8 +100,6 @@
 		DEE69DCE1D4AFE1800341D58 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		DEE69DD01D4AFE2100341D58 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DEE69DD21D4AFEAE00341D58 /* Sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sample.jpg; sourceTree = "<group>"; };
-		DEE69DD31D4AFEAE00341D58 /* ShareContent.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ShareContent.xml; path = IntergratingShareSDKWithConfigurationFile/ShareContent.xml; sourceTree = "<group>"; };
-		DEE69DD41D4AFEAE00341D58 /* ShareSDK.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ShareSDK.xml; path = IntergratingShareSDKWithConfigurationFile/ShareSDK.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +136,6 @@
 		DEE69D5A1D4AFD3600341D58 = {
 			isa = PBXGroup;
 			children = (
-				DEE69DD31D4AFEAE00341D58 /* ShareContent.xml */,
-				DEE69DD41D4AFEAE00341D58 /* ShareSDK.xml */,
 				DEE69D7D1D4AFD6400341D58 /* ShareSDK */,
 				DEE69D651D4AFD3600341D58 /* IntergratingShareSDKWithConfigurationFile */,
 				DEE69D641D4AFD3600341D58 /* Products */,
@@ -389,13 +383,11 @@
 			files = (
 				DEE69DB41D4AFD6400341D58 /* ShareSDKUI.bundle in Resources */,
 				DEE69DBC1D4AFD6400341D58 /* RennSDK.bundle in Resources */,
-				DEE69DD61D4AFEAE00341D58 /* ShareContent.xml in Resources */,
 				DEE69D761D4AFD3600341D58 /* LaunchScreen.storyboard in Resources */,
 				DEE69DD51D4AFEAE00341D58 /* Sample.jpg in Resources */,
 				DEE69D731D4AFD3600341D58 /* Assets.xcassets in Resources */,
 				DEE69DBF1D4AFD6400341D58 /* WeiboSDK.bundle in Resources */,
 				DEE69DBB1D4AFD6400341D58 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				DEE69DD71D4AFEAE00341D58 /* ShareSDK.xml in Resources */,
 				DEE69DC11D4AFD6400341D58 /* README.txt in Resources */,
 				DEE69DC41D4AFD6500341D58 /* ShareSDK.bundle in Resources */,
 				DEE69D711D4AFD3600341D58 /* Main.storyboard in Resources */,
@@ -526,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(SRCROOT)/../../ShareSDK",
@@ -553,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(SRCROOT)/../../ShareSDK",

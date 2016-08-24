@@ -33,7 +33,7 @@
                       [appInfo SSDKSetupSinaWeiboByAppKey:@"568898243"
                                                 appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
                                               redirectUri:@"http://www.sharesdk.cn"
-                                                 authType:SSDKAuthTypeWeb];
+                                                 authType:SSDKAuthTypeBoth];
                       break;
                   default:
                       break;
