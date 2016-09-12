@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ShareContent>
 
-    
     <Content name="ShareSDK" >
-    
+
         <!--  分享信息  -->
         <Base>
             <!--分享内容文本信息-->
@@ -15,7 +14,7 @@
             <!--分享内容图片,如果需要多张图片请使用逗号隔开-->
             <images>{imgUrl}</images>
         </Base>
-        
+
         <!-- 【注意】【注意】【注意】仅需填写上述参数【即可分享到所有平台】,
          以下是对于需要定制特定平台的情况，才需要配置下面的信息!!!-->
 
@@ -94,7 +93,7 @@
         <!-- </Douban> -->
 
         <!-- QQ好友 -->
-        <!-- <QQ> -->
+        <!--<QQ> -->
 
         <!--
          
@@ -107,11 +106,11 @@
         -->
             
         <!-- 继承Base,取消注释可以覆盖Base中的参数 -->
-        <!-- <text></text> -->
-        <!-- <title></title> -->
-        <!-- <url></url> -->
-        <!-- <images></images> -->
-        
+        <!--<text></text>-->
+        <!--<title></title>-->
+        <!--<url></url>-->
+        <!--<images></images>-->
+
         <!-- 如需自处理缩略图,请配置 -->
         <!-- <thumbImage>imgPath</thumbImage> -->
 
@@ -121,7 +120,7 @@
         <!-- 如需设置分享视频时缩略图播放源,请配置 -->
         <!--<videoFlashUrl></videoFlashUrl>-->
 
-        <!-- </QQ> -->
+        <!--</QQ> -->
 
         <!-- QQ空间 -->
         <!-- <QZone> -->
@@ -174,8 +173,8 @@
 
         <!-- </KaiXin> -->
         
-        <!-- <Facebook> -->
-            
+        <!--<Facebook> -->
+
         <!--
             分享类型            必要参数
             Text               text
@@ -184,14 +183,14 @@
         -->
             
         <!-- 继承Base,取消注释可以覆盖Base中的参数 -->
-        <!--<text></text>-->
+            <!--<text></text>-->
         <!--<url></url>-->
         <!--<title></title>-->
         <!--<urlName></urlName>-->
-        <!-- <images></images>-->
-            
-        <!-- </Facebook> -->
-        
+        <!--<images></images>-->
+
+        <!--</Facebook>-->
+
         <!-- <Twitter> -->
             
         <!--
