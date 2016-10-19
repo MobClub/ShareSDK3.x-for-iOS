@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <ShareSDK/ShareSDK+Base.h>
+#import <ShareSDKExtension/ShareSDK+Extension.h>
 
 @implementation ViewController
 

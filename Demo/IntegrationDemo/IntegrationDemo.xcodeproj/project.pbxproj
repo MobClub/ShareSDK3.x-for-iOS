@@ -22,6 +22,9 @@
 		DE7943501B58B9C500D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79434D1B58B9C500D266E8 /* Default-568h@2x.png */; };
 		DE7943511B58B9C500D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79434E1B58B9C500D266E8 /* Default.png */; };
 		DE7943521B58B9C500D266E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79434F1B58B9C500D266E8 /* Default@2x.png */; };
+		DE93BF411DB0E10C005549C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF401DB0E10C005549C6 /* SystemConfiguration.framework */; };
+		DE93BF431DB0E113005549C6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF421DB0E113005549C6 /* CoreTelephony.framework */; };
+		DE93BF451DB0E15E005549C6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF441DB0E15E005549C6 /* ImageIO.framework */; };
 		E2501BA71C50868500D1BDBC /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B741C50868500D1BDBC /* ShareSDK.framework */; };
 		E2501BA81C50868500D1BDBC /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B771C50868500D1BDBC /* ShareSDKExtension.framework */; };
 		E2501BA91C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B781C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework */; };
@@ -61,6 +64,9 @@
 		DE79434D1B58B9C500D266E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE79434E1B58B9C500D266E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE79434F1B58B9C500D266E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DE93BF401DB0E10C005549C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE93BF421DB0E113005549C6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DE93BF441DB0E15E005549C6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E2501B741C50868500D1BDBC /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		E2501B771C50868500D1BDBC /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
 		E2501B781C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE93BF451DB0E15E005549C6 /* ImageIO.framework in Frameworks */,
+				DE93BF431DB0E113005549C6 /* CoreTelephony.framework in Frameworks */,
+				DE93BF411DB0E10C005549C6 /* SystemConfiguration.framework in Frameworks */,
 				DE0C35961BC66CC2007F2ED8 /* libsqlite3.dylib in Frameworks */,
 				E2501BB61C50868500D1BDBC /* libWeChatSDK.a in Frameworks */,
 				E2501BAB1C50868500D1BDBC /* ShareSDKUI.framework in Frameworks */,
@@ -148,6 +157,9 @@
 		D0CD2ECE1B40E3CB00089E2A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DE93BF441DB0E15E005549C6 /* ImageIO.framework */,
+				DE93BF421DB0E113005549C6 /* CoreTelephony.framework */,
+				DE93BF401DB0E10C005549C6 /* SystemConfiguration.framework */,
 				DE0C35951BC66CC2007F2ED8 /* libsqlite3.dylib */,
 				DE748C8F1B68E26700CC1B4B /* shareImg.png */,
 				D0CD2ED81B40E3CB00089E2A /* Main.storyboard */,
@@ -403,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -460,6 +472,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/Required",
 					"$(SRCROOT)/../../ShareSDK/Support/Optional",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
 				);
 				INFOPLIST_FILE = IntegrationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -469,6 +482,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = Q87QUX3533/MobProvisioningProfiles;
@@ -488,6 +502,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/Required",
 					"$(SRCROOT)/../../ShareSDK/Support/Optional",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
 				);
 				INFOPLIST_FILE = IntegrationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -497,6 +512,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/WeChatSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = Q87QUX3533/MobProvisioningProfiles;

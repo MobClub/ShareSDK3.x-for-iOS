@@ -51,7 +51,7 @@ typedef void(^MOBFHttpFaultEvent) (NSError *error);
  *  @param totalBytes  总字节数
  *  @param loadedBytes 上传字节数据
  */
-typedef void(^MOBFHttpUploadProgressEvent) (NSInteger totalBytes, NSInteger loadedBytes);
+typedef void(^MOBFHttpUploadProgressEvent) (int64_t totalBytes, int64_t loadedBytes);
 
 /**
  *  HTTP服务类

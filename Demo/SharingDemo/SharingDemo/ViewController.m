@@ -349,12 +349,12 @@
                                          images:imageArray
                                             url:[NSURL URLWithString:@"http://www.mob.com"]
                                           title:@"分享标题"
-                                           type:SSDKContentTypeImage];
+                                           type:SSDKContentTypeWebPage];
         
         [shareParams SSDKEnableUseClientShare];
         
         //进行分享
-        [ShareSDK share:SSDKPlatformTypeSinaWeibo
+        [ShareSDK share:SSDKPlatformTypeAliPaySocialTimeline
              parameters:shareParams
          onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
              

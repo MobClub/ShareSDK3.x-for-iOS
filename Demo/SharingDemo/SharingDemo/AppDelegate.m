@@ -104,7 +104,8 @@
                             @(SSDKPlatformTypePrint),
                             @(SSDKPlatformTypeYiXin),
                             @(SSDKPlatformTypeInstapaper),
-                            @(SSDKPlatformTypeFacebookMessenger)
+                            @(SSDKPlatformTypeFacebookMessenger),
+                            @(SSDKPlatformTypeAliPaySocialTimeline)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      

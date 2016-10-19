@@ -8,6 +8,7 @@
 
 #import "AuthViewController.h"
 #import <ShareSDK/ISSDKAuthView.h>
+#import <ShareSDKExtension/ShareSDK+Extension.h>
 
 @interface AuthViewController ()
 
@@ -75,7 +76,7 @@
                     }];
                 }
             }
-            [theController dismissModalViewControllerAnimated:YES];
+            [theController dismissViewControllerAnimated:YES completion:^{}];
         }];
     }
     return self;

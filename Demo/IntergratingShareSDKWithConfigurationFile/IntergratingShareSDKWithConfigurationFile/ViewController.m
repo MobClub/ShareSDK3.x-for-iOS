@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDKConfigFile/ShareSDK+XML.h>
 
 @interface ViewController ()
 
@@ -112,7 +113,8 @@
     
     if (imgPath)
     {
-        NSDictionary *customFields = @{@"imgUrl" : imgPath};
+        NSDictionary *customFields = @{@"imgUrl" : imgPath,
+                                       @"url" : @"http://mob.com"};
         
         [ShareSDK shareWithContentName:@"ShareSDK"
                               platform:SSDKPlatformTypeSinaWeibo

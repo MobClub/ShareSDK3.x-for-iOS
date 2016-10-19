@@ -99,10 +99,13 @@
                settings:nil
           onViewDisplay:^(UIView<ISSDKAuthView> *view)
     {
-              //在此回调中进行授权视图自定义
-              AuthViewController *vc = [[AuthViewController alloc] initWithAuthView:view];
-              UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
-              [theController presentModalViewController:nvc animated:YES];
+        //在此回调中进行授权视图自定义
+        AuthViewController *vc = [[AuthViewController alloc] initWithAuthView:view];
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+        [theController presentViewController:nvc
+                                    animated:YES
+                                  completion:^{}];
+        
               
           }
          onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {

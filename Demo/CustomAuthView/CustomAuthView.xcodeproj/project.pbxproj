@@ -18,9 +18,14 @@
 		D0DED6471B43D41C001BC48A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DED6461B43D41C001BC48A /* libz.dylib */; };
 		D0DED6491B43D42F001BC48A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DED6481B43D42F001BC48A /* JavaScriptCore.framework */; };
 		D0DED64C1B43E08D001BC48A /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DED64B1B43E08D001BC48A /* AuthViewController.m */; };
+		DE5090871DB360E400ACCC83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF291DB0DAC6005549C6 /* SystemConfiguration.framework */; };
+		DE5090881DB360F300ACCC83 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF251DB0DA30005549C6 /* CoreTelephony.framework */; };
+		DE601EF41DB74B8400FCB455 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE601EF31DB74B8400FCB455 /* AdSupport.framework */; };
 		DE79435C1B58B9EC00D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943591B58B9EC00D266E8 /* Default-568h@2x.png */; };
 		DE79435D1B58B9EC00D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79435A1B58B9EC00D266E8 /* Default.png */; };
 		DE79435E1B58B9EC00D266E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE79435B1B58B9EC00D266E8 /* Default@2x.png */; };
+		DE93BF3D1DB0E0A3005549C6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF3C1DB0E0A3005549C6 /* ImageIO.framework */; };
+		DE93BF3F1DB0E0B6005549C6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF3E1DB0E0B6005549C6 /* libsqlite3.tbd */; };
 		E2501B151C50867A00D1BDBC /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE21C50867A00D1BDBC /* ShareSDK.framework */; };
 		E2501B161C50867A00D1BDBC /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE51C50867A00D1BDBC /* ShareSDKExtension.framework */; };
 		E2501B171C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE61C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework */; };
@@ -55,9 +60,16 @@
 		D0DED64B1B43E08D001BC48A /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
 		DE2845081B58E79800856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DE2845091B58E79800856CA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DE601EF31DB74B8400FCB455 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DE7943591B58B9EC00D266E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE79435A1B58B9EC00D266E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE79435B1B58B9EC00D266E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DE93BF231DB0D9FC005549C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DE93BF251DB0DA30005549C6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DE93BF271DB0DA74005549C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DE93BF291DB0DAC6005549C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE93BF3C1DB0E0A3005549C6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		DE93BF3E1DB0E0B6005549C6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E2501AE21C50867A00D1BDBC /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		E2501AE51C50867A00D1BDBC /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
 		E2501AE61C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
@@ -92,6 +104,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE601EF41DB74B8400FCB455 /* AdSupport.framework in Frameworks */,
+				DE5090881DB360F300ACCC83 /* CoreTelephony.framework in Frameworks */,
+				DE5090871DB360E400ACCC83 /* SystemConfiguration.framework in Frameworks */,
+				DE93BF3F1DB0E0B6005549C6 /* libsqlite3.tbd in Frameworks */,
+				DE93BF3D1DB0E0A3005549C6 /* ImageIO.framework in Frameworks */,
 				E2501B171C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				E2501B1E1C50867A00D1BDBC /* TencentOpenAPI.framework in Frameworks */,
 				D0DED6491B43D42F001BC48A /* JavaScriptCore.framework in Frameworks */,
@@ -114,6 +131,7 @@
 		D0DED5E71B43D319001BC48A = {
 			isa = PBXGroup;
 			children = (
+				DE601EF31DB74B8400FCB455 /* AdSupport.framework */,
 				E2501AE11C50867A00D1BDBC /* ShareSDK */,
 				D0DED5F21B43D319001BC48A /* CustomAuthView */,
 				D0DED5F11B43D319001BC48A /* Products */,
@@ -151,6 +169,12 @@
 				DE7943591B58B9EC00D266E8 /* Default-568h@2x.png */,
 				DE79435A1B58B9EC00D266E8 /* Default.png */,
 				DE79435B1B58B9EC00D266E8 /* Default@2x.png */,
+				DE93BF3E1DB0E0B6005549C6 /* libsqlite3.tbd */,
+				DE93BF3C1DB0E0A3005549C6 /* ImageIO.framework */,
+				DE93BF291DB0DAC6005549C6 /* SystemConfiguration.framework */,
+				DE93BF271DB0DA74005549C6 /* Security.framework */,
+				DE93BF251DB0DA30005549C6 /* CoreTelephony.framework */,
+				DE93BF231DB0D9FC005549C6 /* CFNetwork.framework */,
 				D0DED6481B43D42F001BC48A /* JavaScriptCore.framework */,
 				D0DED6461B43D41C001BC48A /* libz.dylib */,
 				D0DED6441B43D388001BC48A /* libstdc++.dylib */,
@@ -397,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -436,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,6 +480,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/Required",
 					"$(SRCROOT)/../../ShareSDK/Support/Optional",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
 				);
 				INFOPLIST_FILE = CustomAuthView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -465,6 +490,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -481,6 +507,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/Required",
 					"$(SRCROOT)/../../ShareSDK/Support/Optional",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
 				);
 				INFOPLIST_FILE = CustomAuthView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -490,6 +517,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

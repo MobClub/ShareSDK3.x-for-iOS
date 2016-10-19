@@ -144,7 +144,7 @@
             [tableView reloadRowsAtIndexPaths:tableView.indexPathsForVisibleRows withRowAnimation:UITableViewRowAnimationFade];
             
             //关闭视图
-            [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:^{}];
         }
     }
 }
@@ -158,7 +158,7 @@
  */
 - (void)cancelButtonClickHandler:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 /**

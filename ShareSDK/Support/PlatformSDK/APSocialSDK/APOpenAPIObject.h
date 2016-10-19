@@ -22,6 +22,7 @@ typedef enum {
 //  分享场景
 typedef enum {
     APSceneSession  = 0,        // 会话
+    APSceneTimeLine = 1,        //生活圈
 }APScene;
 
 #pragma mark - APBaseReq
@@ -82,7 +83,7 @@ typedef enum {
 @property (nonatomic, strong) NSString *title;
 //  描述内容
 @property (nonatomic, strong) NSString *desc;
-//  缩略图数据
+//  缩略图数据，thumbData是UIImage类型，thumbUrl是url类型，二者只有一个生效，UIImage优先级高于url
 @property (nonatomic, strong) NSData   *thumbData;
 @property (nonatomic, strong) NSString *thumbUrl;
 //  多媒体对象
@@ -96,11 +97,13 @@ typedef enum {
 
 //  图片
 @interface APShareImageObject : NSObject
+//  缩略图数据，imageData是UIImage类型，imageUrl是远端互联网url图片地址类型，二者只有一个生效，UIImage优先级高于url
 @property (nonatomic, strong) NSData *imageData;
 @property (nonatomic, strong) NSString *imageUrl;
 @end;
 
 //  网页
 @interface APShareWebObject : NSObject
+//网页链接url，标题和描述在APMediaMessage中设置
 @property (nonatomic, strong) NSString *wepageUrl;
 @end;

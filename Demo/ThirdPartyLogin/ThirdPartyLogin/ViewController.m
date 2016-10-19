@@ -10,7 +10,8 @@
 #import "UserInfo.h"
 #import "AccountViewController.h"
 #import <MOBFoundation/MOBFoundation.h>
-#import <MOBFoundation/MOBFImageService.h>
+//#import <MOBFoundation/MOBFImageService.h>
+#import <MOBFoundation/MOBFImageGetter.h>
 #import <ShareSDKExtension/SSEThirdPartyLoginHelper.h>
 
 @interface ViewController () <AccountViewControllerDelegate>
@@ -95,7 +96,9 @@
     AccountViewController *vc = [[AccountViewController alloc] init];
     vc.delegate = self;
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentModalViewController:nvc animated:YES];
+    [self presentViewController:nvc
+                       animated:YES
+                     completion:^{}];
 }
 
 /**
@@ -119,18 +122,11 @@
         
         if (currentUser.avatar)
         {
-            NSString *observer = [self description];
             __weak ViewController *theController = self;
-            [[MOBFImageService sharedInstance] getImageWithURL:[NSURL URLWithString:currentUser.avatar]
-                                                      observer:observer
-                                                     onLoading:nil
-                                                      onResult:^(NSData *imageData) {
-                                                          
-                                                          theController.avatarImageView.image = [[UIImage alloc] initWithData:imageData];
-                                                          [[MOBFImageService sharedInstance] removeObserver:observer];
-                                                          
-                                                      }
-                                                        onFail:nil];
+            [[MOBFImageGetter sharedInstance] getImageWithURL:[NSURL URLWithString:currentUser.avatar]
+                                                       result:^(UIImage *image, NSError *error) {
+                                                           theController.avatarImageView.image = image;
+                                                       }];
         }
         
         self.aboutMeLabel.text = currentUser.aboutMe;
