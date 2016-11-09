@@ -60,6 +60,7 @@
   main module(necessary)
   ```objc
   pod 'ShareSDK3'
+# Mob 公共库(必须) 如果同时集成SMSSDK iOS2.0:可看此注意事项：http://bbs.mob.com/thread-20051-1-1.html
   pod 'MOBFoundation'
   ```
   
@@ -70,16 +71,44 @@
   
   SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
   ```objc
-  pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+  pod 'ShareSDK3/ShareSDKPlatforms/QQ'
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
   pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
- 
-  pod 'ShareSDK3/ShareSDKPlatforms/Messenger'
+  
+  # ShareSDKPlatforms module according to the need to add other platform. 
+  #If the platform does not need # platform corresponding to the statement, there are 2 situations: 1, do not need to add the platform     statement, such as Twitter is the case. 2, ShareSDK does not support this platform for the time being. 
+  
   pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
   pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
   pod 'ShareSDK3/ShareSDKPlatforms/Kakao'
   pod 'ShareSDK3/ShareSDKPlatforms/Yixin'
-  ```
+  pod 'ShareSDK3/ShareSDKPlatforms/Facebook'
+  pod 'ShareSDK3/ShareSDKPlatforms/Copy'
+  pod 'ShareSDK3/ShareSDKPlatforms/Evernote'
+  pod 'ShareSDK3/ShareSDKPlatforms/GooglePlus'
+  pod 'ShareSDK3/ShareSDKPlatforms/Instagram'
+  pod 'ShareSDK3/ShareSDKPlatforms/Instapaper'
+  pod 'ShareSDK3/ShareSDKPlatforms/Line'
+  pod 'ShareSDK3/ShareSDKPlatforms/Mail'
+  pod 'ShareSDK3/ShareSDKPlatforms/SMS'
+  pod 'ShareSDK3/ShareSDKPlatforms/WhatsApp'
+  pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+  
+  #using the configuration file sharing module (optional) 
+  pod 'ShareSDK3/ShareSDKConfigurationFile'
+ 
+  #extension module (optional) 
+  pod 'ShareSDK3/ShareSDKExtension'
+  
+  
+  #ShareSDK currently supports a platform (SDK platform removal does not affect the sharing and authorization functions)
+  #platform statement replaces the ShareSDKPlatforms module statement can  
+  pod 'ShareSDK3/PlatformConnector/QQ'
+  pod 'ShareSDK3/PlatformConnector/SinaWeibo'
+  pod 'ShareSDK3/PlatformConnector/WeChat'
+  pod 'ShareSDK3/PlatformConnector/RenRen'
+  pod 'ShareSDK3/PlatformConnector/AliPaySocial'  
+  ```
 * **Manually import：**
   * 1、Download the latest version of the ShareSDK, and drag into your project
    
