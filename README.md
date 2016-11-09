@@ -60,7 +60,7 @@
   main module(necessary)
   ```objc
   pod 'ShareSDK3'
-# Mob 公共库(必须) 如果同时集成SMSSDK iOS2.0:可看此注意事项：http://bbs.mob.com/thread-20051-1-1.html
+  #Mob Public Library (must) if SMSSDK iOS2.0: can be integrated at the same time see this note：http://bbs.mob.com/thread-20051-1-1.html
   pod 'MOBFoundation'
   ```
   
@@ -71,7 +71,7 @@
   
   SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
   ```objc
-  pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+ pod 'ShareSDK3/ShareSDKPlatforms/QQ'
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
   pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
   
@@ -103,7 +103,7 @@
   
   #ShareSDK currently supports a platform (SDK platform removal does not affect the sharing and authorization functions)
   #platform statement replaces the ShareSDKPlatforms module statement can  
-  pod 'ShareSDK3/PlatformConnector/QQ'
+ pod 'ShareSDK3/PlatformConnector/QQ'
   pod 'ShareSDK3/PlatformConnector/SinaWeibo'
   pod 'ShareSDK3/PlatformConnector/WeChat'
   pod 'ShareSDK3/PlatformConnector/RenRen'
