@@ -77,12 +77,6 @@
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
   pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
   
-  ```
-  
-  # ShareSDKPlatforms module according to the need to add other platform. 
-  #If the platform does not need # platform corresponding to the statement, there are 2 situations: 1, do not need to add the platform     statement, such as Twitter is the case. 2, ShareSDK does not support this platform for the time being. 
-  
-  ```objc
   pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
   pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
   pod 'ShareSDK3/ShareSDKPlatforms/Kakao'
