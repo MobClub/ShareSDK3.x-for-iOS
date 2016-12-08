@@ -67,17 +67,22 @@
   UI module(Non-essential，Use ShareSDK's UI(Share menu bar and share editorial page) needs)
   ```objc
   pod 'ShareSDK3/ShareSDKUI'
+  pod 'ShareSDK3/ShareSDKExtension'
   ```
   
   SNSPlatform SDK module(Non-essential。if you want to Share to QQ/Wechat/Sinaweibo,Only the following three lines)
+  
   ```objc
- pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+  pod 'ShareSDK3/ShareSDKPlatforms/QQ'
   pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
   pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+  
+  ```
   
   # ShareSDKPlatforms module according to the need to add other platform. 
   #If the platform does not need # platform corresponding to the statement, there are 2 situations: 1, do not need to add the platform     statement, such as Twitter is the case. 2, ShareSDK does not support this platform for the time being. 
   
+  ```objc
   pod 'ShareSDK3/ShareSDKPlatforms/RenRen'
   pod 'ShareSDK3/ShareSDKPlatforms/AliPaySocial'
   pod 'ShareSDK3/ShareSDKPlatforms/Kakao'
@@ -100,7 +105,6 @@
   #extension module (optional) 
   pod 'ShareSDK3/ShareSDKExtension'
   
-  
   #ShareSDK currently supports a platform (SDK platform removal does not affect the sharing and authorization functions)
   #platform statement replaces the ShareSDKPlatforms module statement can  
  pod 'ShareSDK3/PlatformConnector/QQ'
@@ -108,7 +112,7 @@
   pod 'ShareSDK3/PlatformConnector/WeChat'
   pod 'ShareSDK3/PlatformConnector/RenRen'
   pod 'ShareSDK3/PlatformConnector/AliPaySocial'  
-  ```
+  ```
 * **Manually import：**
   * 1、Download the latest version of the ShareSDK, and drag into your project
    
