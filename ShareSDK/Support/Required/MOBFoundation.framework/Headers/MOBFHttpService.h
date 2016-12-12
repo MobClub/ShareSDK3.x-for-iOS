@@ -64,6 +64,11 @@ typedef void(^MOBFHttpUploadProgressEvent) (int64_t totalBytes, int64_t loadedBy
 @property (nonatomic, copy) NSString *method;
 
 /**
+ 超时时间
+ */
+@property (nonatomic) NSTimeInterval timeout;
+
+/**
  *	@brief	是否缓存回复对象，默认为YES
  */
 @property (nonatomic) BOOL isCacheResponse;
@@ -185,6 +190,30 @@ typedef void(^MOBFHttpUploadProgressEvent) (int64_t totalBytes, int64_t loadedBy
                                          method:(NSString *)method
                                      parameters:(NSDictionary *)parameters
                                         headers:(NSDictionary *)headers
+                                       onResult:(MOBFHttpResultEvent)resultHandler
+                                        onFault:(MOBFHttpFaultEvent)faultHandler
+                               onUploadProgress:(MOBFHttpUploadProgressEvent)uploadProgressHandler;
+
+
+/**
+ *  发送HTTP请求
+ *
+ *  @param urlString             请求地址
+ *  @param method                请求方式
+ *  @param parameters            请求参数
+ *  @param headers               请求头集合
+ *  @param timeout               请求超时
+ *  @param resultHandler         返回回调
+ *  @param faultHandler          错误回调
+ *  @param uploadProgressHandler 上传数据进度回调
+ *
+ *  @return HTTP服务对象
+ */
++ (MOBFHttpService *)sendHttpRequestByURLString:(NSString *)urlString
+                                         method:(NSString *)method
+                                     parameters:(NSDictionary *)parameters
+                                        headers:(NSDictionary *)headers
+                                        timeout:(NSTimeInterval)timeout
                                        onResult:(MOBFHttpResultEvent)resultHandler
                                         onFault:(MOBFHttpFaultEvent)faultHandler
                                onUploadProgress:(MOBFHttpUploadProgressEvent)uploadProgressHandler;
