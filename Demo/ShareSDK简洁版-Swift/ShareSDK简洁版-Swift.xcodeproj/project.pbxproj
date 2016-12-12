@@ -25,7 +25,6 @@
 		C8FE00D91B6DF92500D7234C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FE00D81B6DF92500D7234C /* Main.storyboard */; };
 		DE148BA21C50AE0300B50AAD /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B6F1C50AE0300B50AAD /* ShareSDK.framework */; };
 		DE148BA31C50AE0300B50AAD /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B721C50AE0300B50AAD /* ShareSDKExtension.framework */; };
-		DE148BA41C50AE0300B50AAD /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B731C50AE0300B50AAD /* ShareSDKInterfaceAdapter.framework */; };
 		DE148BA51C50AE0300B50AAD /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE148B741C50AE0300B50AAD /* ShareSDKUI.bundle */; };
 		DE148BA61C50AE0300B50AAD /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B751C50AE0300B50AAD /* ShareSDKUI.framework */; };
 		DE148BAA1C50AE0300B50AAD /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE148B7F1C50AE0300B50AAD /* KakaoOpenSDK.framework */; };
@@ -84,7 +83,6 @@
 		C8FE00D81B6DF92500D7234C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DE148B6F1C50AE0300B50AAD /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		DE148B721C50AE0300B50AAD /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
-		DE148B731C50AE0300B50AAD /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
 		DE148B741C50AE0300B50AAD /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
 		DE148B751C50AE0300B50AAD /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
 		DE148B7F1C50AE0300B50AAD /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				DE148BB41C50AE0300B50AAD /* MOBFoundation.framework in Frameworks */,
 				DE9678781DB5DB7100C3C4C7 /* RenrenConnector.framework in Frameworks */,
 				DE148BAB1C50AE0300B50AAD /* TencentOpenAPI.framework in Frameworks */,
-				DE148BA41C50AE0300B50AAD /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				DE96787D1DB5DB7100C3C4C7 /* YiXinConnector.framework in Frameworks */,
 				DE9678761DB5DB7100C3C4C7 /* PrintConnector.framework in Frameworks */,
 				DE96786D1DB5DB7100C3C4C7 /* CopyConnector.framework in Frameworks */,
@@ -311,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				DE148B721C50AE0300B50AAD /* ShareSDKExtension.framework */,
-				DE148B731C50AE0300B50AAD /* ShareSDKInterfaceAdapter.framework */,
 				DE148B741C50AE0300B50AAD /* ShareSDKUI.bundle */,
 				DE148B751C50AE0300B50AAD /* ShareSDKUI.framework */,
 			);
@@ -454,6 +450,7 @@
 				TargetAttributes = {
 					C846E7A51B6B91B900522792 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -624,6 +621,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShareSDK-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -650,6 +648,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShareSDK-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

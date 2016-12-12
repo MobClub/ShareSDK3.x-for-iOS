@@ -27,7 +27,6 @@
 		DE93BF451DB0E15E005549C6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF441DB0E15E005549C6 /* ImageIO.framework */; };
 		E2501BA71C50868500D1BDBC /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B741C50868500D1BDBC /* ShareSDK.framework */; };
 		E2501BA81C50868500D1BDBC /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B771C50868500D1BDBC /* ShareSDKExtension.framework */; };
-		E2501BA91C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B781C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework */; };
 		E2501BAA1C50868500D1BDBC /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2501B791C50868500D1BDBC /* ShareSDKUI.bundle */; };
 		E2501BAB1C50868500D1BDBC /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B7A1C50868500D1BDBC /* ShareSDKUI.framework */; };
 		E2501BB01C50868500D1BDBC /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B861C50868500D1BDBC /* TencentOpenAPI.framework */; };
@@ -69,7 +68,6 @@
 		DE93BF441DB0E15E005549C6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E2501B741C50868500D1BDBC /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		E2501B771C50868500D1BDBC /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
-		E2501B781C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
 		E2501B791C50868500D1BDBC /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
 		E2501B7A1C50868500D1BDBC /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
 		E2501B861C50868500D1BDBC /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				E2501BB61C50868500D1BDBC /* libWeChatSDK.a in Frameworks */,
 				E2501BAB1C50868500D1BDBC /* ShareSDKUI.framework in Frameworks */,
 				E2501BBB1C50868500D1BDBC /* ShareSDKConnector.framework in Frameworks */,
-				E2501BA91C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				E2501BB01C50868500D1BDBC /* TencentOpenAPI.framework in Frameworks */,
 				E2501BB91C50868500D1BDBC /* MOBFoundation.framework in Frameworks */,
 				D07CF92B1B43C65F003CAD7A /* JavaScriptCore.framework in Frameworks */,
@@ -201,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				E2501B771C50868500D1BDBC /* ShareSDKExtension.framework */,
-				E2501B781C50868500D1BDBC /* ShareSDKInterfaceAdapter.framework */,
 				E2501B791C50868500D1BDBC /* ShareSDKUI.bundle */,
 				E2501B7A1C50868500D1BDBC /* ShareSDKUI.framework */,
 			);

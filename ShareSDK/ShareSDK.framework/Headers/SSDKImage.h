@@ -55,4 +55,25 @@ extern NSString *const SSDKImageSettingQualityKey;
  */
 - (void)getNativeImage:(void(^)(UIImage *image))handler;
 
+/**
+ *  获取图片数据
+ *
+ *  @param imagePath      图片路径
+ *  @param thumbImagePath 缩略图路径
+ *  @param handler        返回回调
+ */
++ (void)getImage:(NSString *)imagePath
+  thumbImagePath:(NSString *)thumbImagePath
+          result:(void(^)(NSData *thumbImage, NSData *image))handler;
+
+/**
+ *  检测缩略图，由于微信限制缩略图不能大于32k，此方法就是用于检测图片大小使用的方法。
+ *
+ *  @param thumbImageData 缩略图数据
+ *
+ *  @return 调整后缩略图数据
+ */
++ (NSData *)checkThumbImageSize:(NSData *)thumbImageData;
+
+
 @end

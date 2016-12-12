@@ -46,7 +46,6 @@
 		DE7943581B58B9E500D266E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943551B58B9E500D266E8 /* Default@2x.png */; };
 		E2501B5E1C50868000D1BDBC /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B2B1C50868000D1BDBC /* ShareSDK.framework */; };
 		E2501B5F1C50868000D1BDBC /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B2E1C50868000D1BDBC /* ShareSDKExtension.framework */; };
-		E2501B601C50868000D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B2F1C50868000D1BDBC /* ShareSDKInterfaceAdapter.framework */; };
 		E2501B611C50868000D1BDBC /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2501B301C50868000D1BDBC /* ShareSDKUI.bundle */; };
 		E2501B621C50868000D1BDBC /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B311C50868000D1BDBC /* ShareSDKUI.framework */; };
 		E2501B701C50868000D1BDBC /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501B5B1C50868000D1BDBC /* MOBFoundation.framework */; };
@@ -104,7 +103,6 @@
 		DE93BF2E1DB0DB8C005549C6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E2501B2B1C50868000D1BDBC /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		E2501B2E1C50868000D1BDBC /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
-		E2501B2F1C50868000D1BDBC /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
 		E2501B301C50868000D1BDBC /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
 		E2501B311C50868000D1BDBC /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
 		E2501B5B1C50868000D1BDBC /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				DE3AB26B1DB4736100C8787E /* RenrenConnector.framework in Frameworks */,
 				DE3AB2671DB4736100C8787E /* LineConnector.framework in Frameworks */,
 				D07CF9311B43C728003CAD7A /* libz.dylib in Frameworks */,
-				E2501B601C50868000D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				E2501B5E1C50868000D1BDBC /* ShareSDK.framework in Frameworks */,
 				E2501B721C50868000D1BDBC /* ShareSDKConnector.framework in Frameworks */,
 				D07CF92F1B43C722003CAD7A /* libicucore.dylib in Frameworks */,
@@ -278,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				E2501B2E1C50868000D1BDBC /* ShareSDKExtension.framework */,
-				E2501B2F1C50868000D1BDBC /* ShareSDKInterfaceAdapter.framework */,
 				E2501B301C50868000D1BDBC /* ShareSDKUI.bundle */,
 				E2501B311C50868000D1BDBC /* ShareSDKUI.framework */,
 			);

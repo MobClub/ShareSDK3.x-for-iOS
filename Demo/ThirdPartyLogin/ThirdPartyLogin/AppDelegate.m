@@ -10,6 +10,14 @@
 #import <ShareSDK/ShareSDK.h>
 #import "ViewController.h"
 
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+//以下是腾讯SDK的依赖库：
+//libsqlite3.dylib
+
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -22,8 +30,19 @@
      *  如果您使用的时服务端托管平台信息时，第二、四项参数可以传入nil，第三项参数则根据服务端托管平台来决定要连接的社交SDK。
      */
     [ShareSDK registerApp:@"iosv1101"
-          activePlatforms:@[@(SSDKPlatformTypeSinaWeibo)]
-                 onImport:nil
+          activePlatforms:@[@(SSDKPlatformTypeSinaWeibo),@(SSDKPlatformTypeQQ)]
+                 onImport:^(SSDKPlatformType platformType) {
+                     
+                     switch (platformType)
+                     {
+                         case SSDKPlatformTypeQQ:
+                             [ShareSDKConnector connectQQ:[QQApiInterface class]
+                                        tencentOAuthClass:[TencentOAuth class]];
+                             break;
+                         default:
+                             break;
+                     }
+                 }
           onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
               
               switch (platformType)
@@ -34,6 +53,12 @@
                                                 appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
                                               redirectUri:@"http://www.sharesdk.cn"
                                                  authType:SSDKAuthTypeBoth];
+                      break;
+                      
+                  case SSDKPlatformTypeQQ:
+                      [appInfo SSDKSetupQQByAppId:@"100371282"
+                                           appKey:@"aed9b0303e3ed1e27bae87c33761161d"
+                                         authType:SSDKAuthTypeBoth];
                       break;
                   default:
                       break;

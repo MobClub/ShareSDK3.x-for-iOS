@@ -417,10 +417,10 @@
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
-                                     images:imageArray
+                                     images:@[@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"]
                                         url:[NSURL URLWithString:@"http://www.mob.com"]
                                       title:@"分享标题"
-                                       type:SSDKContentTypeImage];
+                                       type:SSDKContentTypeText];
 
     //1.2、自定义分享平台（非必要）
     NSMutableArray *activePlatforms = [NSMutableArray arrayWithArray:[ShareSDK activePlatforms]];

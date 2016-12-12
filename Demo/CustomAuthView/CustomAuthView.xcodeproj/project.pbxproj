@@ -28,7 +28,6 @@
 		DE93BF3F1DB0E0B6005549C6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93BF3E1DB0E0B6005549C6 /* libsqlite3.tbd */; };
 		E2501B151C50867A00D1BDBC /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE21C50867A00D1BDBC /* ShareSDK.framework */; };
 		E2501B161C50867A00D1BDBC /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE51C50867A00D1BDBC /* ShareSDKExtension.framework */; };
-		E2501B171C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE61C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework */; };
 		E2501B181C50867A00D1BDBC /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2501AE71C50867A00D1BDBC /* ShareSDKUI.bundle */; };
 		E2501B191C50867A00D1BDBC /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AE81C50867A00D1BDBC /* ShareSDKUI.framework */; };
 		E2501B1E1C50867A00D1BDBC /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2501AF41C50867A00D1BDBC /* TencentOpenAPI.framework */; };
@@ -72,7 +71,6 @@
 		DE93BF3E1DB0E0B6005549C6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E2501AE21C50867A00D1BDBC /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		E2501AE51C50867A00D1BDBC /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
-		E2501AE61C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
 		E2501AE71C50867A00D1BDBC /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
 		E2501AE81C50867A00D1BDBC /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
 		E2501AF41C50867A00D1BDBC /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				DE5090871DB360E400ACCC83 /* SystemConfiguration.framework in Frameworks */,
 				DE93BF3F1DB0E0B6005549C6 /* libsqlite3.tbd in Frameworks */,
 				DE93BF3D1DB0E0A3005549C6 /* ImageIO.framework in Frameworks */,
-				E2501B171C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				E2501B1E1C50867A00D1BDBC /* TencentOpenAPI.framework in Frameworks */,
 				D0DED6491B43D42F001BC48A /* JavaScriptCore.framework in Frameworks */,
 				E2501B221C50867A00D1BDBC /* libWeiboSDK.a in Frameworks */,
@@ -209,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				E2501AE51C50867A00D1BDBC /* ShareSDKExtension.framework */,
-				E2501AE61C50867A00D1BDBC /* ShareSDKInterfaceAdapter.framework */,
 				E2501AE71C50867A00D1BDBC /* ShareSDKUI.bundle */,
 				E2501AE81C50867A00D1BDBC /* ShareSDKUI.framework */,
 			);
