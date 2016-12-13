@@ -687,6 +687,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/KaKaoSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/SharingDemo",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -723,6 +724,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/KaKaoSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/SharingDemo",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
