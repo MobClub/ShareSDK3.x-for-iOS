@@ -158,11 +158,9 @@ then you will see the following window, check the "Copy items into destination g
 
 The steps of adding the framework:
 
-```objc
-
- ![img](http://www.mob.com/html/images/github/sharesdk-integrate-4.png)
- 
 ```
+ ![img](http://www.mob.com/html/images/github/sharesdk-integrate-4.png)
+ ```
 
 ## Step 2: import the header files and register for a Appkey，and choose the platforms that you need and initialize them 
 
