@@ -13,18 +13,18 @@ Pod::Spec.new do |s|
   s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
 
   s.default_subspecs    = 'ShareSDK'
-  s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
+  #s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
   s.dependency  'MOBFoundation'
 
   # 核心模块
     s.subspec 'ShareSDK' do |sp|
-        sp.vendored_frameworks = 'ShareSDK/Support/Required/ShareSDKConnector.framework'
+        sp.vendored_frameworks = 'ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework'
         sp.libraries = 'icucore', 'z', 'stdc++'
         sp.resources = 'ShareSDK/Support/Required/ShareSDK.bundle'
     end
 
     # 各个平台：需要集成哪些平台需要选择相应的平台语句，如果以下语句没有对应的平台，则是：1、不需要（如Twitter），2、ShareSDK尚未支持。
-    s.subspec 'ShareSDKPlatforms' do |sp|
+    s.subspec 'ShareSDKPlatforms' do |sp|`
         #sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat', 'RenRen', 'AliPaySocial','Kakao','Yixin', 'Messenger','Copy','Evernote','GooglePlus','Instagram','Instapaper','Line','Mail','SMS','WhatsApp','Facebook' - Errors: Can't set `default_subspecs` attribute for subspecs
 
         # QQ
@@ -97,26 +97,31 @@ Pod::Spec.new do |s|
         # Copy
         sp.subspec 'Copy' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/CopyConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # Evernote
         sp.subspec 'Evernote' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/EvernoteConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # GooglePlus
         sp.subspec 'GooglePlus' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/GooglePlusConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # Instagram
         sp.subspec 'Instagram' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/InstagramConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # Instapaper
         sp.subspec 'Instapaper' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/InstapaperConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # Line
@@ -128,16 +133,19 @@ Pod::Spec.new do |s|
         # Mail
         sp.subspec 'Mail' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/MailConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # SMS
         sp.subspec 'SMS' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SMSConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # WhatsApp
         sp.subspec 'WhatsApp' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WhatsAppConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
     end
 
@@ -193,6 +201,6 @@ Pod::Spec.new do |s|
     s.subspec 'ShareSDKUI' do |sp|
         sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKUI.framework'
         sp.resources = 'ShareSDK/Support/Optional/ShareSDKUI.bundle'
-        sp.dependency  'ShareSDK3/ShareSDKExtension'
+        sp.dependency  'ShareSDK3/ShareSDKExtension' , 'ShareSDK3/ShareSDKConfigurationFile'
     end
 end
