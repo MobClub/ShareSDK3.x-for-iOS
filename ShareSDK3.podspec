@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
 
   s.default_subspecs    = 'ShareSDK'
   s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
+  s.dependency  'MOBFoundation'
 
   # 核心模块
     s.subspec 'ShareSDK' do |sp|
