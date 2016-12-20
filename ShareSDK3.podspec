@@ -141,6 +141,7 @@ Pod::Spec.new do |s|
     # ShareSDK Extension扩展模块
     s.subspec 'ShareSDKExtension' do |sp|
         sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKExtension.framework'
+        sp.dependency 'ShareSDK'
     end
 
     # 需要移除平台SDK的平台，可用PlatformConnector平台语句替换ShareSDKPlatforms的平台语句
