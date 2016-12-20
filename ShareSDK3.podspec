@@ -13,11 +13,12 @@ Pod::Spec.new do |s|
   s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
 
   s.default_subspecs    = 'ShareSDK'
-  s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
+  # s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
+  s.dependency 'MOBFoundation'
 
   # 核心模块
     s.subspec 'ShareSDK' do |sp|
-        sp.vendored_frameworks = 'ShareSDK/Support/Required/ShareSDKConnector.framework'
+        sp.vendored_frameworks = 'ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework'
         sp.libraries = 'icucore', 'z', 'stdc++'
         sp.resources = 'ShareSDK/Support/Required/ShareSDK.bundle'
     end
@@ -28,16 +29,16 @@ Pod::Spec.new do |s|
 
         # QQ
         sp.subspec 'QQ' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenAPI.framework','ShareSDK/Support/PlatformConnector/QQConnector.framework'
-            ssp.resource = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenAPI.framework','ShareSDK/Support/PlatformConnector/QQConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resources = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
             ssp.libraries = 'sqlite3'
         end
 
         # SinaWeibo
         sp.subspec 'SinaWeibo' do |ssp|
             ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.a"
-            ssp.resource = 'ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle'
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SinaWeiboConnector.framework'
+            ssp.resources = 'ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SinaWeiboConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
             ssp.frameworks = 'ImageIO'
             ssp.libraries = 'sqlite3'
             ssp.source_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.{h,m}"
@@ -48,98 +49,113 @@ Pod::Spec.new do |s|
         sp.subspec 'WeChat' do |ssp|
             ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.a"
             ssp.source_files = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.{h,m}"
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.h"
             ssp.libraries = 'sqlite3'
         end
 
         # RenRen
         sp.subspec 'RenRen' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.framework' ,'ShareSDK/Support/PlatformConnector/RenrenConnector.framework'
-            ssp.resource = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.bundle'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.framework' ,'ShareSDK/Support/PlatformConnector/RenrenConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # 支付宝（AliPaySocial）
         sp.subspec 'AliPaySocial' do |ssp|
             ssp.vendored_libraries = 'ShareSDK/Support/PlatformSDK/APSocialSDK/*.a'
             ssp.source_files = "ShareSDK/Support/PlatformSDK/APSocialSDK/*.{h,m}"
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/AliPayConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/AliPayConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/APSocialSDK/*.h"
         end
 
         # Kakao
         sp.subspec 'Kakao' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/KaKaoSDK/KakaoOpenSDK.framework','ShareSDK/Support/PlatformConnector/KakaoConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/KaKaoSDK/KakaoOpenSDK.framework','ShareSDK/Support/PlatformConnector/KakaoConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Yixin
         sp.subspec 'Yixin' do |ssp|
             ssp.vendored_libraries = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.a"
             ssp.source_files = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.{h,m}"
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/YiXinConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/YiXinConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.h"
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Facebook
         sp.subspec 'Facebook' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/FacebookMessengerSDK/FBSDKMessengerShareKit.framework','ShareSDK/Support/PlatformConnector/FacebookConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/FacebookMessengerSDK/FBSDKMessengerShareKit.framework','ShareSDK/Support/PlatformConnector/FacebookConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Copy
         sp.subspec 'Copy' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/CopyConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/CopyConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Evernote
         sp.subspec 'Evernote' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/EvernoteConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/EvernoteConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # GooglePlus
         sp.subspec 'GooglePlus' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/GooglePlusConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/GooglePlusConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Instagram
         sp.subspec 'Instagram' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/InstagramConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/InstagramConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Instapaper
         sp.subspec 'Instapaper' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/InstapaperConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/InstapaperConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Line
         sp.subspec 'Line' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/LineConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/LineConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # Mail
         sp.subspec 'Mail' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/MailConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/MailConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # SMS
         sp.subspec 'SMS' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SMSConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SMSConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # WhatsApp
         sp.subspec 'WhatsApp' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WhatsAppConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WhatsAppConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
     end
 
     # ShareSDK 配置文件模块
     s.subspec 'ShareSDKConfigurationFile' do |sp|
-        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKConfigFile.framework'
-        sp.resources = 'ShareSDK/Support/Optional/ShareSDKConfigFile.bundle'
+        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKConfigFile.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+        sp.resources = 'ShareSDK/Support/Optional/ShareSDKConfigFile.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
     end
     
     # ShareSDK Extension扩展模块
     s.subspec 'ShareSDKExtension' do |sp|
-        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKExtension.framework'
+        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKExtension.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+    sp.resources = 'ShareSDK/Support/Required/ShareSDK.bundle'
     end
 
     # 需要移除平台SDK的平台，可用PlatformConnector平台语句替换ShareSDKPlatforms的平台语句
@@ -148,35 +164,39 @@ Pod::Spec.new do |s|
 
         # QQ
         sp.subspec 'QQ' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/QQConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/QQConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+        sp.resources = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # SinaWeibo
         sp.subspec 'SinaWeibo' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SinaWeiboConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SinaWeiboConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # WeChat
         sp.subspec 'WeChat' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # RenRen
         sp.subspec 'RenRen' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/RenrenConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/RenrenConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
 
         # 支付宝（AliPaySocial）
         sp.subspec 'AliPaySocial' do |ssp|
-            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/AliPayConnector.framework'
+            ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/AliPayConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+            ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
         end
     end
 
     # ShareSDK提供的UI
     s.subspec 'ShareSDKUI' do |sp|
-        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKUI.framework'
-        sp.resources = 'ShareSDK/Support/Optional/ShareSDKUI.bundle'
+        sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKUI.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
+        sp.resources = 'ShareSDK/Support/Optional/ShareSDKUI.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
+        sp.dependency 'MOBFoundation'
     end
-
-
 end
