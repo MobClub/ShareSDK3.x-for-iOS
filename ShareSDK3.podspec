@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenAPI.framework','ShareSDK/Support/PlatformConnector/QQConnector.framework'
             ssp.resource = 'ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle'
             ssp.libraries = 'sqlite3'
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # SinaWeibo
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
             ssp.libraries = 'sqlite3'
             ssp.source_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.{h,m}"
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/SinaWeiboSDK/*.h"
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # WeChat
@@ -54,14 +54,14 @@ Pod::Spec.new do |s|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework'
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/WeChatSDK/*.h"
             ssp.libraries = 'sqlite3'
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # RenRen
         sp.subspec 'RenRen' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.framework' ,'ShareSDK/Support/PlatformConnector/RenrenConnector.framework'
             ssp.resource = 'ShareSDK/Support/PlatformSDK/RenRenSDK/RennSDK.bundle'
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # 支付宝（AliPaySocial）
@@ -70,13 +70,13 @@ Pod::Spec.new do |s|
             ssp.source_files = "ShareSDK/Support/PlatformSDK/APSocialSDK/*.{h,m}"
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/AliPayConnector.framework'
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/APSocialSDK/*.h"
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # Kakao
         sp.subspec 'Kakao' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/KaKaoSDK/KakaoOpenSDK.framework','ShareSDK/Support/PlatformConnector/KakaoConnector.framework'
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # Yixin
@@ -85,13 +85,13 @@ Pod::Spec.new do |s|
             ssp.source_files = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.{h,m}"
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/YiXinConnector.framework'
             ssp.public_header_files = "ShareSDK/Support/PlatformSDK/YiXinSDK/*.h"
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # Facebook
         sp.subspec 'Facebook' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/FacebookMessengerSDK/FBSDKMessengerShareKit.framework','ShareSDK/Support/PlatformConnector/FacebookConnector.framework'
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # Copy
@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
         # Line
         sp.subspec 'Line' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/LineConnector.framework'
-            ssp.dependency  'ShareSDK3/PlatformConnector'
+            ssp.dependency  'ShareSDK'
         end
 
         # Mail
@@ -145,6 +145,7 @@ Pod::Spec.new do |s|
     s.subspec 'ShareSDKConfigurationFile' do |sp|
         sp.vendored_frameworks = 'ShareSDK/Support/Optional/ShareSDKConfigFile.framework'
         sp.resources = 'ShareSDK/Support/Optional/ShareSDKConfigFile.bundle'
+        sp.dependency  'ShareSDK'
     end
     
     # ShareSDK Extension扩展模块
@@ -160,26 +161,31 @@ Pod::Spec.new do |s|
         # QQ
         sp.subspec 'QQ' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/QQConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # SinaWeibo
         sp.subspec 'SinaWeibo' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/SinaWeiboConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # WeChat
         sp.subspec 'WeChat' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/WechatConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # RenRen
         sp.subspec 'RenRen' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/RenrenConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
 
         # 支付宝（AliPaySocial）
         sp.subspec 'AliPaySocial' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformConnector/AliPayConnector.framework'
+            ssp.dependency  'ShareSDK'
         end
     end
 
@@ -189,6 +195,4 @@ Pod::Spec.new do |s|
         sp.resources = 'ShareSDK/Support/Optional/ShareSDKUI.bundle'
         sp.dependency  'ShareSDK3/ShareSDKExtension'
     end
-
-
 end
