@@ -9,11 +9,11 @@
 import UIKit
 
 @UIApplicationMain
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+    
         /**
         *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
         *  在将生成的AppKey传入到此方法中。我们Demo提供的appKey为内部测试使用，可能会修改配置信息，请不要使用。
@@ -93,6 +93,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                  appSecret : "38053202e1a5fe26c80c753071f0b573",
                                                   authType : SSDKAuthTypeBoth)
                     
+                 
+                        
                     case SSDKPlatformType.TypeTwitter:
                         //设置Twitter应用信息
                          appInfo.SSDKSetupTwitterByConsumerKey("LRBM0H75rWrU9gNHvlEAA2aOy",

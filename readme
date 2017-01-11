@@ -28,6 +28,8 @@ ShareSDK文件包含：
 
 	iii. PlatformSDK 第三方平台SDK。（不需要的平台的SDK可直接移除）
 
+       iiii. PlatformConnector 平台连接器。（不需要的平台可直接移除）
+
 
 2、Demo（包含Objective-C、swift版示例Demo）。
 

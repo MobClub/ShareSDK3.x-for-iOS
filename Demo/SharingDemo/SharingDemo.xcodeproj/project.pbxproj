@@ -32,6 +32,8 @@
 		DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */; };
 		DE3AB27E1DB47DDE00C8787E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3AB27D1DB47DDE00C8787E /* CoreTelephony.framework */; };
 		DE3AB2801DB47DED00C8787E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3AB27F1DB47DED00C8787E /* SystemConfiguration.framework */; };
+		DE46B2BC1E237E45003B44C1 /* DingTalkConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE46B2BB1E237E45003B44C1 /* DingTalkConnector.framework */; };
+		DE5B18EC1E23466E001B921F /* DTShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5B18EB1E23466E001B921F /* DTShareKit.framework */; };
 		DE79434A1B58B99F00D266E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943471B58B99F00D266E8 /* Default-568h@2x.png */; };
 		DE79434B1B58B99F00D266E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943481B58B99F00D266E8 /* Default.png */; };
 		DE79434C1B58B99F00D266E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7943491B58B99F00D266E8 /* Default@2x.png */; };
@@ -112,6 +114,8 @@
 		DE2E83DD1B9D6A1800FDE614 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DE3AB27D1DB47DDE00C8787E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DE3AB27F1DB47DED00C8787E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE46B2BB1E237E45003B44C1 /* DingTalkConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DingTalkConnector.framework; sourceTree = "<group>"; };
+		DE5B18EB1E23466E001B921F /* DTShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTShareKit.framework; sourceTree = "<group>"; };
 		DE7943471B58B99F00D266E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE7943481B58B99F00D266E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE7943491B58B99F00D266E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			files = (
 				DE3AB2801DB47DED00C8787E /* SystemConfiguration.framework in Frameworks */,
 				DE3AB27E1DB47DDE00C8787E /* CoreTelephony.framework in Frameworks */,
+				DE5B18EC1E23466E001B921F /* DTShareKit.framework in Frameworks */,
 				E2501AD91C50853300D1BDBC /* libWeiboSDK.a in Frameworks */,
 				DE93BF651DB0E315005549C6 /* PrintConnector.framework in Frameworks */,
 				DE2E83DE1B9D6A1800FDE614 /* libsqlite3.dylib in Frameworks */,
@@ -213,6 +218,7 @@
 				E2501ACD1C50853300D1BDBC /* ShareSDKExtension.framework in Frameworks */,
 				DE93BF631DB0E315005549C6 /* LineConnector.framework in Frameworks */,
 				DE93BF5E1DB0E315005549C6 /* FacebookConnector.framework in Frameworks */,
+				DE46B2BC1E237E45003B44C1 /* DingTalkConnector.framework in Frameworks */,
 				DE93BF621DB0E315005549C6 /* KakaoConnector.framework in Frameworks */,
 				D08BDA601B412B5E00C73757 /* libstdc++.dylib in Frameworks */,
 				DE93BF641DB0E315005549C6 /* MailConnector.framework in Frameworks */,
@@ -286,6 +292,14 @@
 			path = APSocialSDK;
 			sourceTree = "<group>";
 		};
+		DE5B18EA1E23466E001B921F /* DingTalkSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DE5B18EB1E23466E001B921F /* DTShareKit.framework */,
+			);
+			path = DingTalkSDK;
+			sourceTree = "<group>";
+		};
 		DE5C7CB11BA56BEF00B7409B /* System lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +327,7 @@
 		DE93BF461DB0E315005549C6 /* PlatformConnector */ = {
 			isa = PBXGroup;
 			children = (
+				DE46B2BB1E237E45003B44C1 /* DingTalkConnector.framework */,
 				DE93BF471DB0E315005549C6 /* AliPayConnector.framework */,
 				DE93BF481DB0E315005549C6 /* CopyConnector.framework */,
 				DE93BF4A1DB0E315005549C6 /* EvernoteConnector.framework */,
@@ -369,6 +384,7 @@
 		E2501AA01C50853300D1BDBC /* PlatformSDK */ = {
 			isa = PBXGroup;
 			children = (
+				DE5B18EA1E23466E001B921F /* DingTalkSDK */,
 				DE0AB5DD1DB5FF650007CF77 /* APSocialSDK */,
 				E2501AA61C50853300D1BDBC /* FacebookMessengerSDK */,
 				E2501AA81C50853300D1BDBC /* KaKaoSDK */,
@@ -688,6 +704,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
 					"$(PROJECT_DIR)/SharingDemo",
+					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/DingTalkSDK",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -725,6 +742,7 @@
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(SRCROOT)/../../ShareSDK/Support/PlatformConnector",
 					"$(PROJECT_DIR)/SharingDemo",
+					"$(SRCROOT)/../../ShareSDK/Support/PlatformSDK/DingTalkSDK",
 				);
 				INFOPLIST_FILE = SharingDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;

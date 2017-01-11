@@ -52,6 +52,9 @@
 //Facebook Messenger SDK
 #import <FBSDKMessengerShareKit/FBSDKMessengerSharer.h>
 
+//钉钉（DingTalk）
+#import <DTShareKit/DTOpenAPI.h>
+
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
@@ -105,7 +108,8 @@
                             @(SSDKPlatformTypeYiXin),
                             @(SSDKPlatformTypeInstapaper),
                             @(SSDKPlatformTypeFacebookMessenger),
-                            @(SSDKPlatformTypeAliPaySocialTimeline)
+                            @(SSDKPlatformTypeAliPaySocialTimeline),
+                            @(SSDKPlatformTypeDingTalk)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
@@ -136,6 +140,9 @@
                              break;
                          case SSDKPlatformTypeFacebookMessenger:
                              [ShareSDKConnector connectFacebookMessenger:[FBSDKMessengerSharer class]];
+                             break;
+                         case SSDKPlatformTypeDingTalk:
+                             [ShareSDKConnector connectDingTalk:[DTOpenAPI class]];
                              break;
                          default:
                              break;
@@ -275,6 +282,9 @@
                   case SSDKPlatformTypeInstapaper:
                       [appInfo SSDKSetupInstapaperByConsumerKey:@"4rDJORmcOcSAZL1YpqGHRI605xUvrLbOhkJ07yO0wWrYrc61FA"
                                                  consumerSecret:@"GNr1GespOQbrm8nvd7rlUsyRQsIo3boIbMguAl9gfpdL0aKZWe"];
+                      break;
+                  case SSDKPlatformTypeDingTalk:
+                      [appInfo SSDKSetupDingTalkByAppId:@"dingoanxyrpiscaovl4qlw"];
                       break;
                   default:
                       break;
