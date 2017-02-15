@@ -80,6 +80,7 @@ Pod::Spec.new do |s|
         sp.subspec 'MeiPai' do |ssp|
             ssp.vendored_frameworks = 'ShareSDK/Support/PlatformSDK/MPShareSDK/MPShareSDK.framework','ShareSDK/Support/PlatformConnector/MeiPaiConnector.framework','ShareSDK/ShareSDK.framework','ShareSDK/Support/Required/ShareSDKConnector.framework','ShareSDK/Support/Optional/ShareSDKExtension.framework'
             ssp.resource = 'ShareSDK/Support/Required/ShareSDK.bundle'
+            ssp.frameworks = 'AssetsLibrary'
         end
 
         # Yixin
