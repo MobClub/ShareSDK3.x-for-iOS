@@ -55,6 +55,9 @@
 //钉钉（DingTalk）
 #import <DTShareKit/DTOpenAPI.h>
 
+//美拍
+#import <MPShareSDK/MPShareSDK.h>
+
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
@@ -109,7 +112,9 @@
                             @(SSDKPlatformTypeInstapaper),
                             @(SSDKPlatformTypeFacebookMessenger),
                             @(SSDKPlatformTypeAliPaySocialTimeline),
-                            @(SSDKPlatformTypeDingTalk)
+                            @(SSDKPlatformTypeDingTalk),
+                            @(SSDKPlatformTypeMeiPai),
+                            @(SSDKPlatformTypeYouTube)
                             ]
                  onImport:^(SSDKPlatformType platformType) {
                      
@@ -144,6 +149,9 @@
                          case SSDKPlatformTypeDingTalk:
                              [ShareSDKConnector connectDingTalk:[DTOpenAPI class]];
                              break;
+                         case SSDKPlatformTypeMeiPai:
+                             [ShareSDKConnector connectMeiPai:[MPShareSDK class]];
+                             break;
                          default:
                              break;
                      }
@@ -169,6 +177,7 @@
                       //设置Facebook应用信息，其中authType设置为只用SSO形式授权
                       [appInfo SSDKSetupFacebookByApiKey:@"107704292745179"
                                                appSecret:@"38053202e1a5fe26c80c753071f0b573"
+                                             displayName:@"shareSDK"
                                                 authType:SSDKAuthTypeBoth];
                       break;
                   case SSDKPlatformTypeTwitter:
@@ -286,6 +295,14 @@
                   case SSDKPlatformTypeDingTalk:
                       [appInfo SSDKSetupDingTalkByAppId:@"dingoanxyrpiscaovl4qlw"];
                       break;
+                      
+                  case SSDKPlatformTypeMeiPai:
+                      [appInfo SSDKSetupMeiPaiByAppKey:@"1089867596"];//4294967196
+                      break;
+                  case SSDKPlatformTypeYouTube:
+                      [appInfo SSDKSetupYouTubeByClientId:@"906418427202-jinnbqal1niq4s8isbg2ofsqc5ddkcgr.apps.googleusercontent.com"
+                                             clientSecret:@""
+                                              redirectUri:@"http://localhost"];
                   default:
                       break;
               }

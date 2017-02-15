@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>从手机相册中选择</string>
 	<key>LSApplicationCategoryType</key>
 	<dict/>
 	<key>FacebookAppID</key>
@@ -10,6 +12,11 @@
 	<string>48d3f524e4a636b08d81b3ceb50f1003</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fbauth</string>
+		<string>mtmv</string>
+		<string>mpsharesdk10</string>
+		<string>mpsharesdk11</string>
+		<string>youtube</string>
 		<string>fb-messenger-platform-20150714</string>
 		<string>weibosdk2.5</string>
 		<string>dingtalk</string>
@@ -180,6 +187,16 @@
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>meipai</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>mp1089867596</string>
+			</array>
+		</dict>
 		<dict>
 			<key>CFBundleURLName</key>
 			<string>dingtalk</string>

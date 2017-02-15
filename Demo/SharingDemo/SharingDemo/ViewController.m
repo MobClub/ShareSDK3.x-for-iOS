@@ -18,6 +18,8 @@
 #import <ShareSDKExtension/ShareSDK+Extension.h>
 #import <MOBFoundation/MOBFoundation.h>
 
+#import <AssetsLibrary/AssetsLibrary.h>
+
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 /**
@@ -343,18 +345,27 @@
     [shareParams SSDKEnableUseClientShare];
     NSArray* imageArray = @[[UIImage imageNamed:@"shareImg.png"]];
     
-    if (imageArray) {
+    //自定义美拍分享
+    [shareParams SSDKSetupShareParamsByText:@"分享内容"
+                                     images:imageArray
+                                        url:[NSURL URLWithString:@"http://www.mob.com"]
+                                      title:@"分享标题"
+                                       type:SSDKContentTypeAuto];
+    
+    [shareParams SSDKEnableUseClientShare];
+    
+    //美拍需要传相册地址
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"cat" ofType:@"mp4"];
+    [assetsLibrary writeVideoAtPathToSavedPhotosAlbum:[NSURL URLWithString:path]
+                                      completionBlock:^(NSURL *assetURL, NSError *error) {
         
-        [shareParams SSDKSetupShareParamsByText:@"分享内容"
-                                         images:imageArray
-                                            url:[NSURL URLWithString:@"http://www.mob.com"]
-                                          title:@"分享标题"
-                                           type:SSDKContentTypeAuto];
+        NSLog(@"%@",assetURL);
         
-        [shareParams SSDKEnableUseClientShare];
+        [shareParams SSDKSetupMeiPaiParamsByUrl:assetURL type:SSDKContentTypeAuto];
         
         //进行分享
-        [ShareSDK share:SSDKPlatformTypeSinaWeibo
+        [ShareSDK share:SSDKPlatformTypeMeiPai
              parameters:shareParams
          onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
              
@@ -396,7 +407,7 @@
                      break;
              }
          }];
-    }
+    }];
 }
 
 #pragma mark 显示分享菜单
@@ -421,7 +432,8 @@
                                         url:[NSURL URLWithString:@"http://www.mob.com"]
                                       title:@"分享标题"
                                        type:SSDKContentTypeImage];
-
+    
+    
     //1.2、自定义分享平台（非必要）
     NSMutableArray *activePlatforms = [NSMutableArray arrayWithArray:[ShareSDK activePlatforms]];
     //添加一个自定义的平台（非必要）
