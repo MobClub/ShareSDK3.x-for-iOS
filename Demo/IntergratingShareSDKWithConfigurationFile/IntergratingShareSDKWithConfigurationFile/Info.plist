@@ -2,6 +2,56 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.mob.demoShareSDK</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>alipayShare</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ap2015072400185895</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>vk5312801</string>
+				<string>yx0d9a9f9088ea44d78680f3274da1765f</string>
+				<string>pin4797078908495202393</string>
+				<string>kakao48d3f524e4a636b08d81b3ceb50f1003</string>
+				<string>pdk4797078908495202393</string>
+				<string>tb2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM</string>
+				<string>com.mob.demoShareSDK</string>
+				<string>rm226427com.mob.demoShareSDK</string>
+				<string>pocketapp1234</string>
+				<string>QQ05FB8B52</string>
+				<string>wx4868b35061f87885</string>
+				<string>tencent100371282</string>
+				<string>fb107704292745179</string>
+				<string>wb568898243</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>48d3f524e4a636b08d81b3ceb50f1003</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weibosdk</string>
@@ -42,63 +92,13 @@
 		<string>wechat</string>
 		<string>weixin</string>
 	</array>
-	<key>KAKAO_APP_KEY</key>
-	<string>48d3f524e4a636b08d81b3ceb50f1003</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>ap2015072400185895</string>
-			</array>
-			<key>CFBundleURLName</key>
-			<string>alipayShare</string>
-		</dict>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>vk5312801</string>
-				<string>yx0d9a9f9088ea44d78680f3274da1765f</string>
-				<string>pin4797078908495202393</string>
-				<string>kakao48d3f524e4a636b08d81b3ceb50f1003</string>
-				<string>pdk4797078908495202393</string>
-				<string>tb2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM</string>
-				<string>com.mob.demoShareSDK</string>
-				<string>rm226427com.mob.demoShareSDK</string>
-				<string>pocketapp1234</string>
-				<string>QQ05FB8B52</string>
-				<string>wx4868b35061f87885</string>
-				<string>tencent100371282</string>
-				<string>fb107704292745179</string>
-				<string>wb568898243</string>
-			</array>
-		</dict>
-	</array>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.mob.demoShareSDK</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

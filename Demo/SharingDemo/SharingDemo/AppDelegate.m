@@ -303,6 +303,17 @@
                       [appInfo SSDKSetupYouTubeByClientId:@"906418427202-jinnbqal1niq4s8isbg2ofsqc5ddkcgr.apps.googleusercontent.com"
                                              clientSecret:@""
                                               redirectUri:@"http://localhost"];
+                      break;
+//                      v3.6.2 新增
+//                      需要在 info.plist 增加 ChannelID 设置
+//                      <key>LineSDKConfig</key>
+//                      <dict>
+//                      <key>ChannelID</key>
+//                      <string>1502330683</string>
+//                      </dict>
+                  case SSDKPlatformTypeLine:
+                      [appInfo SSDKSetupLineAuthType:SSDKAuthTypeBoth];
+                      break;
                   default:
                       break;
               }

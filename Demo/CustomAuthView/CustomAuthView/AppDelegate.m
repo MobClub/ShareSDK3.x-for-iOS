@@ -35,7 +35,7 @@
                       [appInfo SSDKSetupSinaWeiboByAppKey:@"568898243"
                                                 appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
                                               redirectUri:@"http://www.sharesdk.cn"
-                                                 authType:SSDKAuthTypeBoth];
+                                                 authType:SSDKAuthTypeWeb];
                       break;
                   case SSDKPlatformTypeInstagram:
                       [appInfo SSDKSetupInstagramByClientID:@"ff68e3216b4f4f989121aa1c2962d058"
@@ -52,6 +52,24 @@
               }
           }];
     
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"handleOpenURL %@",url);
+    return YES;
+}
+//
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    NSLog(@"handleOpenURL openURL %@",url);
+    return YES;
+};
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"application handleOpenURL %@",url);
     return YES;
 }
 

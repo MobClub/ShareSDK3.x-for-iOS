@@ -74,4 +74,22 @@
     return YES;
 }
 
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"handleOpenURL %@",url);
+    return YES;
+}
+//
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    NSLog(@"handleOpenURL openURL %@",url);
+    return YES;
+};
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"application handleOpenURL %@",url);
+    return YES;
+}
+
 @end

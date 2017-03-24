@@ -20,24 +20,23 @@ class ViewController: UIViewController {
     @IBAction func SimpleShare(sender: UIButton) {
 
         // 1.创建分享参数
-        var shareParames = NSMutableDictionary()
-        shareParames.SSDKSetupShareParamsByText("分享内容",
+        let shareParames = NSMutableDictionary()
+        shareParames.ssdkSetupShareParams(byText: "分享内容",
                                            images : UIImage(named: "shareImg.png"),
-                                              url : NSURL(string:"http://mob.com"),
+                                              url : NSURL(string:"http://mob.com") as URL!,
                                             title : "分享标题",
-                                             type : SSDKContentType.Image)
-        
+                                             type : SSDKContentType.image)
         //2.进行分享
-        ShareSDK.share(SSDKPlatformType.TypeSinaWeibo, parameters: shareParames) { (state : SSDKResponseState, userData : [NSObject : AnyObject]!, contentEntity :SSDKContentEntity!, error : NSError!) -> Void in
+        ShareSDK.share(SSDKPlatformType.typeSinaWeibo, parameters: shareParames) { (state : SSDKResponseState, userData : [AnyHashable : Any]?, contentEntity :SSDKContentEntity?, error : Error?) -> Void in
             
             switch state{
                 
-                case SSDKResponseState.Success:
+                case SSDKResponseState.success:
                                                 print("分享成功")
                                                 let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
                                                 alert.show()
-                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
-                case SSDKResponseState.Cancel:  print("分享取消")
+                case SSDKResponseState.fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.cancel:  print("分享取消")
             
             default:
                 break
@@ -51,20 +50,23 @@ class ViewController: UIViewController {
     @IBAction func ShowShareMenu(sender: UIButton) {
         
         //1.创建分享参数
-        var shareParames = NSMutableDictionary()
-        shareParames.SSDKSetupShareParamsByText("分享内容",
+        let shareParames = NSMutableDictionary()
+        shareParames.ssdkSetupShareParams(byText: "分享内容",
                                          images : UIImage(named: "shareImg.png"),
-                                            url : NSURL(string:"http://mob.com"),
+                                            url : NSURL(string:"http://mob.com") as URL!,
                                           title : "分享标题",
-                                           type : SSDKContentType.Auto)
+                                           type : SSDKContentType.auto)
+        
+        SSUIShareActionSheetStyle.setShareActionSheetStyle(.simple)
+        
         //2.进行分享
-        ShareSDK.showShareActionSheet(sender, items: nil, shareParams: shareParames) { (state : SSDKResponseState, platformType : SSDKPlatformType, userdata : [NSObject : AnyObject]!, contentEnity : SSDKContentEntity!, error : NSError!, end) -> Void in
+        ShareSDK.showShareActionSheet(sender, items: nil, shareParams: shareParames) { (state : SSDKResponseState, platformType : SSDKPlatformType, userdata : [AnyHashable : Any]?, contentEnity : SSDKContentEntity?, error : Error?, end) in
             
             switch state{
             
-                case SSDKResponseState.Success: print("分享成功")
-                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
-                case SSDKResponseState.Cancel:  print("分享取消")
+                case SSDKResponseState.success: print("分享成功")
+                case SSDKResponseState.fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.cancel:  print("分享取消")
             
             default:
                 break
@@ -78,21 +80,22 @@ class ViewController: UIViewController {
     @IBAction func ShowShareEditor(sender: UIButton) {
         
         // 1.创建分享参数
-        var shareParames = NSMutableDictionary()
+        let shareParames = NSMutableDictionary()
 
-        shareParames.SSDKSetupShareParamsByText("分享内容",
+        shareParames.ssdkSetupShareParams(byText: "分享内容",
                                          images : UIImage(named: "shareImg.png"),
-                                            url : NSURL(string:"http://mob.com"),
+                                            url : NSURL(string:"http://mob.com") as URL!,
                                           title : "分享标题",
-                                           type : SSDKContentType.Image)
+                                           type : SSDKContentType.image)
+        
         //2.显示分享编辑页面
-        ShareSDK.showShareEditor(SSDKPlatformType.TypeSinaWeibo, otherPlatformTypes: nil, shareParams: shareParames) { (state :SSDKResponseState, platformType : SSDKPlatformType, userData: [NSObject : AnyObject]!, contentEntity : SSDKContentEntity!, error : NSError!, end) -> Void in
+        ShareSDK.showShareEditor(SSDKPlatformType.typeSinaWeibo, otherPlatformTypes: nil, shareParams: shareParames) { (state :SSDKResponseState, platformType : SSDKPlatformType, userData: [AnyHashable : Any]?, contentEntity : SSDKContentEntity?, error : Error?, end) -> Void in
             
             switch state{
                 
-                case SSDKResponseState.Success: print("分享成功")
-                case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
-                case SSDKResponseState.Cancel:  print("分享取消")
+                case SSDKResponseState.success: print("分享成功")
+                case SSDKResponseState.fail:    print("分享失败,错误描述:\(error)")
+                case SSDKResponseState.cancel:  print("分享取消")
                 
             default:
                 break
@@ -104,19 +107,22 @@ class ViewController: UIViewController {
     * 获取授权用户信息
     */
     @IBAction func OAuth(sender: UIButton) {
-        //授权
-        ShareSDK.authorize(SSDKPlatformType.TypeSinaWeibo, settings: nil, onStateChanged: { (state : SSDKResponseState, user : SSDKUser!, error : NSError!) -> Void in
+        ShareSDK.authorize(SSDKPlatformType.typeWechat, settings: [:]) { (state : SSDKResponseState, user : SSDKUser?, error : Error?) in
             
-            switch state{
-                
-            case SSDKResponseState.Success: print("授权成功,用户信息为\(user)\n ----- 授权凭证为\(user.credential)")
-            case SSDKResponseState.Fail:    print("授权失败,错误描述:\(error)")
-            case SSDKResponseState.Cancel:  print("操作取消")
-                
-            default:
-                break
-            }
-        })
+        }
+        //授权
+//        ShareSDK.authorize(SSDKPlatformType.typeWechat, settings: nil, onStateChanged: { (state : SSDKResponseState, user : SSDKUser?, error : Error?) -> Void in
+//            
+//            switch state{
+//                
+//            case SSDKResponseState.success: print("授权成功,用户信息为\(user)\n ----- 授权凭证为\(user?.credential)")
+//            case SSDKResponseState.fail:    print("授权失败,错误描述:\(error)")
+//            case SSDKResponseState.cancel:  print("操作取消")
+//                
+//            default:
+//                break
+//            }
+//        })
     }
 }
 

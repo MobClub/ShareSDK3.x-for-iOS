@@ -42,6 +42,18 @@
 //人人SDK头文件
 #import <RennSDK/RennSDK.h>
 
+#import <ShareSDKUI/SSUIShareActionSheetCustomItem.h>
+#import <ShareSDKExtension/SSEShareHelper.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDKUI/SSUIShareActionSheetStyle.h>
+#import <ShareSDK/ShareSDK+Base.h>
+
+#import <ShareSDKExtension/ShareSDK+Extension.h>
+#import <MOBFoundation/MOBFoundation.h>
+
+#import <ShareSDKUI/SSUIShareActionSheetItem.h>
+#import <ShareSDKUI/SSUIShareActionSheetCustomItem.h>
+
 #endif
 
 

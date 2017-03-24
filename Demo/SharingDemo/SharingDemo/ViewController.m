@@ -426,12 +426,14 @@
     
     //1、创建分享参数（必要）
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    NSArray* imageArray = @[@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"];
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"shareImg" ofType:@"png"];
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Icon" ofType:@"png"];
+    NSArray* imageArray = @[@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg",[UIImage imageNamed:@"shareImg.png"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
-                                     images:imageArray
+                                     images:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
                                         url:[NSURL URLWithString:@"http://www.mob.com"]
                                       title:@"分享标题"
-                                       type:SSDKContentTypeImage];
+                                       type:SSDKContentTypeAuto];
     
     
     //1.2、自定义分享平台（非必要）
@@ -463,6 +465,7 @@
 //        [SSUIShareActionSheetStyle setPageIndicatorTintColor:[UIColor colorWithRed:62/255.0 green:62/255.0 blue:62/255.0 alpha:1.0]];
     
     //2、分享
+//    SSUIShareActionSheetController *sheet =
     [ShareSDK showShareActionSheet:view
                              items:nil
                        shareParams:shareParams
@@ -546,6 +549,8 @@
                    }
                    
                }];
+    //设置 消息编辑UI中 不显示显示其他平台Icon
+//    sheet.noShowOtherPlatformOnEditorView = YES;
     
 //另附：设置跳过分享编辑页面，直接分享的平台。
 //        SSUIShareActionSheetController *sheet = [ShareSDK showShareActionSheet:view
