@@ -542,7 +542,7 @@
                            break;
                    }
                    
-                   if (state != SSDKResponseStateBegin)
+                   if (state != SSDKResponseStateBegin && state != SSDKResponseStateBeginUPLoad)
                    {
                        [theController showLoadingView:NO];
                        [theController.tableView reloadData];
@@ -633,7 +633,7 @@
                           break;
                   }
                   
-                  if (state != SSDKResponseStateBegin)
+                  if (state != SSDKResponseStateBegin &&  state != SSDKResponseStateBeginUPLoad)
                   {
                       [theController showLoadingView:NO];
                       [theController.tableView reloadData];
