@@ -94,6 +94,7 @@
   pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
   pod 'ShareSDK3/ShareSDKPlatforms/MeiPai'
   pod 'ShareSDK3/ShareSDKPlatforms/YouTube'
+  pod 'ShareSDK3/ShareSDKPlatforms/Twitter'
   
   #using the configuration file sharing module (optional) 
   pod 'ShareSDK3/ShareSDKConfigurationFile'
