@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
         # QQ
         sp.subspec 'QQ' do |ssp|
             ssp.vendored_frameworks = 'SDK/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenAPI.framework','SDK/ShareSDK/Support/PlatformConnector/QQConnector.framework','SDK/ShareSDK/ShareSDK.framework','SDK/ShareSDK/Support/Required/ShareSDKConnector.framework','SDK/ShareSDK/Support/Optional/ShareSDKExtension.framework'
-            ssp.resources = 'SDK/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
+            ssp.resources = 'SDK/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle','SDK/ShareSDK/Support/Required/ShareSDK.bundle'
             ssp.libraries = 'sqlite3'
         end
 
@@ -181,7 +181,7 @@ Pod::Spec.new do |s|
     # ShareSDK 配置文件模块
     s.subspec 'ShareSDKConfigurationFile' do |sp|
         sp.vendored_frameworks = 'SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.framework','SDK/ShareSDK/ShareSDK.framework','SDK/ShareSDK/Support/Required/ShareSDKConnector.framework','SDK/ShareSDK/Support/Optional/ShareSDKExtension.framework'
-        sp.resources = 'SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
+        sp.resources = 'SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.bundle','SDK/ShareSDK/Support/Required/ShareSDK.bundle'
     end
     
     # ShareSDK Extension扩展模块
