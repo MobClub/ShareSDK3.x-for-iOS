@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
 
   s.default_subspecs    = 'ShareSDK'
-  s.vendored_frameworks = 'ShareSDK/ShareSDK.framework'
+  s.vendored_frameworks = 'SDK/ShareSDK/ShareSDK.framework'
   s.dependency 'MOBFoundation'
 
   # 核心模块
