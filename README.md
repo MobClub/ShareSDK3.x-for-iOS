@@ -37,7 +37,7 @@ SDK
               | ----- Third-party platform's SDK（Platform SDK does not require can be removable）
               | ----- PlatformConnector 
               | ----- Optional
-              		| ----- ShareSDKExtension.framework：ShareSDK framework for functional expansion plug. Currently the main provider of third-party platform login, onekey share, screenshots sharing, shake sharing and other related functions. We need to use the above functions necessary。
+              	    | ----- ShareSDKExtension.framework：ShareSDK framework for functional expansion plug. Currently the main provider of third-party platform login, onekey share, screenshots sharing, shake sharing and other related functions. We need to use the above functions necessary。
                     | ----- ShareSDKUI.bundle：Share menu bar and share editorial page Resources。（customize these UI can be removed directly）
                     | ----- ShareSDKUI.framework：Share menu bar and share editorial page。（customize these UI can be removed directly）
                     | ----- ShareSDKConfigFile.bundle
