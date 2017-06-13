@@ -193,6 +193,6 @@ Pod::Spec.new do |s|
     # ShareSDK提供的UI
     s.subspec 'ShareSDKUI' do |sp|
         sp.vendored_frameworks = 'SDK/ShareSDK/Support/Optional/ShareSDKUI.framework','SDK/ShareSDK/ShareSDK.framework','SDK/ShareSDK/Support/Required/ShareSDKConnector.framework','SDK/ShareSDK/Support/Optional/ShareSDKExtension.framework'
-        sp.resources = 'SDK/ShareSDK/Support/Optional/ShareSDKUI.bundle','ShareSDK/Support/Required/ShareSDK.bundle'
+        sp.resources = 'SDK/ShareSDK/Support/Optional/ShareSDKUI.bundle','SDK/ShareSDK/Support/Required/ShareSDK.bundle'
     end
 end
