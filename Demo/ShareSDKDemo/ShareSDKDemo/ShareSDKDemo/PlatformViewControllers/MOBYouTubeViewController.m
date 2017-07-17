@@ -27,18 +27,9 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeYouTube;
     self.title = @"YouTube";
-    authTypeArray = @[@"授权"];
-    authSelectorNameArray = @[@"authAct"];
+    shareIconArray = @[@"videoIcon",@"videoIcon"];
     shareTypeArray = @[@"视频",@"视频 上传进度"];
     selectorNameArray = @[@"shareVideo",@"shareVideoUploadProgress"];
-}
-
-/**
- 授权
- */
-- (void)authAct
-{
-    [super authAct];
 }
 
 - (NSMutableDictionary *)shareParameters

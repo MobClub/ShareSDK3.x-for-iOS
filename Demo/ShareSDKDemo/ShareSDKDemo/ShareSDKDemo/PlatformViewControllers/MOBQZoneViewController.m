@@ -20,6 +20,7 @@
     [super viewDidLoad];
     platformType = SSDKPlatformSubTypeQZone;
     self.title = @"QZone";
+    shareIconArray = @[@"textIcon",@"imageIcon",@"webURLIcon",@"videoIcon"];
     shareTypeArray = @[@"文字",@"图片",@"链接",@"相册视频"];
     selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareAssetVideo"];
 }
@@ -82,9 +83,10 @@
 - (void)shareLink
 {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://n1.itc.cn/img8/wb/common/2016/08/13/qianfan.png"]];
     //通用参数设置
     [parameters SSDKSetupShareParamsByText:@"Share SDK Link Desc"
-                                    images:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
+                                    images:[UIImage imageWithData:data]
                                        url:[NSURL URLWithString:@"https://www.mob.com"]
                                      title:@"Share SDK"
                                       type:SSDKContentTypeWebPage];

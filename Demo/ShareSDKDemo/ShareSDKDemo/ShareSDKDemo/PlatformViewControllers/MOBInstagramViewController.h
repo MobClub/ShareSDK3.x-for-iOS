@@ -11,10 +11,3 @@
 @interface MOBInstagramViewController : MOBPlatformViewController
 
 @end
-
-/*
- <key>LSApplicationQueriesSchemes</key>
-	<array>
-     <string>instagram</string>
-	</array>
-*/

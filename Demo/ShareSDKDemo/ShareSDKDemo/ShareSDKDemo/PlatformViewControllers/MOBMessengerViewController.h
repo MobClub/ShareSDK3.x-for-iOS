@@ -11,11 +11,3 @@
 @interface MOBMessengerViewController : MOBPlatformViewController
 
 @end
-
-/*
- <key>LSApplicationQueriesSchemes</key>
-	<array>
-     <string>fb-messenger-platform-20150714</string>
-     <string>fb-messenger</string>
-	</array>
-*/

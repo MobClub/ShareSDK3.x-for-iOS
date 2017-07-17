@@ -19,7 +19,8 @@
     [super viewDidLoad];
     platformType = SSDKPlatformSubTypeWechatTimeline;
     self.title = @"微信朋友圈";
-    shareTypeArray = @[@"文字",@"图片",@"链接",@"网络音频",@"网络视频"];
+    shareIconArray = @[@"textIcon",@"imageIcon",@"webURLIcon",@"audioURLIcon",@"videoURLIcon"];
+    shareTypeArray = @[@"文字",@"图片",@"链接",@"音乐链接",@"视频链接"];
     selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareAudio",@"shareVideo"];
 }
 

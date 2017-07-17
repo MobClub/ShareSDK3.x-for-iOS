@@ -20,6 +20,7 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeMeiPai;
     self.title = @"美拍";
+    shareIconArray = @[@"imageIcon",@"videoIcon",@"imageIcon",@"videoIcon"];
     shareTypeArray = @[@"图片",@"视频",@"相册图片",@"相册视频"]; //相册视频
     selectorNameArray = @[@"shareImage",@"shareVideo",@"shareAssetImage",@"shareAssetVideo"];
 }

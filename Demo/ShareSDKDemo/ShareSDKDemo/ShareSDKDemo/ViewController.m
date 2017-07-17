@@ -9,171 +9,149 @@
 #import "ViewController.h"
 #import <ShareSDK/ShareSDK+Base.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <MOBFoundation/MOBFoundation.h>
+
+#import "MobShareViewController.h"
+#import "MobAuthViewController.h"
+#import "MobUserInfoViewController.h"
 
 @interface ViewController ()
 {
-    IBOutlet UITableView *tabeleView;
-    NSArray *_platforemArray;
-    NSArray *_overseasPlatforemArray;
-    NSArray *_systemPlatforemArray;
-    NSBundle *_uiBundle;
-    BOOL showMorePlatforem;
-    BOOL showOverseasMorePlatforem;
+    IBOutlet UIView *topView;
+    IBOutlet UIButton *shareButton;
+    IBOutlet UIButton *authButton;
+    IBOutlet UIButton *userInfoButton;
+    NSArray *buttonArray;
+    CALayer *lineLayer;
+    
+    NSInteger selectedIndex;
+    IBOutlet UICollectionView *myCollectionView;
+    
+    MobShareViewController *shareViewController;
+    MobAuthViewController *authViewController;
+    MobUserInfoViewController *userInfoViewController;
+    NSArray *viewControllerArray;
+    BOOL isFirst;
 }
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+static NSString * const cellReuseIdentifier = @"cellReuseIdentifier";
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    _platforemArray = @[
-                        @(SSDKPlatformSubTypeQQFriend),
-                        @(SSDKPlatformSubTypeQZone),
-                        @(SSDKPlatformSubTypeWechatSession),
-                        @(SSDKPlatformSubTypeWechatTimeline),
-                        @(SSDKPlatformSubTypeWechatFav),
-                        @(SSDKPlatformTypeSinaWeibo),
-                        @(SSDKPlatformTypeMeiPai),
-                        ];
-    _overseasPlatforemArray = @[
-                                @(SSDKPlatformTypeFacebook),
-                                @(SSDKPlatformTypeFacebookMessenger),
-                                @(SSDKPlatformTypeTwitter),
-                                @(SSDKPlatformTypeYouTube),
-                                @(SSDKPlatformTypeInstagram),
-                                @(SSDKPlatformTypeLine),
-                                ];
-    _systemPlatforemArray = nil;
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"ShareSDKUI" ofType:@"bundle"];
-    _uiBundle = [NSBundle bundleWithPath:bundlePath];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    buttonArray = @[shareButton,authButton,userInfoButton];
+    [myCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellReuseIdentifier];
+    shareViewController = [[MobShareViewController alloc] initWithNibName:@"MobShareViewController" bundle:nil];
+    authViewController = [[MobAuthViewController alloc] initWithNibName:@"MobAuthViewController" bundle:nil];
+    userInfoViewController = [[MobUserInfoViewController alloc] initWithNibName:@"MobUserInfoViewController" bundle:nil];
+    viewControllerArray = @[shareViewController,authViewController,userInfoViewController];
+    isFirst = YES;
 }
 
-
-#pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)viewDidAppear:(BOOL)animated
 {
-    return 2;
+    [super viewDidAppear:animated];
+    if(isFirst)
+    {
+        isFirst = NO;
+        [self showLineWithButton:shareButton];
+        shareViewController.view.frame = myCollectionView.bounds;
+        authViewController.view.frame = myCollectionView.bounds;
+        userInfoViewController.view.frame = myCollectionView.bounds;
+    }
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void)showLineWithButton:(UIButton *)button
 {
-    switch (section) {
+    selectedIndex = button.tag;
+    if(lineLayer == nil)
+    {
+        lineLayer = [[CALayer alloc] init];
+        lineLayer.backgroundColor = [MOBFColor colorWithRGB:0xff6800].CGColor;
+        [topView.layer addSublayer:lineLayer];
+    }
+    CGFloat width = button.titleLabel.text.length * button.titleLabel.font.pointSize;
+    CGFloat y = CGRectGetHeight(topView.frame)-2;
+    CGFloat x = 0;
+    switch (button.tag) {
         case 0:
-            return _platforemArray.count;
+            x = CGRectGetWidth(button.frame) - width;
+            break;
         case 1:
-            return _overseasPlatforemArray.count;
+            x = CGRectGetMinX(button.frame) + (CGRectGetWidth(button.frame) - width)/2;
+            break;
         default:
-            return  0;
+            x = CGRectGetMinX(button.frame);
+            break;
+    }
+    lineLayer.frame = CGRectMake(x, y, width, 2);
+    
+}
+
+- (IBAction)buttonAct:(UIButton *)sender
+{
+    if(selectedIndex != sender.tag)
+    {
+        if(sender.tag == 1)
+        {
+            [authViewController reload];
+        }
+        else if(sender.tag == 2)
+        {
+            [userInfoViewController reload];
+        }
+        UIButton *selecetedButton = buttonArray[selectedIndex];
+        [selecetedButton setSelected:NO];
+        [UIView animateWithDuration:0.25 animations:^{
+            [self showLineWithButton:sender];
+            [myCollectionView setContentOffset:CGPointMake(CGRectGetWidth(myCollectionView.bounds) * sender.tag, 0) animated:YES];
+            [sender setSelected:YES];
+        }];
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark UICollectionViewDelegate UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseCell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseCell"];
-    }
-    id obj = nil;
-    switch (indexPath.section) {
-        case 0:
-            obj = _platforemArray[indexPath.row];
-            break;
-        case 1:
-            obj = _overseasPlatforemArray[indexPath.row];
-            break;
-        case 2:
-            obj = _systemPlatforemArray[indexPath.row];
-            break;
-    }
-    if([obj isKindOfClass:[NSString class]])
-    {
-        NSString *titel = obj;
-        cell.textLabel.text = titel;
-        cell.imageView.image = nil;
-        if((showMorePlatforem && indexPath.section == 0) || (showOverseasMorePlatforem && indexPath.section == 1))
-        {
-            cell.textLabel.textAlignment = NSTextAlignmentRight;
-        }
-        else
-        {
-            cell.textLabel.textAlignment = NSTextAlignmentLeft;
-        }
-    }
-    else if([obj isKindOfClass:[NSNumber class]])
-    {
-        //title
-        NSInteger platformType = [obj integerValue];
-        NSString *platformTypeName = [NSString stringWithFormat:@"ShareType_%zi",platformType];
-        cell.textLabel.text = NSLocalizedStringWithDefaultValue(platformTypeName, @"ShareSDKUI_Localizable", _uiBundle, platformTypeName, nil);
-        //icon
-        NSString *iconImageName = [NSString stringWithFormat:@"Icon_simple/sns_icon_%ld.png",(long)platformType];
-        UIImage *icon = [UIImage imageWithContentsOfFile:[_uiBundle pathForResource:(iconImageName) ofType:nil]];
-        cell.imageView.image = icon;
-        cell.textLabel.textAlignment = NSTextAlignmentLeft;
-    }
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return collectionView.frame.size;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellReuseIdentifier forIndexPath:indexPath];
+    UIViewController *viewController = viewControllerArray[indexPath.row];
+    [cell addSubview:viewController.view];
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    return 40;
+    NSInteger page=scrollView.contentOffset.x/CGRectGetWidth(scrollView.frame);
+    UIButton *button = buttonArray[page];
+    [self buttonAct:button];
 }
 
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    switch (section)
-    {
-        case 0:
-        {
-            return @"  国内平台";
-        }
-        case 1:
-        {
-            return @"  海外平台";
-        }
-        default:
-            return nil;
-    }
-}
-
-
-#pragma mark - Table view delegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    id obj = _platforemArray[indexPath.row];
-    if([obj isKindOfClass:[NSString class]])
-    {
-        return 50;
-    }
-    return 60;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    id obj = nil;
-    switch (indexPath.section) {
-        case 0:
-            obj = _platforemArray[indexPath.row];
-            break;
-        case 1:
-            obj = _overseasPlatforemArray[indexPath.row];
-            break;
-    }
-    NSInteger platformType = [obj integerValue];
-    NSString *platformTypeName = [NSString stringWithFormat:@"ShareType_%zi",platformType];
-    NSString *platformName = NSLocalizedStringWithDefaultValue(platformTypeName, @"ShareSDKUI_Localizable", _uiBundle, platformTypeName, nil);
-    platformName = [platformName stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString *viewControllerName = [NSString stringWithFormat:@"MOB%@ViewController",platformName];
-    Class viewControllerClass = NSClassFromString(viewControllerName);
-    if (viewControllerClass)
-    {
-        UIViewController *viewController = [[viewControllerClass alloc] init];
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

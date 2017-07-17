@@ -28,19 +28,11 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeFacebook;
     self.title = @"Facebook";
-    authTypeArray = @[@"授权"];
-    authSelectorNameArray = @[@"authAct"];
-    shareTypeArray = @[@"文字 应用内",@"图片+文字 应用内",@"链接 应用内",@"链接 APP",@"多图 APP",@"相册视频 APP",@"视频 应用内"];
-    selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareLinkToAPP",@"shareImages",@"shareAssetVideo",@"shareVideoByAPI"];
+    shareIconArray = @[@"textIcon",@"textAndImageIcon",@"webURLIcon",@"mutImageIcon",@"webURLIcon",@"videoURLIcon",@"videoIcon"];
+    shareTypeArray = @[@"文字 应用内",@"图片+文字 应用内",@"链接 应用内",@"多图 APP",@"链接 APP",@"相册视频 APP",@"视频 应用内"];
+    selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareImages",@"shareLinkToAPP",@"shareAssetVideo",@"shareVideoByAPI"];
 }
 
-/**
- 授权
- */
-- (void)authAct
-{
-    [super authAct];
-}
 
 /**
  分享文字
@@ -91,8 +83,8 @@
 - (void)shareLink
 {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    //图片必须为网络图片
     //通用参数设置
+    //图片必须为网络图片
     [parameters SSDKSetupShareParamsByText:@"Share SDK Link Desc"
                                     images:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
                                        url:[NSURL URLWithString:@"https://www.mob.com"]

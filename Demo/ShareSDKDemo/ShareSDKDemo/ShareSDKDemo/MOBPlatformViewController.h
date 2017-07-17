@@ -13,6 +13,7 @@
 {
     IBOutlet UITableView *mobTableView;
     NSArray *shareTypeArray;
+    NSArray *shareIconArray;
     NSArray *selectorNameArray;
     NSArray *authTypeArray;
     NSArray *authSelectorNameArray;

@@ -11,10 +11,3 @@
 @interface MOBYouTubeViewController : MOBPlatformViewController
 
 @end
-
-/*
- <key>LSApplicationQueriesSchemes</key>
-	<array>
- <string>youtube</string>
-	</array>
- */

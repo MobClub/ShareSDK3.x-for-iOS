@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fbh-Vq-A7R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fbh-Vq-A7R">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1273" y="45"/>
         </scene>
-        <!--平台-->
+        <!--View Controller-->
         <scene sceneID="Lle-4E-1bs">
             <objects>
                 <viewController id="Zva-9o-vYd" customClass="ViewController" sceneMemberID="viewController">
@@ -37,85 +37,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4JD-ZV-yKr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FaG-UH-02t">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="f2g-dd-I1d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </view>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="nc7-ZD-LTx">
-                                    <rect key="frame" x="0.0" y="1" width="375" height="1"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="e8r-wa-Vbi">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Zva-9o-vYd" id="fO7-fx-yLc"/>
-                                    <outlet property="delegate" destination="Zva-9o-vYd" id="PMj-Zg-I92"/>
+                                    <outlet property="dataSource" destination="Zva-9o-vYd" id="Qhn-ih-dns"/>
+                                    <outlet property="delegate" destination="Zva-9o-vYd" id="GuQ-yT-sX1"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4JD-ZV-yKr" secondAttribute="trailing" id="68F-c1-loO"/>
-                            <constraint firstItem="4JD-ZV-yKr" firstAttribute="top" secondItem="EeA-b7-ksO" secondAttribute="top" id="cbK-nA-xAU"/>
-                            <constraint firstItem="4JD-ZV-yKr" firstAttribute="leading" secondItem="EeA-b7-ksO" secondAttribute="leading" id="fQT-gc-9JE"/>
-                            <constraint firstItem="US3-P0-nCM" firstAttribute="top" secondItem="4JD-ZV-yKr" secondAttribute="bottom" id="jcI-x3-mzM"/>
+                            <constraint firstItem="FaG-UH-02t" firstAttribute="leading" secondItem="EeA-b7-ksO" secondAttribute="leading" id="CA6-IQ-mLv"/>
+                            <constraint firstItem="US3-P0-nCM" firstAttribute="top" secondItem="FaG-UH-02t" secondAttribute="bottom" id="Npv-py-bH3"/>
+                            <constraint firstAttribute="trailing" secondItem="FaG-UH-02t" secondAttribute="trailing" id="dKE-w6-pc1"/>
+                            <constraint firstItem="FaG-UH-02t" firstAttribute="top" secondItem="Lhh-kW-V9N" secondAttribute="bottom" id="jn9-lU-Mum"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="平台" id="5Lp-4Q-ScI">
-                        <barButtonItem key="rightBarButtonItem" title="分享菜单" id="SX2-jM-zSZ">
-                            <connections>
-                                <segue destination="7hH-cM-UcK" kind="show" id="WtZ-wy-DC8"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="5Lp-4Q-ScI">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="A7N-ae-ZUU">
+                            <rect key="frame" x="8" y="5.5" width="359" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWH-3T-QZ5">
+                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="分享">
+                                        <color key="titleColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" red="1" green="0.47058823529999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonAct:" destination="Zva-9o-vYd" eventType="touchUpInside" id="fso-Vg-ALe"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQC-Ro-Rrx">
+                                    <rect key="frame" x="119.5" y="0.0" width="120" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="授权">
+                                        <color key="titleColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" red="1" green="0.47058823529999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonAct:" destination="Zva-9o-vYd" eventType="touchUpInside" id="uK9-Wx-gtv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-Hh-6lH">
+                                    <rect key="frame" x="239.5" y="0.0" width="119.5" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="用户信息">
+                                        <color key="titleColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" red="1" green="0.47058823529999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonAct:" destination="Zva-9o-vYd" eventType="touchUpInside" id="dio-wo-eO6"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="VLc-Hh-6lH" firstAttribute="width" secondItem="WWH-3T-QZ5" secondAttribute="width" id="2hJ-cY-SLC"/>
+                                <constraint firstItem="xQC-Ro-Rrx" firstAttribute="width" secondItem="WWH-3T-QZ5" secondAttribute="width" id="3OG-f5-5jl"/>
+                                <constraint firstItem="WWH-3T-QZ5" firstAttribute="leading" secondItem="A7N-ae-ZUU" secondAttribute="leading" id="DVy-AP-Wd4"/>
+                                <constraint firstAttribute="bottom" secondItem="WWH-3T-QZ5" secondAttribute="bottom" id="EE0-H0-fpO"/>
+                                <constraint firstItem="VLc-Hh-6lH" firstAttribute="leading" secondItem="xQC-Ro-Rrx" secondAttribute="trailing" id="EIh-97-5BQ"/>
+                                <constraint firstAttribute="bottom" secondItem="xQC-Ro-Rrx" secondAttribute="bottom" id="FKq-Ci-uEo"/>
+                                <constraint firstItem="xQC-Ro-Rrx" firstAttribute="leading" secondItem="WWH-3T-QZ5" secondAttribute="trailing" id="I78-hV-c4I"/>
+                                <constraint firstItem="xQC-Ro-Rrx" firstAttribute="top" secondItem="A7N-ae-ZUU" secondAttribute="top" id="Seg-Ux-Arv"/>
+                                <constraint firstItem="WWH-3T-QZ5" firstAttribute="top" secondItem="A7N-ae-ZUU" secondAttribute="top" id="VX9-9F-Cw5"/>
+                                <constraint firstItem="VLc-Hh-6lH" firstAttribute="top" secondItem="A7N-ae-ZUU" secondAttribute="top" id="e1f-W3-MrQ"/>
+                                <constraint firstAttribute="trailing" secondItem="VLc-Hh-6lH" secondAttribute="trailing" id="h2e-gk-Ykg"/>
+                                <constraint firstAttribute="bottom" secondItem="VLc-Hh-6lH" secondAttribute="bottom" id="ug2-Bq-2cy"/>
+                            </constraints>
+                        </view>
                     </navigationItem>
                     <connections>
-                        <outlet property="tabeleView" destination="4JD-ZV-yKr" id="6VK-z3-Gth"/>
+                        <outlet property="authButton" destination="xQC-Ro-Rrx" id="K2q-QV-WMh"/>
+                        <outlet property="myCollectionView" destination="FaG-UH-02t" id="n1Q-jJ-Jnk"/>
+                        <outlet property="shareButton" destination="WWH-3T-QZ5" id="NT6-tp-eyB"/>
+                        <outlet property="topView" destination="A7N-ae-ZUU" id="f4l-Fk-BsQ"/>
+                        <outlet property="userInfoButton" destination="VLc-Hh-6lH" id="nqk-v2-hTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="din-Pw-jdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-426.39999999999998" y="44.527736131934034"/>
-        </scene>
-        <!--Mob More View Controller-->
-        <scene sceneID="zhQ-LO-ltM">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RfX-a4-8mF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="7hH-cM-UcK" customClass="MobMoreViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u9t-QH-n5R"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ru3-Iu-oSB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fft-Fu-QE4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-Pg-fdy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="7hH-cM-UcK" id="Xb3-Lh-Ya7"/>
-                                    <outlet property="delegate" destination="7hH-cM-UcK" id="w9U-sM-gY0"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZVA-Pg-fdy" firstAttribute="leading" secondItem="fft-Fu-QE4" secondAttribute="leading" id="Dt3-jc-Yua"/>
-                            <constraint firstItem="Ru3-Iu-oSB" firstAttribute="top" secondItem="ZVA-Pg-fdy" secondAttribute="bottom" id="Tev-3I-iPS"/>
-                            <constraint firstItem="ZVA-Pg-fdy" firstAttribute="top" secondItem="fft-Fu-QE4" secondAttribute="top" id="jCe-XD-rxR"/>
-                            <constraint firstAttribute="trailing" secondItem="ZVA-Pg-fdy" secondAttribute="trailing" id="jnn-Bh-7nJ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mobTableView" destination="ZVA-Pg-fdy" id="uUz-GW-RgC"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="329" y="45"/>
         </scene>
     </scenes>
 </document>

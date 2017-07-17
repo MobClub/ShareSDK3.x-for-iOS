@@ -19,7 +19,8 @@
     [super viewDidLoad];
     platformType = SSDKPlatformSubTypeWechatFav;
     self.title = @"微信收藏";
-    shareTypeArray = @[@"文字",@"图片",@"链接",@"网络音频",@"网络视频",@"文件（本地视频）"];
+    shareIconArray = @[@"textIcon",@"imageIcon",@"webURLIcon",@"audioURLIcon",@"videoURLIcon",@"videoIcon"];
+    shareTypeArray = @[@"文字",@"图片",@"链接",@"音乐链接",@"视频链接",@"文件（本地视频）"];
     selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareAudio",@"shareVideo",@"shareFile"];
 }
 

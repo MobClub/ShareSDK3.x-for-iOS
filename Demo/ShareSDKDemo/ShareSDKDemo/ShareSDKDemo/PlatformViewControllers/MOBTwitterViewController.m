@@ -24,8 +24,7 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeTwitter;
     self.title = @"Twitter";
-    authTypeArray = @[@"授权"];
-    authSelectorNameArray = @[@"authAct"];
+    shareIconArray = @[@"textIcon",@"textAndImageIcon",@"videoIcon",@"videoIcon"];
     shareTypeArray = @[@"文字",@"文字+图片",@"文字+视频",@"文字+视频 进度"];
     selectorNameArray = @[@"shareText",@"shareImage",@"shareVideo",@"shareVideoProgress"];
 }

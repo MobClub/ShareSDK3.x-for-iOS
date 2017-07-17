@@ -19,19 +19,11 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeLine;
     self.title = @"Line";
-    authTypeArray = @[@"授权"];
-    authSelectorNameArray = @[@"authAct"];
+    shareIconArray = @[@"textIcon",@"imageIcon"];
     shareTypeArray = @[@"文字",@"图片"];
     selectorNameArray = @[@"shareText",@"shareImage"];
 }
 
-/**
- 授权
- */
-- (void)authAct
-{
-    [super authAct];
-}
 
 /**
  分享文字

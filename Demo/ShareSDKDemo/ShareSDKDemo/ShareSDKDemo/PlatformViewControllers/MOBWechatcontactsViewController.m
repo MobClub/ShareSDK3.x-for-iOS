@@ -19,18 +19,9 @@
     [super viewDidLoad];
     platformType = SSDKPlatformSubTypeWechatSession;
     self.title = @"微信好友";
-    authTypeArray = @[@"授权"];
-    authSelectorNameArray = @[@"authAct"];
-    shareTypeArray = @[@"文字",@"图片",@"链接",@"网络音频",@"网络视频",@"应用消息",@"表情",@"文件（本地视频）",@"小程序"];
+    shareIconArray = @[@"textIcon",@"imageIcon",@"webURLIcon",@"audioURLIcon",@"videoURLIcon",@"appInfoIcon",@"emoIcon",@"videoIcon",@"miniIcon"];
+    shareTypeArray = @[@"文字",@"图片",@"链接",@"音乐链接",@"视频链接",@"应用消息",@"表情",@"文件（本地视频）",@"小程序"];
     selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareAudio",@"shareVideo",@"shareApp",@"shareEmoticon",@"shareFile",@"shareMiniProgram"];
-}
-
-/**
- 授权
- */
-- (void)authAct
-{
-    [super authAct];
 }
 
 /**
@@ -184,7 +175,7 @@
                                  thumbImage:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
                                       image:nil
                                musicFileURL:nil
-                                    extInfo:@"<xml>extend info</xml>"
+                                    extInfo:nil
                                    fileData:[@"13232" dataUsingEncoding:NSUTF8StringEncoding]
                                emoticonData:nil
                         sourceFileExtension:nil

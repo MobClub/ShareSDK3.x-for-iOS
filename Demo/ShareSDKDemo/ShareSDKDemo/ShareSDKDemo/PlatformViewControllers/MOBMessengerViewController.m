@@ -20,6 +20,7 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeFacebookMessenger;
     self.title = @"Messenger";
+    shareIconArray = @[@"imageIcon",@"imageIcon",@"videoIcon",@"audioURLIcon",@"webURLIcon",@"mutImageIcon",@"videoIcon"];
     shareTypeArray = @[@"图片",@"GIF",@"本地视频",@"本地音频",@"链接",@"多图",@"相册视频"];
     selectorNameArray = @[@"shareImage",@"shareGIF",@"shareVideo",@"shareAudio",@"shareLink",@"shareImages",@"shareAssetVideo"];
 }
@@ -112,8 +113,8 @@
 - (void)shareLink
 {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    //图片必须为网络图片
     //通用参数设置
+    //图片必须为网络图片
     [parameters SSDKSetupShareParamsByText:@"Share SDK Link Desc"
                                     images:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
                                        url:[NSURL URLWithString:@"http://sharesdk.mob.com/"]

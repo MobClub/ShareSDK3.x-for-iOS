@@ -8,10 +8,12 @@
 
 #import "MOBPlatformViewController.h"
 #import <ShareSDKExtension/ShareSDK+Extension.h>
+#import "AppDelegate.h"
 
 @interface MOBPlatformViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSIndexPath *selectIndexPath;
+    BOOL _isShare;
 }
 
 @end
@@ -41,6 +43,11 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -87,9 +94,17 @@
             break;
         }
         case 1:
+        {
             cell.textLabel.text = shareTypeArray[indexPath.row];
             cell.detailTextLabel.text = @"";
+            NSString *imageName = shareIconArray[indexPath.row];
+            cell.imageView.image = [UIImage imageNamed:imageName];
+            if(!isTest)
+            {
+                cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"shareIcon"]];
+            }
             break;
+        }
         case 2:
             cell.textLabel.text = otherTypeArray[indexPath.row];
             cell.detailTextLabel.text = @"";
@@ -104,6 +119,11 @@
 
 - (void)shareWithParameters:(NSMutableDictionary *)parameters
 {
+    if(_isShare)
+    {
+        return;
+    }
+    _isShare = YES;
     if(parameters.count == 0){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
                                                             message:@"请先设置分享参数"
@@ -120,12 +140,12 @@
              return ;
          }
          NSString *titel = @"";
-         NSString *message = @"";
          NSString *typeStr = @"";
          UIColor *typeColor = [UIColor grayColor];
          switch (state) {
              case SSDKResponseStateSuccess:
              {
+                 _isShare = NO;
                  titel = @"分享成功";
                  typeStr = @"成功";
                  typeColor = [UIColor blueColor];
@@ -133,14 +153,16 @@
              }
              case SSDKResponseStateFail:
              {
-                 message = [NSString stringWithFormat:@"%@", error];
+                 _isShare = NO;
                  NSLog(@"error :%@",error);
-                 typeStr = @"失败";
+                 titel = @"分享失败";
+                 typeStr = [NSString stringWithFormat:@"%@",error];
                  typeColor = [UIColor redColor];
                  break;
              }
              case SSDKResponseStateCancel:
              {
+                 _isShare = NO;
                  titel = @"分享已取消";
                  typeStr = @"取消";
                  break;
@@ -148,16 +170,19 @@
              default:
                  break;
          }
-         [mobTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
-         if(selectIndexPath != nil)
+         if(isTest)
          {
-             UITableViewCell *cell = [mobTableView cellForRowAtIndexPath:selectIndexPath];
-             cell.detailTextLabel.text = typeStr;
-             cell.detailTextLabel.textColor = typeColor;
-             selectIndexPath = nil;
+             [mobTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+             if(selectIndexPath != nil)
+             {
+                 UITableViewCell *cell = [mobTableView cellForRowAtIndexPath:selectIndexPath];
+                 cell.detailTextLabel.text = titel;
+                 cell.detailTextLabel.textColor = typeColor;
+                 selectIndexPath = nil;
+             }
          }
          UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:titel
-                                                             message:message
+                                                             message:typeStr
                                                             delegate:nil
                                                    cancelButtonTitle:@"确定"
                                                    otherButtonTitles:nil];
@@ -222,7 +247,10 @@
     if(alertView.tag == 1000 && buttonIndex == 1)
     {
         [ShareSDK cancelAuthorize:platformType];
-        [mobTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+        if(isTest)
+        {
+            [mobTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+        }
     }
 }
 
@@ -276,13 +304,17 @@
                settings:nil
          onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
              NSString *titel = @"";
-             switch (state) {
+             switch (state)
+             {
                  case SSDKResponseStateSuccess:
                  {
                      
                      titel = @"授权成功";
                      NSLog(@"%@",user.rawData);
-                     [mobTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+                     if(isTest)
+                     {
+                         [mobTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+                     }
                      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:titel
                                                                          message:nil
                                                                         delegate:nil

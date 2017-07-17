@@ -20,19 +20,11 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeInstagram;
     self.title = @"Instagram";
-    authTypeArray = @[@"授权"];
-    authSelectorNameArray = @[@"authAct"];
+    shareIconArray = @[@"imageIcon",@"videoIcon"];
     shareTypeArray = @[@"图片",@"视频"];
     selectorNameArray = @[@"shareImage",@"shareVideo"];
 }
 
-/**
- 授权
- */
-- (void)authAct
-{
-    [super authAct];
-}
 
 
 /**
