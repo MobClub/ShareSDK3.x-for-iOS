@@ -355,14 +355,16 @@
             [appInfo SSDKSetupQQByAppId:MOBSSDKQQAppID
                                  appKey:MOBSSDKQQAppKey
                                authType:MOBSSDKQQAuthType
-                                 useTIM:MOBSSDKQQUseTIM];
+                                 useTIM:MOBSSDKQQUseTIM
+                            backUnionID:MOBSSDKQQBackUnionID];
 #endif
             break;
             //微信
         case SSDKPlatformTypeWechat:
 #if (defined IMPORT_SUB_WechatSession) || (defined IMPORT_SUB_WechatTimeline) || (defined IMPORT_SUB_WechatFav)
             [appInfo SSDKSetupWeChatByAppId:MOBSSDKWeChatAppID
-                                  appSecret:MOBSSDKWeChatAppSecret];
+                                  appSecret:MOBSSDKWeChatAppSecret
+                                backUnionID:MOBSSDKWeChatBackUnionID];
 #endif
             break;
             //支付宝
@@ -580,6 +582,11 @@
             [appInfo SSDKSetupTumblrByConsumerKey:MOBSSDKTumblrConsumerKey
                                    consumerSecret:MOBSSDKTumblrConsumerSecret
                                       callbackUrl:MOBSSDKTumblrCallbackUrl];
+#endif
+            break;
+        case SSDKPlatformTypeSMS:
+#ifdef IMPORT_SMS
+            [appInfo SSDKSetpSMSOpenCountryList:MOBSSDKSMSOpenCountryList];
 #endif
             break;
         default:

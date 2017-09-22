@@ -32,7 +32,7 @@
     BOOL onShakeShare;
     IBOutlet UIView *shakeShareView;
     BOOL isAnimate;
-    
+    IBOutlet UIButton *menuButton;
     //视频分享菜单
     MOBLoadingViewController *loadingViewController;
     SSDKHttpServiceModel *httpServiceModel;
@@ -41,6 +41,8 @@
 @end
 
 @implementation MobShareViewController
+
+static const NSInteger otherInfo = 1;
 
 - (void)viewDidLoad
 {
@@ -241,7 +243,7 @@
                                      images:imageArray
                                         url:[NSURL URLWithString:@"http://mob.com"]
                                       title:@"分享标题"
-                                       type:SSDKContentTypeWebPage];
+                                       type:SSDKContentTypeImage];
     //优先使用平台客户端分享
 //    [shareParams SSDKEnableUseClientShare];
     //设置微博使用高级接口
@@ -262,7 +264,7 @@
     //设置简介版UI 需要  #import <ShareSDKUI/SSUIShareActionSheetStyle.h>
 //    [SSUIShareActionSheetStyle setShareActionSheetStyle:ShareActionSheetStyleSimple];
 //    [ShareSDK setWeiboURL:@"http://www.mob.com"];
-    [ShareSDK showShareActionSheet:self.view
+    [ShareSDK showShareActionSheet:menuButton
                              items:[MOBShareSDKHelper shareInstance].platforems
                        shareParams:shareParams
                onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
@@ -334,6 +336,8 @@
             return _overseasPlatforemArray.count;
         case 3:
             return _systemPlatforemArray.count;
+        case 4:
+            return otherInfo;
         default:
             return  0;
     }
@@ -350,6 +354,12 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseCell"];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    if(indexPath.section == 4)
+    {
+        cell.textLabel.text = @"其他";
+        cell.imageView.image = nil;
+        return cell;
     }
     id obj = nil;
     switch (indexPath.section) {
@@ -417,6 +427,18 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.section == 0)
     {
+        return;
+    }
+    if(indexPath.section == 4)
+    {
+        Class viewControllerClass = NSClassFromString(@"MOBMoreShareViewController");
+        if (viewControllerClass)
+        {
+            UIViewController *viewController = [[viewControllerClass alloc] init];
+            AppDelegate *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            UINavigationController *navigationController = (UINavigationController *)application.window.rootViewController;
+            [navigationController pushViewController:viewController animated:YES];
+        }
         return;
     }
     id obj = nil;
@@ -536,7 +558,7 @@
 - (void)shareWithParameters:(NSMutableDictionary *)shareParams items:(NSArray *)items filePath:(NSString *)filePath
 {
     __weak __typeof__ (self) weakSelf = self;
-    SSUIShareActionSheetController *sheet = [ShareSDK showShareActionSheet:self.view
+    SSUIShareActionSheetController *sheet = [ShareSDK showShareActionSheet:menuButton
                                                                      items:items
                                                                shareParams:shareParams
                                                        onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {

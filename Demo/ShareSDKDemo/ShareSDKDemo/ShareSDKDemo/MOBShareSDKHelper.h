@@ -166,6 +166,8 @@
     #define MOBSSDKQQAuthType SSDKAuthTypeBoth
     //useTIM 是否优先使用TIM客户端
     #define MOBSSDKQQUseTIM NO
+    //是否默认返回 UnionID v4.0.2增加
+    #define MOBSSDKQQBackUnionID NO
 #endif
 
 
@@ -195,6 +197,8 @@
     #define MOBSSDKWeChatAppID @"wx4868b35061f87885"
     //AppSecret
     #define MOBSSDKWeChatAppSecret @"64020361b8ec4c99936c0e3999a9f249"
+    //是否默认返回 UnionID v4.0.2增加
+    #define MOBSSDKWeChatBackUnionID NO
 // 如需测试小程序 需要修改 bundleID 为  com.tencent.wc.xin.SDKSample
 // MOBSSDKWeChatAppID @"wxd930ea5d5a258f4f"
 #endif
@@ -301,12 +305,12 @@
  分享详例：MOBDoubanViewController
  */
 #ifdef IMPORT_DouBan
-//AppKey
-#define MOBSSDKDouBanApiKey @"02e2cbe5ca06de5908a863b15e149b0b"
-//AppSecret
-#define MOBSSDKDouBanSecret @"9f1e7b4f71304f2f"
-//RedirectUri
-#define MOBSSDKDouBanRedirectUri @"http://www.sharesdk.cn"
+    //AppKey
+    #define MOBSSDKDouBanApiKey @"02e2cbe5ca06de5908a863b15e149b0b"
+    //AppSecret
+    #define MOBSSDKDouBanSecret @"9f1e7b4f71304f2f"
+    //RedirectUri
+    #define MOBSSDKDouBanRedirectUri @"http://www.sharesdk.cn"
 #endif
 
 
@@ -834,18 +838,21 @@
  开放平台地址： https://www.tumblr.com/developers
  */
 #ifdef IMPORT_Tumblr
-//ConsumerKey
-#define MOBSSDKTumblrConsumerKey @"2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM"
-//ConsumerSecret
-#define MOBSSDKTumblrConsumerSecret @"3Rt0sPFj7u2g39mEVB3IBpOzKnM3JnTtxX2bao2JKk4VV1gtNo"
-//CallbackUrl
-#define MOBSSDKTumblrCallbackUrl @"http://sharesdk.cn"
+    //ConsumerKey
+    #define MOBSSDKTumblrConsumerKey @"2QUXqO9fcgGdtGG1FcvML6ZunIQzAEL8xY6hIaxdJnDti2DYwM"
+    //ConsumerSecret
+    #define MOBSSDKTumblrConsumerSecret @"3Rt0sPFj7u2g39mEVB3IBpOzKnM3JnTtxX2bao2JKk4VV1gtNo"
+    //CallbackUrl
+    #define MOBSSDKTumblrCallbackUrl @"http://sharesdk.cn"
 #endif
 
 #pragma mark - SMS平台配置信息
 /*
     分享详例：MOBSMSViewController
 */
+#ifdef IMPORT_SMS
+    #define MOBSSDKSMSOpenCountryList NO
+#endif
 
 #pragma mark - Mail平台配置信息
 /*

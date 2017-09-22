@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>写入视频信息分享</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
@@ -17,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.0.1</string>
+	<string>4.0.2</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -264,9 +266,9 @@
 		<string>1521201864</string>
 	</dict>
 	<key>MOBAppKey</key>
-	<string>iosv1101</string>
+	<string>moba6b6c6d6</string>
 	<key>MOBAppSecret</key>
-	<string></string>
+	<string>b89d2427a3bc7ad1aea1e1e8c1d36bf3</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

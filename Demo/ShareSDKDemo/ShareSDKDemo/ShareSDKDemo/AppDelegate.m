@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <ShareSDKConnector/ShareSDKConnector.h>
 //导入启动注册helper
 //#import "MOBShareSDKHelper.h"
 
@@ -337,10 +338,7 @@
 //}
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -361,5 +359,49 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"application:openURL:sourceApplication:annotation:");
+//    [self application:application handleOpenURL:url];
+    return  YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"application:handleOpenURL:");
+//    [self application:application openURL:url sourceApplication:nil annotation:nil];
+    return  YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+{
+    NSLog(@"application:openURL:options:");
+    //    [self application:app handleOpenURL:url];
+    return  YES;
+}
+
+//#import "WeiboSDK.h"
+//#import "WXApi.h"
+//#import <TencentOpenAPI/QQApiInterface.h>
+//#import <TencentOpenAPI/TencentOAuth.h>
+//#import "APOpenAPI.h"
+//#import <MPShareSDK/MPShareSDK.h>
+//#import <DTShareKit/DTOpenAPI.h>
+//#import "YXApi.h"
+//#import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
+//#import <LineSDK/LineSDK.h>
+//#import <KakaoOpenSDK/KakaoOpenSDK.h>
+//[ShareSDKConnector connectWeibo:[WeiboSDK class]];
+//[ShareSDKConnector connectWeChat:[WXApi class]];
+//[ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+//[ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
+//[ShareSDKConnector connectMeiPai:[MPShareSDK class]];
+//[ShareSDKConnector connectDingTalk:[DTOpenAPI class]];
+//[ShareSDKConnector connectYiXin:[YXApi class]];
+//[ShareSDKConnector connectFacebookMessenger:[FBSDKMessengerSharer class]];
+//[ShareSDKConnector connectLine:[LineSDKLogin class]];
+//[ShareSDKConnector connectKaKao:[KOSession class]];
+
 
 @end

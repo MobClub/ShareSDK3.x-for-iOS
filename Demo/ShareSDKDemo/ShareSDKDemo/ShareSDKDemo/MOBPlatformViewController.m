@@ -145,6 +145,7 @@
          switch (state) {
              case SSDKResponseStateSuccess:
              {
+                 NSLog(@"分享成功");
                  _isShare = NO;
                  titel = @"分享成功";
                  typeStr = @"成功";

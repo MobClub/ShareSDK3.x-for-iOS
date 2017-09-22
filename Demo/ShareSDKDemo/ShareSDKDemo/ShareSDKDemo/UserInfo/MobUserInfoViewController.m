@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     _platforemArray = @[
+                        @(SSDKPlatformTypeSMS),
                         @(SSDKPlatformSubTypeQQFriend),
                         @(SSDKPlatformSubTypeWechatSession),
                         @(SSDKPlatformTypeSinaWeibo),

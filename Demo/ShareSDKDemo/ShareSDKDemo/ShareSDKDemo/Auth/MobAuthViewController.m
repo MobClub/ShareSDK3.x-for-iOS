@@ -29,11 +29,17 @@
 @implementation MobAuthViewController
 
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     _platforemArray = @[
+                        @(SSDKPlatformTypeSMS),
                         @(SSDKPlatformSubTypeQQFriend),
                         @(SSDKPlatformSubTypeWechatSession),
                         @(SSDKPlatformTypeSinaWeibo),
@@ -271,6 +277,7 @@
              switch (state) {
                  case SSDKResponseStateSuccess:
                  {
+                     NSLog(@"授权 成功");
                      _isAuth = NO;
                      NSString *key = [NSString stringWithFormat:@"%@",@(platformType)];
                      [_platforemUserInfos setObject:user forKey:key];

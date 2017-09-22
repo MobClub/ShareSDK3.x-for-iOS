@@ -211,19 +211,19 @@
 {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     //平台定制
-                [parameters SSDKSetupWeChatParamsByText:@"share SDK"
-                                                  title:@"file"
-                                                    url:nil
-                                             thumbImage:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
-                                                  image:nil
-                                           musicFileURL:nil
-                                                extInfo:nil
-                                               fileData:nil
-                                           emoticonData:nil
-                                    sourceFileExtension:@"mp4"
-                                         sourceFileData:[[NSBundle mainBundle] pathForResource:@"cat" ofType:@"mp4"]
-                                                   type:SSDKContentTypeFile
-                                     forPlatformSubType:SSDKPlatformSubTypeWechatSession];
+    [parameters SSDKSetupWeChatParamsByText:@"share SDK"
+                                      title:@"file"
+                                        url:nil
+                                 thumbImage:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
+                                      image:nil
+                               musicFileURL:nil
+                                    extInfo:nil
+                                   fileData:nil
+                               emoticonData:nil
+                        sourceFileExtension:@"mp4"
+                             sourceFileData:[[NSBundle mainBundle] pathForResource:@"cat" ofType:@"mp4"]
+                                       type:SSDKContentTypeFile
+                         forPlatformSubType:SSDKPlatformSubTypeWechatSession];
     
     [self shareWithParameters:parameters];
 }

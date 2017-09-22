@@ -91,14 +91,13 @@
                                      title:@"Share SDK"
                                       type:SSDKContentTypeWebPage];
     //平台定制
-//        [parameters SSDKSetupFacebookMessengerParamsByTitle:@"Share SDK"
-//                                                        url:[NSURL URLWithString:@"http://www.mob.com"]
-//                                                  quoteText:@"Share SDK Link Desc"
-//                                                     images:@"http://weixintest.ihk.cn/ihkwx_upload/heji/material/img/20160414/1460616012469.jpg"
-//                                                        gif:nil
-//                                                      audio:nil
-//                                                      video:nil
-//                                                       type:SSDKContentTypeWebPage];
+    //    [parameters SSDKSetupFacebookParamsByText:@@"Share SDK Link Desc"
+    //                                        image:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
+    //                                          url:[NSURL URLWithString:@"https://www.mob.com"]
+    //                                     urlTitle:@"Share SDK"
+    //                                      urlName:nil
+    //                               attachementUrl:nil
+    //                                         type:SSDKContentTypeWebPage];
     
     [self shareWithParameters:parameters];
 }

@@ -68,7 +68,7 @@
 //                               recipients:nil
 //                             ccRecipients:nil
 //                            bccRecipients:nil
-//                                     type:SSDKContentTypeText];
+//                                     type:SSDKContentTypeImage];
     [self shareWithParameters:parameters];
 }
 

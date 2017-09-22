@@ -218,13 +218,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     CALayer *line = [CALayer layer];
     line.frame = rect;
     line.backgroundColor = UIColorFromRGB(0xd4d4d6).CGColor;
-    [toolView.layer addSublayer:line];
+    [toolView.contentView.layer addSublayer:line];
     //添加分享平台列表
     CGRect collectionRect = toolView.bounds;
     collectionRect.origin.y = 0;
     collectionRect.size.height -= 50;
     UICollectionView *collectionView = [self shareListViewWithFrame:collectionRect];
-    [toolView addSubview:collectionView];
+    [toolView.contentView addSubview:collectionView];
     //取消按钮
     CGRect buttonRect = toolView.bounds;
     buttonRect.origin.x = 0;
@@ -232,7 +232,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     buttonRect.size.width -= 0;
     buttonRect.size.height = 44;
     UIButton *cancelButton = [self cancelButtonWithFrame:buttonRect];
-    [toolView addSubview:cancelButton];
+    [toolView.contentView addSubview:cancelButton];
     [_mainView addSubview:toolView];
     [self.window addSubview:_mainView];
     [self showMainView];

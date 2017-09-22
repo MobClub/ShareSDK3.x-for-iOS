@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         SSUIShareActionSheetStyle.setShareActionSheetStyle(.simple)
         
         //2.进行分享
-        _ = ShareSDK.showShareActionSheet(sender, items: nil, shareParams: shareParames) { (state : SSDKResponseState, platformType : SSDKPlatformType, userdata : [AnyHashable : Any]?, contentEnity : SSDKContentEntity?, error : Error?, end) in
+        let sheet = ShareSDK.showShareActionSheet(sender, items: nil, shareParams: shareParames) { (state : SSDKResponseState, platformType : SSDKPlatformType, userdata : [AnyHashable : Any]?, contentEnity : SSDKContentEntity?, error : Error?, end) in
             
             switch state{
             
@@ -72,6 +72,7 @@ class ViewController: UIViewController {
                 break
             }
         }
+        sheet?.directSharePlatforms.add(SSDKPlatformType.typeSinaWeibo.rawValue)
     }
     
     /**

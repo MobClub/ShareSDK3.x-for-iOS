@@ -18,6 +18,7 @@
     IBOutlet UIButton *copyButton;
     IBOutlet UIButton *clearButon;
     SSDKPlatformType platformType;
+    IBOutlet NSLayoutConstraint *mainViewAspect;
 }
 
 @end
@@ -41,6 +42,11 @@
     clearButon.layer.masksToBounds = YES;
     clearButon.layer.cornerRadius = 15;
     [clearButon setBackgroundImage:[UIImage getImageWithColor:[UIColor lightGrayColor]] forState:UIControlStateNormal];
+    if([MOBFDevice isPad])
+    {
+        [mainView removeConstraint:mainViewAspect];
+        [mainView addConstraint:[NSLayoutConstraint constraintWithItem:mainView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:mainView attribute:NSLayoutAttributeHeight multiplier:1 constant:0]];
+    }
 }
 
 - (IBAction)copyAct:(id)sender

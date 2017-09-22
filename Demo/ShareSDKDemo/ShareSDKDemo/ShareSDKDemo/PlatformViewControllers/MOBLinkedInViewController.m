@@ -52,13 +52,13 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     //通用参数设置
 //    [parameters SSDKSetupShareParamsByText:@"Share SDK Link Desc"
-//                                    images:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
+//                                    images:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
 //                                       url:[NSURL URLWithString:@"http://www.mob.com"]
 //                                     title:@"Share SDK"
 //                                      type:SSDKContentTypeWebPage];
     //平台定制
     [parameters SSDKSetupLinkedInParamsByText:@"Share SDK Link Desc"
-                                        image:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
+                                        image:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
                                           url:[NSURL URLWithString:@"http://www.mob.com"]
                                         title:@"Share SDK"
                                       urlDesc:@"Mob"
