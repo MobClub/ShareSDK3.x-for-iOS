@@ -113,11 +113,11 @@
 #endif
     //支付宝好友
 #ifdef IMPORT_AliPaySocial
-    [platforems addObject:@(SSDKPlatformTypeAliPaySocial)];
+    [platforems addObject:@(SSDKPlatformTypeAliSocial)];
 #endif
     //支付宝朋友圈
 #ifdef IMPORT_AliPaySocialTimeline
-    [platforems addObject:@(SSDKPlatformTypeAliPaySocialTimeline)];
+    [platforems addObject:@(SSDKPlatformTypeAliSocialTimeline)];
 #endif
     //钉钉
 #ifdef IMPORT_DingTalk
@@ -287,9 +287,9 @@
 #endif
             break;
             //支付宝
-        case SSDKPlatformTypeAliPaySocial:
+        case SSDKPlatformTypeAliSocial:
 #if (defined IMPORT_AliPaySocial) || (defined IMPORT_AliPaySocialTimeline)
-            [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
+            [ShareSDKConnector connectAliSocial:[APOpenAPI class]];
 #endif
             break;
             //美拍
@@ -368,9 +368,9 @@
 #endif
             break;
             //支付宝
-        case SSDKPlatformTypeAliPaySocial:
+        case SSDKPlatformTypeAliSocial:
 #if (defined IMPORT_AliPaySocial) || (defined IMPORT_AliPaySocialTimeline)
-            [appInfo SSDKSetupAliPaySocialByAppId:MOBSSDKAliPayAppID];
+            [appInfo SSDKSetupAliSocialByAppId:MOBSSDKAliPayAppID];
 #endif
             break;
             //美拍

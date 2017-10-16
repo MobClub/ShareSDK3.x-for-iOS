@@ -40,7 +40,6 @@
 		449E46151ED2D998007518C0 /* YiXinConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E45321ED2D997007518C0 /* YiXinConnector.framework */; };
 		449E46161ED2D998007518C0 /* YouTubeConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E45331ED2D997007518C0 /* YouTubeConnector.framework */; };
 		449E46201ED2D998007518C0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E45471ED2D997007518C0 /* TencentOpenAPI.framework */; };
-		449E46211ED2D998007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E45481ED2D997007518C0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		449E46261ED2D998007518C0 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E455B1ED2D997007518C0 /* libWeChatSDK.a */; };
 		449E46271ED2D998007518C0 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 449E455C1ED2D997007518C0 /* README.txt */; };
 		449E46291ED2D998007518C0 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E45651ED2D997007518C0 /* ShareSDK.bundle */; };
@@ -444,7 +443,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449E46211ED2D998007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				449E45FE1ED2D998007518C0 /* ShareSDKUI.bundle in Resources */,
 				449E45FB1ED2D998007518C0 /* ShareSDKConfigFile.bundle in Resources */,
 				D0DED5FF1B43D319001BC48A /* Main.storyboard in Resources */,

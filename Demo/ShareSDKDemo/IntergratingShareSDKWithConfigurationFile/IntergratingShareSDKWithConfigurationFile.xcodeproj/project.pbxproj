@@ -45,7 +45,6 @@
 		449E3F151ED2C503007518C0 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E3E461ED2C503007518C0 /* FBSDKMessengerShareKit.framework */; };
 		449E3F161ED2C503007518C0 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E3E481ED2C503007518C0 /* KakaoOpenSDK.framework */; };
 		449E3F191ED2C503007518C0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E3E4E1ED2C503007518C0 /* TencentOpenAPI.framework */; };
-		449E3F1A1ED2C503007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E3E4F1ED2C503007518C0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		449E3F1B1ED2C503007518C0 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E3E511ED2C503007518C0 /* RennSDK.bundle */; };
 		449E3F1C1ED2C503007518C0 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E3E521ED2C503007518C0 /* RennSDK.framework */; };
 		449E3F1F1ED2C503007518C0 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E3E621ED2C503007518C0 /* libWeChatSDK.a */; };
@@ -509,7 +508,6 @@
 				449E3F1B1ED2C503007518C0 /* RennSDK.bundle in Resources */,
 				449E3F201ED2C503007518C0 /* README.txt in Resources */,
 				DEE69D761D4AFD3600341D58 /* LaunchScreen.storyboard in Resources */,
-				449E3F1A1ED2C503007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				449E3EF81ED2C503007518C0 /* ShareSDKUI.bundle in Resources */,
 				DEE69DD51D4AFEAE00341D58 /* Sample.jpg in Resources */,
 				DEE69D731D4AFD3600341D58 /* Assets.xcassets in Resources */,

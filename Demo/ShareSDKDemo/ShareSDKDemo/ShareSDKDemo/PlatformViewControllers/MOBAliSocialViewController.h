@@ -1,5 +1,5 @@
 //
-//  MOBAlipaymomentsViewController.h
+//  MOBAlipayViewController.h
 //  ShareSDKDemo
 //
 //  Created by youzu on 2017/5/26.
@@ -8,6 +8,6 @@
 
 #import "MOBPlatformViewController.h"
 
-@interface MOBAlipaymomentsViewController : MOBPlatformViewController
+@interface MOBAliSocialViewController : MOBPlatformViewController
 
 @end

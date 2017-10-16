@@ -6,18 +6,18 @@
 //  Copyright © 2017年 mob. All rights reserved.
 //
 
-#import "MOBAlipaymomentsViewController.h"
+#import "MOBAliSocialmomentsViewController.h"
 
-@interface MOBAlipaymomentsViewController ()
+@interface MOBAliSocialmomentsViewController ()
 
 @end
 
-@implementation MOBAlipaymomentsViewController
+@implementation MOBAliSocialmomentsViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    platformType = SSDKPlatformTypeAliPaySocial;
+    platformType = SSDKPlatformTypeAliSocial;
     self.title = @"支付宝朋友圈";
     shareIconArray = @[@"imageIcon",@"webURLIcon"];
     shareTypeArray = @[@"图片",@"链接"];

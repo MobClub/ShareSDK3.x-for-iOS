@@ -98,7 +98,7 @@
                             @(SSDKPlatformTypeYinXiang),
                             @(SSDKPlatformTypeEvernote),
                             @(SSDKPlatformTypeYinXiang),
-                            @(SSDKPlatformTypeAliPaySocial),
+                            @(SSDKPlatformTypeAliSocial),
                             @(SSDKPlatformTypePinterest),
                             @(SSDKPlatformTypeKakao),
                             @(SSDKPlatformSubTypeKakaoTalk),
@@ -110,7 +110,7 @@
                             @(SSDKPlatformTypeYiXin),
                             @(SSDKPlatformTypeInstapaper),
                             @(SSDKPlatformTypeFacebookMessenger),
-                            @(SSDKPlatformTypeAliPaySocialTimeline),
+                            @(SSDKPlatformTypeAliSocialTimeline),
                             @(SSDKPlatformTypeDingTalk),
                             @(SSDKPlatformTypeMeiPai),
                             @(SSDKPlatformTypeYouTube)
@@ -136,8 +136,8 @@
                          case SSDKPlatformTypeKakao:
                              [ShareSDKConnector connectKaKao:[KOSession class]];
                              break;
-                         case SSDKPlatformTypeAliPaySocial:
-                             [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
+                         case SSDKPlatformTypeAliSocial:
+                             [ShareSDKConnector connectAliSocial:[APOpenAPI class]];
                              break;
                          case SSDKPlatformTypeYiXin:
                              [ShareSDKConnector connectYiXin:[YXApi class]];
@@ -261,8 +261,8 @@
                                           redirectUri:@"http://www.mob.com/oauth"
                                              authType:SSDKAuthTypeBoth];
                       break;
-                  case SSDKPlatformTypeAliPaySocial:
-                      [appInfo SSDKSetupAliPaySocialByAppId:@"2015072400185895"];
+                  case SSDKPlatformTypeAliSocial:
+                      [appInfo SSDKSetupAliSocialByAppId:@"2015072400185895"];
                       break;
                   case SSDKPlatformTypePinterest:
                       [appInfo SSDKSetupPinterestByClientId:@"4797078908495202393"];

@@ -48,7 +48,7 @@
     //对于QQ、微信、支付宝好友、易信、KaKao、Facebook Messenger等需要依赖原生SDK的平台，仍需要以下代码。
     [ShareSDKConnector connectWeChat:[WXApi class] delegate:self];
     [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-    [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
+    [ShareSDKConnector connectAliSocial:[APOpenAPI class]];
     [ShareSDKConnector connectYiXin:[YXApi class]];
     [ShareSDKConnector connectKaKao:[KOSession class]];
     [ShareSDKConnector connectFacebookMessenger:[FBSDKMessengerSharer class]];

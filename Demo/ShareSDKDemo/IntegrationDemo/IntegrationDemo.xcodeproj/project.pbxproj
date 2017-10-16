@@ -11,7 +11,6 @@
 		4462270B1EE6640200E4CF7A /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 446227081EE6640200E4CF7A /* WeiboSDK.bundle */; };
 		449E4A9E1ED2DE1B007518C0 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49B21ED2DE1B007518C0 /* MOBFoundation.framework */; };
 		449E4AA61ED2DE1B007518C0 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49C01ED2DE1B007518C0 /* ShareSDK.framework */; };
-		449E4AA71ED2DE1B007518C0 /* ShareSDKConfigFile.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E49C31ED2DE1B007518C0 /* ShareSDKConfigFile.bundle */; };
 		449E4AA81ED2DE1B007518C0 /* ShareSDKConfigFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49C41ED2DE1B007518C0 /* ShareSDKConfigFile.framework */; };
 		449E4AA91ED2DE1B007518C0 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49C51ED2DE1B007518C0 /* ShareSDKExtension.framework */; };
 		449E4AAA1ED2DE1B007518C0 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E49C61ED2DE1B007518C0 /* ShareSDKUI.bundle */; };
@@ -40,7 +39,6 @@
 		449E4AC11ED2DE1B007518C0 /* YiXinConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49DE1ED2DE1B007518C0 /* YiXinConnector.framework */; };
 		449E4AC21ED2DE1B007518C0 /* YouTubeConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49DF1ED2DE1B007518C0 /* YouTubeConnector.framework */; };
 		449E4ACC1ED2DE1B007518C0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E49F31ED2DE1B007518C0 /* TencentOpenAPI.framework */; };
-		449E4ACD1ED2DE1B007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E49F41ED2DE1B007518C0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		449E4AD21ED2DE1B007518C0 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E4A071ED2DE1B007518C0 /* libWeChatSDK.a */; };
 		449E4AD31ED2DE1B007518C0 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 449E4A081ED2DE1B007518C0 /* README.txt */; };
 		449E4AD51ED2DE1B007518C0 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E4A111ED2DE1B007518C0 /* ShareSDK.bundle */; };
@@ -438,11 +436,9 @@
 				DE7943511B58B9C500D266E8 /* Default.png in Resources */,
 				449E4AAA1ED2DE1B007518C0 /* ShareSDKUI.bundle in Resources */,
 				DE7943521B58B9C500D266E8 /* Default@2x.png in Resources */,
-				449E4AA71ED2DE1B007518C0 /* ShareSDKConfigFile.bundle in Resources */,
 				DE748C901B68E26700CC1B4B /* shareImg.png in Resources */,
 				D0CD2EDA1B40E3CB00089E2A /* Main.storyboard in Resources */,
 				D0CD2EDF1B40E3CB00089E2A /* LaunchScreen.xib in Resources */,
-				449E4ACD1ED2DE1B007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				DE7943501B58B9C500D266E8 /* Default-568h@2x.png in Resources */,
 				4462270B1EE6640200E4CF7A /* WeiboSDK.bundle in Resources */,
 				449E4AD31ED2DE1B007518C0 /* README.txt in Resources */,

@@ -26,8 +26,8 @@
 		4438370C1ED7CADE00A43603 /* MOBGoogleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4438370B1ED7CADE00A43603 /* MOBGoogleViewController.m */; };
 		4438370F1ED7D01E00A43603 /* MOBWhatsAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4438370E1ED7D01E00A43603 /* MOBWhatsAppViewController.m */; };
 		443837121ED7D3BF00A43603 /* MOBDingTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443837111ED7D3BF00A43603 /* MOBDingTalkViewController.m */; };
-		443837151ED7D3D700A43603 /* MOBAlipaymomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443837141ED7D3D700A43603 /* MOBAlipaymomentsViewController.m */; };
-		443837181ED7D3E900A43603 /* MOBAlipayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443837171ED7D3E900A43603 /* MOBAlipayViewController.m */; };
+		443837151ED7D3D700A43603 /* MOBAliSocialmomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443837141ED7D3D700A43603 /* MOBAliSocialmomentsViewController.m */; };
+		443837181ED7D3E900A43603 /* MOBAliSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443837171ED7D3E900A43603 /* MOBAliSocialViewController.m */; };
 		443B3CA41F679775002B3F7D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3BCA1F679774002B3F7D /* MOBFoundation.framework */; };
 		443B3CAC1F679775002B3F7D /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3BD81F679774002B3F7D /* ShareSDK.framework */; };
 		443B3CAD1F679775002B3F7D /* ShareSDKConfigFile.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B3BDB1F679774002B3F7D /* ShareSDKConfigFile.bundle */; };
@@ -67,7 +67,6 @@
 		443B3CD01F679775002B3F7D /* LineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3C071F679774002B3F7D /* LineSDK.framework */; };
 		443B3CD11F679775002B3F7D /* MPShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3C091F679774002B3F7D /* MPShareSDK.framework */; };
 		443B3CD21F679775002B3F7D /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3C0B1F679774002B3F7D /* TencentOpenAPI.framework */; };
-		443B3CD31F679775002B3F7D /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B3C0C1F679774002B3F7D /* TencentOpenApi_IOS_Bundle.bundle */; };
 		443B3CD41F679775002B3F7D /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B3C0E1F679774002B3F7D /* RennSDK.bundle */; };
 		443B3CD51F679775002B3F7D /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3C0F1F679774002B3F7D /* RennSDK.framework */; };
 		443B3CD61F679775002B3F7D /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B3C111F679774002B3F7D /* libWeiboSDK.a */; };
@@ -193,10 +192,10 @@
 		4438370E1ED7D01E00A43603 /* MOBWhatsAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBWhatsAppViewController.m; sourceTree = "<group>"; };
 		443837101ED7D3BF00A43603 /* MOBDingTalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBDingTalkViewController.h; sourceTree = "<group>"; };
 		443837111ED7D3BF00A43603 /* MOBDingTalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBDingTalkViewController.m; sourceTree = "<group>"; };
-		443837131ED7D3D700A43603 /* MOBAlipaymomentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBAlipaymomentsViewController.h; sourceTree = "<group>"; };
-		443837141ED7D3D700A43603 /* MOBAlipaymomentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBAlipaymomentsViewController.m; sourceTree = "<group>"; };
-		443837161ED7D3E900A43603 /* MOBAlipayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBAlipayViewController.h; sourceTree = "<group>"; };
-		443837171ED7D3E900A43603 /* MOBAlipayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBAlipayViewController.m; sourceTree = "<group>"; };
+		443837131ED7D3D700A43603 /* MOBAliSocialmomentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBAliSocialmomentsViewController.h; sourceTree = "<group>"; };
+		443837141ED7D3D700A43603 /* MOBAliSocialmomentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBAliSocialmomentsViewController.m; sourceTree = "<group>"; };
+		443837161ED7D3E900A43603 /* MOBAliSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBAliSocialViewController.h; sourceTree = "<group>"; };
+		443837171ED7D3E900A43603 /* MOBAliSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBAliSocialViewController.m; sourceTree = "<group>"; };
 		443B3BCA1F679774002B3F7D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		443B3BD81F679774002B3F7D /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		443B3BDB1F679774002B3F7D /* ShareSDKConfigFile.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKConfigFile.bundle; sourceTree = "<group>"; };
@@ -712,10 +711,10 @@
 				440E802A1E794633000A2B32 /* MOBWechatfavoritesViewController.m */,
 				44B9A5411E8508E5008BC9ED /* MOBSinaWeiboViewController.h */,
 				44B9A5401E8508E5008BC9ED /* MOBSinaWeiboViewController.m */,
-				443837161ED7D3E900A43603 /* MOBAlipayViewController.h */,
-				443837171ED7D3E900A43603 /* MOBAlipayViewController.m */,
-				443837131ED7D3D700A43603 /* MOBAlipaymomentsViewController.h */,
-				443837141ED7D3D700A43603 /* MOBAlipaymomentsViewController.m */,
+				443837161ED7D3E900A43603 /* MOBAliSocialViewController.h */,
+				443837171ED7D3E900A43603 /* MOBAliSocialViewController.m */,
+				443837131ED7D3D700A43603 /* MOBAliSocialmomentsViewController.h */,
+				443837141ED7D3D700A43603 /* MOBAliSocialmomentsViewController.m */,
 				444187201EFA8438001BC2D0 /* MOBDoubanViewController.h */,
 				4441871F1EFA8438001BC2D0 /* MOBDoubanViewController.m */,
 				443837101ED7D3BF00A43603 /* MOBDingTalkViewController.h */,
@@ -971,7 +970,6 @@
 				444BCBC11E6E6698003D2ACE /* D11.jpg in Resources */,
 				444BCBC81E6E6C80003D2ACE /* MOBPlatformViewController.xib in Resources */,
 				445231021EC46DD0000EEB63 /* MobUserInfoViewController.xib in Resources */,
-				443B3CD31F679775002B3F7D /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				443B3CD71F679775002B3F7D /* WeiboSDK.bundle in Resources */,
 				447564631EC5638F00646BB6 /* shareMenuIcon@2x.png in Resources */,
 				444BCBBB1E6E6664003D2ACE /* shareImg.png in Resources */,
@@ -1041,7 +1039,7 @@
 				440E80281E794613000A2B32 /* MOBWechatmomentsViewController.m in Sources */,
 				440755A51ED713D9004011AA /* MOBPrintViewController.m in Sources */,
 				440E80291E794613000A2B32 /* MOBWechatcontactsViewController.m in Sources */,
-				443837151ED7D3D700A43603 /* MOBAlipaymomentsViewController.m in Sources */,
+				443837151ED7D3D700A43603 /* MOBAliSocialmomentsViewController.m in Sources */,
 				4441A83F1EE8010C001F6DF6 /* MOBInstapaperViewController.m in Sources */,
 				4441A8331EE7DEC3001F6DF6 /* MOBYixinfavoritesViewController.m in Sources */,
 				4465F7951EA711B600C49F70 /* MOBEvernoteViewController.m in Sources */,
@@ -1066,7 +1064,7 @@
 				445230DB1EC46DC0000EEB63 /* MobAuthViewController.m in Sources */,
 				4441A82D1EE7DE93001F6DF6 /* MOBYixincontactsViewController.m in Sources */,
 				444187211EFA8438001BC2D0 /* MOBDoubanViewController.m in Sources */,
-				443837181ED7D3E900A43603 /* MOBAlipayViewController.m in Sources */,
+				443837181ED7D3E900A43603 /* MOBAliSocialViewController.m in Sources */,
 				440755AD1ED71B18004011AA /* MobScreenshotCenter.m in Sources */,
 				4438370C1ED7CADE00A43603 /* MOBGoogleViewController.m in Sources */,
 				4447CDAD1E82365F009E57A0 /* MOBLoadingViewController.m in Sources */,
@@ -1236,8 +1234,8 @@
 			buildSettings = {
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q87QUX3533;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = LW5266U92D;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1267,8 +1265,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.ShareSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ca920fb-ae43-4ba6-a96e-14db157e0b13";
-				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
+				PROVISIONING_PROFILE = "3944b332-19f5-4da5-a25c-5d408cf821bb";
+				PROVISIONING_PROFILE_SPECIFIER = ShareSDK;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

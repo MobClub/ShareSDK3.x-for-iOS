@@ -47,7 +47,6 @@
 		449E4CFA1ED2E1B9007518C0 /* LineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E4C2A1ED2E1B8007518C0 /* LineSDK.framework */; };
 		449E4CFB1ED2E1B9007518C0 /* MPShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E4C2C1ED2E1B8007518C0 /* MPShareSDK.framework */; };
 		449E4CFC1ED2E1B9007518C0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E4C2E1ED2E1B8007518C0 /* TencentOpenAPI.framework */; };
-		449E4CFD1ED2E1B9007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E4C2F1ED2E1B8007518C0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		449E4CFE1ED2E1B9007518C0 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 449E4C311ED2E1B8007518C0 /* RennSDK.bundle */; };
 		449E4CFF1ED2E1B9007518C0 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E4C321ED2E1B8007518C0 /* RennSDK.framework */; };
 		449E4D001ED2E1B9007518C0 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E4C341ED2E1B8007518C0 /* libWeiboSDK.a */; };
@@ -634,7 +633,6 @@
 				D08BDA1A1B412A8400C73757 /* Main.storyboard in Resources */,
 				D08BDA1F1B412A8400C73757 /* LaunchScreen.xib in Resources */,
 				DE79434A1B58B99F00D266E8 /* Default-568h@2x.png in Resources */,
-				449E4CFD1ED2E1B9007518C0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				449E4CDA1ED2E1B8007518C0 /* ShareSDKUI.bundle in Resources */,
 				DE0F12EA1B84594C00B6E543 /* Icon-72.png in Resources */,
 				D08BDA1C1B412A8400C73757 /* Images.xcassets in Resources */,

@@ -28,11 +28,10 @@
     [super viewDidLoad];
     platformType = SSDKPlatformTypeFacebook;
     self.title = @"Facebook";
-    shareIconArray = @[@"textIcon",@"textAndImageIcon",@"webURLIcon",@"mutImageIcon",@"webURLIcon",@"videoURLIcon",@"videoIcon"];
-    shareTypeArray = @[@"文字 应用内",@"图片+文字 应用内",@"链接 应用内",@"多图 APP",@"链接 APP",@"相册视频 APP",@"视频 应用内"];
-    selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareImages",@"shareLinkToAPP",@"shareAssetVideo",@"shareVideoByAPI"];
+    shareIconArray = @[@"textIcon",@"textAndImageIcon",@"webURLIcon",@"mutImageIcon",@"webURLIcon",@"videoURLIcon",@"videoIcon",@"webURLIcon"];
+    shareTypeArray = @[@"文字 应用内",@"图片+文字 应用内",@"链接 应用内",@"多图 APP",@"链接 APP",@"相册视频 APP",@"视频 应用内",@"应用分享"];
+    selectorNameArray = @[@"shareText",@"shareImage",@"shareLink",@"shareImages",@"shareLinkToAPP",@"shareAssetVideo",@"shareVideoByAPI",@"shareApp"];
 }
-
 
 /**
  分享文字
@@ -47,13 +46,13 @@
                                      title:nil
                                       type:SSDKContentTypeText];
     //平台定制
-//    [parameters SSDKSetupFacebookParamsByText:@"Share SDK"
-//                                        image:nil
-//                                          url:nil
-//                                     urlTitle:nil
-//                                      urlName:nil
-//                               attachementUrl:nil
-//                                         type:SSDKContentTypeText];
+    //    [parameters SSDKSetupFacebookParamsByText:@"Share SDK"
+    //                                        image:nil
+    //                                          url:nil
+    //                                     urlTitle:nil
+    //                                      urlName:nil
+    //                               attachementUrl:nil
+    //                                         type:SSDKContentTypeText];
     [self shareWithParameters:parameters];
 }
 
@@ -70,13 +69,13 @@
                                      title:nil
                                       type:SSDKContentTypeImage];
     //平台定制
-//    [parameters SSDKSetupFacebookParamsByText:@"Share SDK"
-//                                        image:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
-//                                          url:nil
-//                                     urlTitle:nil
-//                                      urlName:nil
-//                               attachementUrl:nil
-//                                         type:SSDKContentTypeImage];
+    //    [parameters SSDKSetupFacebookParamsByText:@"Share SDK"
+    //                                        image:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
+    //                                          url:nil
+    //                                     urlTitle:nil
+    //                                      urlName:nil
+    //                               attachementUrl:nil
+    //                                         type:SSDKContentTypeImage];
     [self shareWithParameters:parameters];
 }
 
@@ -91,13 +90,13 @@
                                      title:@"Share SDK"
                                       type:SSDKContentTypeWebPage];
     //平台定制
-    //    [parameters SSDKSetupFacebookParamsByText:@@"Share SDK Link Desc"
-    //                                        image:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
-    //                                          url:[NSURL URLWithString:@"https://www.mob.com"]
-    //                                     urlTitle:@"Share SDK"
-    //                                      urlName:nil
-    //                               attachementUrl:nil
-    //                                         type:SSDKContentTypeWebPage];
+    [parameters SSDKSetupFacebookParamsByText:@"Share SDK Link Desc"
+                                        image:@"http://ww4.sinaimg.cn/bmiddle/005Q8xv4gw1evlkov50xuj30go0a6mz3.jpg"
+                                          url:[NSURL URLWithString:@"https://www.mob.com"]
+                                     urlTitle:@"Share SDK"
+                                      urlName:nil
+                               attachementUrl:nil
+                                         type:SSDKContentTypeWebPage];
     
     [self shareWithParameters:parameters];
 }
@@ -113,13 +112,13 @@
                                      title:@"Share SDK"
                                       type:SSDKContentTypeWebPage];
     //平台定制
-//    [parameters SSDKSetupFacebookParamsByText:@"Share SDK Link Desc"
-//                                        image:@"http://weixintest.ihk.cn/ihkwx_upload/heji/material/img/20160414/1460616012469.jpg"
-//                                          url:[NSURL URLWithString:@"http://www.mob.com"]
-//                                     urlTitle:@"Share SDK"
-//                                      urlName:nil
-//                               attachementUrl:nil
-//                                         type:SSDKContentTypeWebPage];
+    //    [parameters SSDKSetupFacebookParamsByText:@"Share SDK Link Desc"
+    //                                        image:@"http://weixintest.ihk.cn/ihkwx_upload/heji/material/img/20160414/1460616012469.jpg"
+    //                                          url:[NSURL URLWithString:@"http://www.mob.com"]
+    //                                     urlTitle:@"Share SDK"
+    //                                      urlName:nil
+    //                               attachementUrl:nil
+    //                                         type:SSDKContentTypeWebPage];
     [parameters SSDKEnableUseClientShare];
     
     [self shareWithParameters:parameters];
@@ -140,13 +139,13 @@
                                      title:nil
                                       type:SSDKContentTypeImage];
     //平台定制
-//    [parameters SSDKSetupFacebookParamsByText:nil
-//                                        image:@[path1,path2,path3,path4]
-//                                          url:nil
-//                                     urlTitle:nil
-//                                      urlName:nil
-//                               attachementUrl:nil
-//                                         type:SSDKContentTypeImage];
+    //    [parameters SSDKSetupFacebookParamsByText:nil
+    //                                        image:@[path1,path2,path3,path4]
+    //                                          url:nil
+    //                                     urlTitle:nil
+    //                                      urlName:nil
+    //                               attachementUrl:nil
+    //                                         type:SSDKContentTypeImage];
     
     [parameters SSDKEnableUseClientShare];
     
@@ -168,13 +167,13 @@
                                          title:nil
                                           type:SSDKContentTypeVideo];
         //平台定制
-//         [parameters SSDKSetupFacebookParamsByText:nil
-//                                             image:nil
-//                                               url:assetURL
-//                                          urlTitle:nil
-//                                           urlName:nil
-//                                    attachementUrl:nil
-//                                              type:SSDKContentTypeVideo];
+        //         [parameters SSDKSetupFacebookParamsByText:nil
+        //                                             image:nil
+        //                                               url:assetURL
+        //                                          urlTitle:nil
+        //                                           urlName:nil
+        //                                    attachementUrl:nil
+        //                                              type:SSDKContentTypeVideo];
         
         [weakSelf shareWithParameters:parameters];
     }];
@@ -285,9 +284,18 @@
     }];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)shareApp
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params SSDKSetupFacebookParamsByText:nil
+                                    image:@"http://www.mob.com/public/images/logo_black.png"
+                                      url:[NSURL URLWithString:@"https://fb.me/1492137904189216"]
+                                 urlTitle:nil
+                                  urlName:nil
+                           attachementUrl:nil
+                                     type:SSDKContentTypeApp];
+    //    [parameters SSDKEnableUseClientShare];
+    
+    [self shareWithParameters:params];
 }
 @end
