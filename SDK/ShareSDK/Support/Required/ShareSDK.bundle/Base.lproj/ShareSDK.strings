@@ -45,7 +45,7 @@
 "SMS_BACK_TEXT" = "返回";
 "SMS_WAIT_TEXT" = "等待";
 "SMS_TITLE" = "短信登录";
-"SMS_CODE_TEXT" = "验证码"
+"SMS_CODE_TEXT" = "验证码";
 "SMS_BACK_MESSAGE" = "验证码短信可能略有延迟，确定返回并重新开始？";
 "SMS_VIOICE_MESSAGE" = "短信验证码收不到？请尝试";
 "SMS_VIOICE_TEXT" = "语音验证码";
@@ -123,17 +123,17 @@
 "ShareSDKConnector_Error_Yixin_NOShare" = "分享平台［易信］客户端不支持分享功能";
 "ShareSDKConnector_Error_Yixin_NOClient" = "分享平台［易信］尚未安装客户端!无法进行分享";
 
-"ShareSDKConnector_Error_KaKao_NOLib" = "请将KakaoOpenAPI.framework导入项目并引入KOSession.h"
+"ShareSDKConnector_Error_KaKao_NOLib" = "请将KakaoOpenAPI.framework导入项目并引入KOSession.h";
 "ShareSDKConnector_Error_KaKao_NOLibShare" = "分享平台［KaKao］尚未导入KakaoOpenSDK.framework! 无法进行相关操作";
 "ShareSDKConnector_Error_KaKao_Callback" = "无效的回调请求";
 "ShareSDKConnector_Error_KaKao_ShareTalk" = "[Kakao] 的Talk客户端分享失败，请检查分享参数"
 "ShareSDKConnector_Error_KaKao_Talk" = "分享平台［KaKao］不支持Talk客户端分享";
 "ShareSDKConnector_Error_KaKao_Story" = "分享平台［KaKao］不支持Story客户端分享";
 
-"ShareSDKConnector_Error_Ali_NOLib" = "请将libAPOpenSdk.a导入项目并引入APOpenAPI";
-"ShareSDKConnector_Error_Ali_NOShare" = "分享平台［支付宝］客户端不支持分享功能";
-"ShareSDKConnector_Error_Ali_NOClient" = "分享平台［支付宝］尚未安装客户端!无法进行分享";
-"ShareSDKConnector_Error_Ali_NOLibShare" = "分享平台［支付宝］尚未导入libAPOpenSdk.a库! 无法进行相关操作";
+"ShareSDKConnector_Error_AliPay_NOLib" = "请将libAPOpenSdk.a导入项目并引入APOpenAPI";
+"ShareSDKConnector_Error_AliPay_NOShare" = "分享平台［支付宝］客户端不支持分享功能";
+"ShareSDKConnector_Error_AliPay_NOClient" = "分享平台［支付宝］尚未安装客户端!无法进行分享";
+"ShareSDKConnector_Error_AliPay_NOLibShare" = "分享平台［支付宝］尚未导入libAPOpenSdk.a库! 无法进行相关操作";
 
 "ShareSDKConnector_Error_Line_NOLib" = "请将LineSDK.framework导入项目";
 "ShareSDKConnector_Error_Line_NOLibShare" = "分享平台［Line］尚未导入LineSDK.framework! 无法进行相关操作";

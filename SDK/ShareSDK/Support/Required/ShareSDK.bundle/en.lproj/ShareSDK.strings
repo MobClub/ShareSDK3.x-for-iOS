@@ -45,7 +45,7 @@
 "SMS_BACK_TEXT" = "Back";
 "SMS_WAIT_TEXT" = "Wait";
 "SMS_TITLE" = "SMS Login";
-"SMS_CODE_TEXT" = "Code"
+"SMS_CODE_TEXT" = "Code";
 "SMS_BACK_MESSAGE" = "SMS verify code may be slightly delayed";
 "SMS_VIOICE_MESSAGE" = "Not receive code? Please try";
 "SMS_VIOICE_TEXT" = "Voice code";
@@ -90,7 +90,7 @@
 "ShareSDKConnector_Error_Twitter_Size" = "File size should not exceed 512 MB";
 "ShareSDKConnector_Error_Twitter_Time" = "Duration should be between 0.5 seconds and 140.0 seconds";
 
-"ShareSDKConnector_Error_WeChat_NoLib" = "Please add libWeChat.a into the project and import WXApi.h"
+"ShareSDKConnector_Error_WeChat_NoLib" = "Please add libWeChat.a into the project and import WXApi.h";
 "ShareSDKConnector_Error_WeChat_NOShare" = "Share platform [WeChat] client does not support sharing";
 "ShareSDKConnector_Error_WeChat_NOClient" = "Share the platform [WeChat] has not yet installed the client! Can not share";
 "ShareSDKConnector_Error_WeChat_NOLibShare" = "Share platform [WeChat] has not yet add libWeChatSDK.a! Unable to do so";
@@ -105,7 +105,7 @@
 
 "ShareSDKConnector_Error_MeiPai_NOLib" = "Please add the MPShareSDK.framework into the project";
 "ShareSDKConnector_Error_MeiPai_NOLibShare" = "Share platform［MeiPai］has not yet add MPShareSDK.framework! Unable to do so";
-"ShareSDKConnector_Error_MeiPai_NOShare" = "Share platform［MeiPai］does not support such sharing"
+"ShareSDKConnector_Error_MeiPai_NOShare" = "Share platform［MeiPai］does not support such sharing";
 "ShareSDKConnector_Error_MeiPai_NOShareVideo" = "Share platform [MeiPai] client version does not support video sharing";
 "ShareSDKConnector_Error_MeiPai_NOSharePhoto" = "Share platform [MeiPai] client version does not support photo sharing";
 "ShareSDKConnector_Error_MeiPai_NOClient" = "Share platform [MeiPai] has not yet installed the client! Can not share";
@@ -123,17 +123,17 @@
 "ShareSDKConnector_Error_Yixin_NOShare" = "Share platform［Yixin］client version does not support sharing";
 "ShareSDKConnector_Error_Yixin_NOClient" = "Share platform［Yixin］has not yet installed the client! Can not share";
 
-"ShareSDKConnector_Error_KaKao_NOLib" = "Please add KakaoOpenAPI.framework into the project and import KOSession.h"
+"ShareSDKConnector_Error_KaKao_NOLib" = "Please add KakaoOpenAPI.framework into the project and import KOSession.h";
 "ShareSDKConnector_Error_KaKao_NOLibShare" = "Share platform［KaKao］has not yet add KakaoOpenSDK.framework! Unable to do so";
 "ShareSDKConnector_Error_KaKao_Callback" = "Invalid callback request";
 "ShareSDKConnector_Error_KaKao_ShareTalk" = "[Kakao] Talk client sharing failed, please check sharing parameters";
 "ShareSDKConnector_Error_KaKao_Talk" = "Share platform [KaKao] does not support Talk client sharing";
 "ShareSDKConnector_Error_KaKao_Story" = "Share platform [KaKao] does not support Story client sharing";
 
-"ShareSDKConnector_Error_Ali_NOLib" = "Please add libAPOpenSdk.a into the project and import APOpenAPI.h";
-"ShareSDKConnector_Error_Ali_NOShare" = "Share platform［AliSocial］client version does not support sharing";
-"ShareSDKConnector_Error_Ali_NOClient" = "Share platform［AliSocial］has not yet installed the client! Can not share";
-"ShareSDKConnector_Error_Ali_NOLibShare" = "Share platform［AliSocial］has not yet add libAPOpenSdk.a! Unable to do so";
+"ShareSDKConnector_Error_AliPay_NOLib" = "Please add libAPOpenSdk.a into the project and import APOpenAPI.h";
+"ShareSDKConnector_Error_AliPay_NOShare" = "Share platform［AliPay］client version does not support sharing";
+"ShareSDKConnector_Error_AliPay_NOClient" = "Share platform［AliPay］has not yet installed the client! Can not share";
+"ShareSDKConnector_Error_AliPay_NOLibShare" = "Share platform［AliPay］has not yet add libAPOpenSdk.a! Unable to do so";
 
 "ShareSDKConnector_Error_Line_NOLib" = "Please add LineSDK.framework into the project";
 "ShareSDKConnector_Error_Line_NOLibShare" = "Share platform［Line］has not yet add LineSDK.framework! Unable to do so";

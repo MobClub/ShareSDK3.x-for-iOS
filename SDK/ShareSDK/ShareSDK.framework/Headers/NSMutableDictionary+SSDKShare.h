@@ -90,7 +90,35 @@
                                    latitude:(double)latitude
                                   longitude:(double)longitude
                                    objectID:(NSString *)objectID
+                                       type:(SSDKContentType)type __deprecated_msg("discard form v4.0.4");
+
+/*
+ 设置新浪微博分享参数
+ 
+ @param text      文本
+ @param title     标题
+ @param images    图片集合,传入参数可以为单张图片信息，也可以为一个NSArray，数组元素可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。如: @"http://www.mob.com/images/logo_black.png" 或 @[@"http://www.mob.com/images/logo_black.png"]
+ @param video     分享视频, 本地路径。
+ @param url       分享链接
+ @param latitude  纬度
+ @param longitude 经度
+ @param objectID  对象ID，标识系统内内容唯一性，应传入系统中分享内容的唯一标识，没有时可以传入nil
+ @param isShareToStory 是否分享到故事 (仅支持视频和图片通过客户端分享)
+ @param type      分享类型，仅支持Text、Image、WebPage、Video类型，Video只支持客户端分享
+ 设置 SSDKEnableSinaWeiboAPIShare 使用API进行分享 但text中需要附 安全域 安全域在新浪微博开放平台设置
+ @param dataDictionary 数据存储字典 如果传入nil将新建
+ */
+- (void)SSDKSetupSinaWeiboShareParamsByText:(NSString *)text
+                                      title:(NSString *)title
+                                     images:(id)images
+                                      video:(NSString *)video
+                                        url:(NSURL *)url
+                                   latitude:(double)latitude
+                                  longitude:(double)longitude
+                                   objectID:(NSString *)objectID
+                             isShareToStory:(BOOL)shareToStory
                                        type:(SSDKContentType)type;
+
 
 /**
  *  设置腾讯微博分享参数
@@ -328,6 +356,7 @@
  
  *  @param image            图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
                             分享类型为Image类型时,若使用客户端分享,可传入 单张/多张 的 本地/网络 图片;如果不使用客户端分享,仅支持单张的本地/网络图片
+                            分享类型为App（应用邀请）时 只支持网络图片链接
  *【Facebook通过客户端分享图片,可不需依赖任何权限;否则需要申请publish_actions权限】*
                             分享类型为WebPage类型时,无论是否使用客户端,仅支持单张的网络图片
  
@@ -347,7 +376,7 @@
  
  *  @param type             分享类型
                             当使用客户端分享时,支持Image、WebPage,Video类型
-                            当不适用客户端分享是,支持Text、Image、WebPage类型
+                            当不适用客户端分享是,支持Text、Image、WebPage、App(应用邀请)类型
  */
 - (void)SSDKSetupFacebookParamsByText:(NSString *)text
                                 image:(id)image

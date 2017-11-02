@@ -13,6 +13,8 @@
  */
 @protocol IMOBFDataModel <NSObject>
 
+@required
+
 /**
  初始化数据模型
  
@@ -50,7 +52,7 @@
  
  @return 字段映射字典
  */
-- (NSDictionary <NSString *, NSString *> *)mappingDictionary;
++ (NSDictionary <NSString *, NSString *> *)propertyMappingDictionary;
 
 /**
  当类中有属性为数组,且数组元素同为MOBFDataModel时,应该置制定该属性属性及其元素类型
@@ -59,6 +61,28 @@
  
  @return 映射配置
  */
-- (NSDictionary <NSString *, NSString *> *)confirmArrayElementType;
++ (NSDictionary <NSString *, NSString *> *)elementTypeOfCollectionPropertyDictionary;
+
+/**
+ 当属性定义类型不支持从原始数据直接转换时触发此方法，该方法默认返回nil，表示不进行转换
+ 
+ @param rawData 原始数据
+ @param targetType 目标类型
+ @param propertyName 属性名称
+ @return 目标类型对象
+ */
++ (id)unsupportTypeWithRawData:(id)rawData
+                    targetType:(Class)targetType
+                  propertyName:(NSString *)propertyName;
+
+/**
+ 当设置属性对象不支持转化为原始数据时触发此方法，默认返回nil，表示不进行转换
+ 
+ @param object 对象
+ @param propertyName 属性名称
+ @return 原始数据，仅包含NSDictionary、NSArray、NSString、NSNumber类型的返回。
+ */
++ (id)rawDataWithUnsupportTypeObject:(id)object
+                        propertyName:(NSString *)propertyName;
 
 @end

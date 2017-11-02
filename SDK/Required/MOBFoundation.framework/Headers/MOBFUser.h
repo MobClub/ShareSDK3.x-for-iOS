@@ -36,6 +36,11 @@
 @property (nonatomic, copy, nullable) NSString * nickname;
 
 /**
+ 签名信息
+ */
+@property (nonatomic, copy, nullable) NSString * sign;
+
+/**
  用户自定义数据
  */
 @property (nonatomic, strong, nullable) NSDictionary * userdata;
@@ -65,4 +70,21 @@
                                avatar:(NSString * _Nullable)avatar
                              nickname:(NSString * _Nullable)nickname
                              userdata:(NSDictionary * _Nullable)userdata;
+
+/**
+ 创建第三方用户信息
+ 
+ @param appUid 用户标识，能够表示你的用户唯一性的标识
+ @param avatar 用户头像地址
+ @param nickname 用户名称
+ @param userdata 用户自定义数据
+ @return 用户信息
+ */
++ (MOBFUser* _Nullable)userWithAppUid:(NSString * _Nonnull )appUid
+                               avatar:(NSString * _Nullable)avatar
+                             nickname:(NSString * _Nullable)nickname
+                                 sign:(NSString * _Nullable)sign
+                             userdata:(NSDictionary * _Nullable)userdata;
+
+
 @end
