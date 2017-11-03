@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author           = { "Jinghuang Liu" => "liujinghuang@icloud.com" }
 
   s.homepage         = 'http://www.mob.com'
-  s.source           = { :git => "https://github.com/MobClub/ShareSDK-for-iOS-Spec.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/MobClub/ShareSDK3.x-for-iOS.git", :tag => s.version.to_s }
   s.platform         = :ios
   s.ios.deployment_target = "8.0"
   s.frameworks       = 'JavaScriptCore'
