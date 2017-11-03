@@ -10,8 +10,7 @@ Pod::Spec.new do |s|
   s.platform         = :ios
   s.ios.deployment_target = "8.0"
   s.frameworks       = 'JavaScriptCore'
-  s.libraries        = 'icucore', 'z.1.2.5', 'stdc++'
-
+  s.libraries        = 'z.1.2.5', 'stdc++'
   s.default_subspecs    = 'ShareSDK'
   s.vendored_frameworks = 'SDK/ShareSDK/ShareSDK.framework'
   s.dependency 'MOBFoundation'
@@ -52,16 +51,6 @@ Pod::Spec.new do |s|
             ssp.vendored_frameworks = 'SDK/ShareSDK/Support/PlatformConnector/WechatConnector.framework','SDK/ShareSDK/ShareSDK.framework','SDK/ShareSDK/Support/Required/ShareSDKConnector.framework','SDK/ShareSDK/Support/Optional/ShareSDKExtension.framework'
             ssp.resource = 'SDK/ShareSDK/Support/Required/ShareSDK.bundle'
             ssp.public_header_files = "SDK/ShareSDK/Support/PlatformSDK/WeChatSDK/*.h"
-            ssp.libraries = 'sqlite3'
-        end
-
-        # WeChatFull
-        sp.subspec 'WeChatFull' do |ssp|
-            ssp.vendored_libraries = "SDK/ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.a"
-            ssp.source_files = "SDK/ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.{h,m}"
-            ssp.vendored_frameworks = 'SDK/ShareSDK/Support/PlatformConnector/WechatConnector.framework','SDK/ShareSDK/ShareSDK.framework','SDK/ShareSDK/Support/Required/ShareSDKConnector.framework','SDK/ShareSDK/Support/Optional/ShareSDKExtension.framework'
-            ssp.resource = 'SDK/ShareSDK/Support/Required/ShareSDK.bundle'
-            ssp.public_header_files = "SDK/ShareSDK/Support/PlatformSDK/WeChatSDKFull/*.h"
             ssp.libraries = 'sqlite3'
         end
 
